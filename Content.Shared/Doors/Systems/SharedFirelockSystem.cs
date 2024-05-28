@@ -2,6 +2,7 @@ using Content.Shared.Access.Systems;
 using Content.Shared.Doors.Components;
 using Content.Shared.Popups;
 using Content.Shared.Prying.Components;
+using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Doors.Systems;
@@ -107,4 +108,23 @@ public abstract class SharedFirelockSystem : EntitySystem
     }
 
     #endregion
+}
+
+[Serializable, NetSerializable]
+public enum FirelockVisuals : byte
+{
+    PressureWarning,
+    TemperatureWarning,
+}
+
+[Serializable, NetSerializable]
+public enum FirelockVisualLayersPressure : byte
+{
+    Base
+}
+
+[Serializable, NetSerializable]
+public enum FirelockVisualLayersTemperature : byte
+{
+    Base
 }
