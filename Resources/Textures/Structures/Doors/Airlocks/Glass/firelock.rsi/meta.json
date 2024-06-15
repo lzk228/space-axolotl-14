@@ -46,16 +46,6 @@
       ]
     },
     {
-      "name": "deny",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
-    },
-    {
       "name": "deny_unlit",
       "delays": [
         [
@@ -64,9 +54,6 @@
           0.1
         ]
       ]
-    },
-    {
-      "name": "locked"
     },
     {
       "name": "open"
@@ -139,6 +126,24 @@
       "delays": [
         [
           0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "pressure_unlit",
+      "delays": [
+        [
+          0.8,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "temperature_unlit",
+      "delays": [
+        [
+          0.8,
           0.4
         ]
       ]
