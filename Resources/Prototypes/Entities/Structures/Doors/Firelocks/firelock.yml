@@ -127,6 +127,7 @@
       access: [ [ "Engineering" ] ]
     - type: PryUnpowered
       pryModifier: 0.5
+    - type: SyncSprite
 
 - type: entity
   id: Firelock
