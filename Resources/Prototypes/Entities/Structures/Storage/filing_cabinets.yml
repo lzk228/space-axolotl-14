@@ -1,7 +1,7 @@
 - type: entity
   name: filing cabinet
   parent: [ BaseStructureDynamic, BaseBagOpenClose ]
-  id: filingCabinet
+  id: FilingCabinet
   suffix: Empty
   description: A cabinet for all your filing needs.
   components:
@@ -64,14 +64,14 @@
             max: 2
   - type: Construction
     graph: FilingCabinet
-    node: filingCabinet
+    node: FilingCabinet
   - type: StaticPrice
     price: 20
 
 - type: entity
   name: tall cabinet
-  parent: filingCabinet
-  id: filingCabinetTall
+  parent: FilingCabinet
+  id: FilingCabinetTall
   suffix: Empty
   components:
   - type: Sprite
@@ -89,7 +89,7 @@
 - type: entity
   name: chest drawer
   parent: BaseStructureDynamic
-  id: filingCabinetDrawer
+  id: FilingCabinetDrawer
   suffix: Empty
   description: A small drawer for all your filing needs, Now with wheels!
   components:
@@ -183,16 +183,16 @@
         orGroup: Folder
 
 - type: entity
-  parent: [filingCabinet, BaseBureaucraticStorageFill]
-  id: filingCabinetRandom
+  parent: [FilingCabinet, BaseBureaucraticStorageFill]
+  id: FilingCabinetRandom
   suffix: Random
 
 - type: entity
-  parent: [filingCabinetTall, BaseBureaucraticStorageFill]
-  id: filingCabinetTallRandom
+  parent: [FilingCabinetTall, BaseBureaucraticStorageFill]
+  id: FilingCabinetTallRandom
   suffix: Random
 
 - type: entity
-  parent: [filingCabinetDrawer, BaseBureaucraticStorageFill]
-  id: filingCabinetDrawerRandom
+  parent: [FilingCabinetDrawer, BaseBureaucraticStorageFill]
+  id: FilingCabinetDrawerRandom
   suffix: Random
