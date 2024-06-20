@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Automod;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.Preferences;
@@ -155,6 +156,49 @@ namespace Content.Server.Database
             DateTimeOffset? expiration,
             Guid editedBy,
             DateTimeOffset editedAt);
+        #endregion
+
+        #region Text Automod Filter
+
+        /// <summary>
+        /// Add an automod filter to the database.
+        /// </summary>
+        /// <param name="automodFilter">To add to the database.</param>
+        /// <returns>The automod filter added to the database, but with the Id set.</returns>
+        Task<AutomodFilterDef> AddAutomodFilterAsync(AutomodFilterDef automodFilter);
+
+        /// <summary>
+        /// Get a an automod filter from the database.
+        /// </summary>
+        /// <param name="id">The id of the filter to fetch.</param>
+        /// <returns>The automod filter fetched from the database. Or null.</returns>
+        Task<AutomodFilterDef?> GetAutomodFilterAsync(int id);
+
+        /// <summary>
+        /// Get all automod filters from the database.
+        /// </summary>
+        /// <returns>All automod filters in the database.</returns>
+        Task<List<AutomodFilterDef>> GetAllAutomodFiltersAsync();
+
+        /// <summary>
+        /// Edit an automod filter by the Id provided in <paramref name="automodFilterDef"/>
+        /// </summary>
+        /// <param name="automodFilterDef">The automod filter to replace the database entry with.</param>
+        Task EditAutomodFilterAsync(AutomodFilterDef automodFilterDef);
+
+        /// <summary>
+        /// Removes an automod filter from the database.
+        /// </summary>
+        /// <param name="id">Of the entry to remove.</param>
+        /// <returns>True when the entry was found and deleted.</returns>
+        Task<bool> RemoveAutomodFilterAsync(int id);
+
+        /// <summary>
+        /// Removes multiple automod filter database entries.
+        /// </summary>
+        /// <param name="ids">List of database entry ids to remove.</param>
+        Task RemoveMultipleAutomodFilterAsync(List<int> ids);
+
         #endregion
 
         #region Playtime
@@ -505,6 +549,46 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.EditServerRoleBan(id, reason, severity, expiration, editedBy, editedAt));
         }
+        #endregion
+
+        #region Text Automod Filter
+
+        public Task<AutomodFilterDef> AddAutomodFilterAsync(AutomodFilterDef automodFilter)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.AddTextAutomodFilter(automodFilter));
+        }
+
+        public Task<AutomodFilterDef?> GetAutomodFilterAsync(int id)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetTextAutomodFilter(id));
+        }
+
+        public Task<List<AutomodFilterDef>> GetAllAutomodFiltersAsync()
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetAllTextAutomodFiltersAsync());
+        }
+
+        public Task EditAutomodFilterAsync(AutomodFilterDef automodFilterDef)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.EditTextAutomodFilter(automodFilterDef));
+        }
+
+        public Task<bool> RemoveAutomodFilterAsync(int id)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.RemoveTextAutomodFilterAsync(id));
+        }
+
+        public Task RemoveMultipleAutomodFilterAsync(List<int> ids)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.RemoveMultipleTextAutomodFilterAsync(ids));
+        }
+
         #endregion
 
         #region Playtime

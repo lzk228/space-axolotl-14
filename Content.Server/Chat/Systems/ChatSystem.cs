@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
+using Content.Server.Automod;
 using Content.Server.Chat.Managers;
 using Content.Server.Examine;
 using Content.Server.GameTicking;
@@ -17,9 +18,10 @@ using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Ghost;
-using Content.Shared.Humanoid;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
+using Content.Shared.Mind;
+using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Players;
 using Content.Shared.Radio;
@@ -55,6 +57,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly IAutomodManager _automod = default!;
     [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
     [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
@@ -210,6 +213,19 @@ public sealed partial class ChatSystem : SharedChatSystem
             _chatManager.EnsurePlayer(player.UserId).AddEntity(GetNetEntity(source));
         }
 
+        // Chat automod
+        // Player isn't always provided, so get session. Kinda hacky for now.
+        var session = player;
+        if (player == null && TryComp(source, out MindContainerComponent? mindContainer) && mindContainer.HasMind && TryComp(mindContainer.Mind, out MindComponent? mind))
+        {
+            session = mind.Session;
+        }
+        if (session != null
+            && !_automod.Filter(desiredType == InGameICChatType.Emote ? AutomodTarget.Emote : AutomodTarget.IC,
+                message,
+                session))
+            return;
+
         if (desiredType == InGameICChatType.Speak && message.StartsWith(LocalPrefix))
         {
             // prevent radios and remove prefix.
@@ -273,6 +289,16 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
 
         if (player != null && !_chatManager.HandleRateLimit(player))
+            return;
+
+        // Chat filter
+        // Player isn't always provided, so get session. Kinda hacky for now.
+        var session = player;
+        if (player == null && TryComp(source, out MindContainerComponent? mindContainer) && mindContainer.HasMind && TryComp(mindContainer.Mind, out MindComponent? mind))
+        {
+            session = mind.Session;
+        }
+        if (session != null && !_automod.Filter(AutomodTarget.OOC, message, session))
             return;
 
         // It doesn't make any sense for a non-player to send in-game OOC messages, whereas non-players may be sending
@@ -715,8 +741,11 @@ public sealed partial class ChatSystem : SharedChatSystem
     private string SanitizeInGameICMessage(EntityUid source, string message, out string? emoteStr, bool capitalize = true, bool punctuate = false, bool capitalizeTheWordI = true)
     {
         var newMessage = message.Trim();
+
+        // Accent replacement
         newMessage = SanitizeMessageReplaceWords(newMessage);
 
+        // IC Chat sanitization
         if (capitalize)
             newMessage = SanitizeMessageCapital(newMessage);
         if (capitalizeTheWordI)
@@ -724,6 +753,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (punctuate)
             newMessage = SanitizeMessagePeriod(newMessage);
 
+        // IC Chat sanitization
         _sanitizer.TrySanitizeOutSmilies(newMessage, source, out newMessage, out emoteStr);
 
         return newMessage;

@@ -1,0 +1,12 @@
+﻿- type: automodActionGroup
+  id: warning
+  automodActions:
+  - !type:TextAutomodActionWarningPopup
+  - !type:TextAutomodActionAdminLog
+
+- type: automodActionGroup
+  id: block
+  automodActions:
+  - !type:TextAutomodActionWarningPopup
+  - !type:TextAutomodActionAdminLog
+  - !type:TextAutomodActionBlockMessage

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Automod;
 using Content.Shared.Database;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -1637,6 +1638,100 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             db.DbContext.RoleWhitelists.Remove(entry);
             await db.DbContext.SaveChangesAsync();
             return true;
+        }
+
+        #endregion
+
+        #region Text Automod Filter
+
+        public async Task<AutomodFilterDef> AddTextAutomodFilter(AutomodFilterDef automodFilter)
+        {
+            await using var db = await GetDb();
+
+            var filter = new TextAutomod
+            {
+                Pattern = automodFilter.Pattern,
+                FilterType = automodFilter.FilterType,
+                ActionGroup = automodFilter.ActionGroup,
+                TargetFlags = automodFilter.TargetFlags,
+                DisplayName = automodFilter.DisplayName
+            };
+            db.DbContext.TextAutomod.Add(filter);
+
+            await db.DbContext.SaveChangesAsync();
+            return ConvertTextAutomodFilter(filter);
+        }
+
+        public async Task<AutomodFilterDef?> GetTextAutomodFilter(int id)
+        {
+            await using var db = await GetDb();
+
+            var filter = await db.DbContext.TextAutomod.SingleOrDefaultAsync(f => f.Id == id);
+            return filter is null ? null : ConvertTextAutomodFilter(filter);
+        }
+
+        public async Task<List<AutomodFilterDef>> GetAllTextAutomodFiltersAsync()
+        {
+            await using var db = await GetDb();
+
+            var filters = new List<AutomodFilterDef>();
+            foreach (var filter in db.DbContext.TextAutomod.ToList())
+            {
+                filters.Add(ConvertTextAutomodFilter(filter));
+            }
+
+            return filters;
+        }
+
+        protected AutomodFilterDef ConvertTextAutomodFilter(TextAutomod textAutomod)
+        {
+            return new AutomodFilterDef(
+                textAutomod.Id,
+                textAutomod.Pattern,
+                textAutomod.FilterType,
+                textAutomod.ActionGroup,
+                textAutomod.TargetFlags,
+                textAutomod.DisplayName);
+        }
+
+        public async Task EditTextAutomodFilter(AutomodFilterDef automodFilter)
+        {
+            await using var db = await GetDb();
+
+            var filter = await db.DbContext.TextAutomod.SingleOrDefaultAsync(f => f.Id == automodFilter.Id);
+            if (filter is null)
+                return;
+            filter.Pattern = automodFilter.Pattern;
+            filter.FilterType = automodFilter.FilterType;
+            filter.ActionGroup = automodFilter.ActionGroup;
+            filter.TargetFlags = automodFilter.TargetFlags;
+            filter.DisplayName = automodFilter.DisplayName;
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
+        public async Task<bool> RemoveTextAutomodFilterAsync(int id)
+        {
+            await using var db = await GetDb();
+
+            var filter = await db.DbContext.TextAutomod.SingleOrDefaultAsync(f => f.Id == id);
+            if (filter is null)
+                return false;
+
+            db.DbContext.TextAutomod.RemoveRange(filter);
+
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task RemoveMultipleTextAutomodFilterAsync(List<int> ids)
+        {
+            await using var db = await GetDb();
+
+            var toRemove = db.DbContext.TextAutomod.Where(f => ids.Contains(f.Id));
+            db.DbContext.TextAutomod.RemoveRange(toRemove);
+
+            await db.DbContext.SaveChangesAsync();
         }
 
         #endregion

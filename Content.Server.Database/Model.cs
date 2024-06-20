@@ -41,6 +41,7 @@ namespace Content.Server.Database
         public DbSet<AdminWatchlist> AdminWatchlists { get; set; } = null!;
         public DbSet<AdminMessage> AdminMessages { get; set; } = null!;
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
+        public DbSet<TextAutomod> TextAutomod { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -1122,5 +1123,15 @@ namespace Content.Server.Database
 
         [Required]
         public string RoleId { get; set; } = default!;
+    }
+
+    public sealed class TextAutomod
+    {
+        public int Id { get; set; }
+        public string Pattern { get; set; } = null!;
+        public AutomodFilterType FilterType { get; set; }
+        public string ActionGroup { get; set; } = null!;
+        public AutomodTarget TargetFlags { get; set; }
+        public string DisplayName { get; set; } = null!;
     }
 }
