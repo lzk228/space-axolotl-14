@@ -3,6 +3,7 @@
   parent:
   - BaseMob
   - MobDamageable
+  - MobDamageThresholds
   - MobAtmosExposed
   id: BaseSimpleMob
   suffix: AI
@@ -37,7 +38,7 @@
   parent:
   - BaseSimpleMob
   - MobCombat
-  - MobBloodstream
+  - MobSimpleBloodstream
   - MobFlammable
   id: SimpleSpaceMobBase # Mob without barotrauma, freezing and asphyxiation (for space carps!?)
   suffix: AI
@@ -68,6 +69,7 @@
   parent:
   - MobRespirator
   - MobAtmosStandard
+  - MobSimpleBloodstream
   - SimpleSpaceMobBase
   id: SimpleMobBase # for air breathers
   suffix: AI
@@ -101,8 +103,6 @@
       - Pacified
       - StaminaModifier
       - Flashed
-  - type: Bloodstream
-    bloodMaxVolume: 150
   - type: MobPrice
     price: 150
   - type: FloatingVisuals
