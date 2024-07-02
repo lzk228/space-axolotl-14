@@ -543,9 +543,6 @@
   id: DrinkCan
 
 - type: Tag
-  id: DrinkSpaceGlue
-
-- type: Tag
   id: Duck
 
 - type: Tag
