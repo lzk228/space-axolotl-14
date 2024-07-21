@@ -51,11 +51,10 @@
     powerLoad: 12000
     needsPower: false #only turns on when scanning
   - type: ArtifactAnalyzer
-  - type: TraversalDistorter
   - type: ItemPlacer
     whitelist:
       components:
-      - Artifact
+      - XenoArtifact
   - type: DeviceNetwork
     deviceNetId: Wired
     receiveFrequencyId: BasicDevice

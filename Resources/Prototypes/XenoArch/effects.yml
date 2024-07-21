@@ -1,0 +1,33 @@
+- type: entity
+  id: BaseXenoArtifactEffect
+  name: effect
+  description: Unknown
+  categories: [ HideSpawnMenu ]
+  abstract: true
+  components:
+  - type: XenoArtifactNode
+  - type: NameIdentifier
+    group: XenoArtifactNode
+
+- type: entity
+  id: XenoArtifactEffectTest
+  parent: BaseXenoArtifactEffect
+  description: Does... something. Supposedly.
+
+- type: entity
+  id: XenoArtifactEffectCreationGasPlasma
+  parent: BaseXenoArtifactEffect
+  description: Expels plasma
+  components:
+  - type: XAECreateGas
+    gases:
+      Plasma: 300
+
+- type: entity
+  id: XenoArtifactEffectCreationGasTritium
+  parent: BaseXenoArtifactEffect
+  description: Expels tritium
+  components:
+  - type: XAECreateGas
+    gases:
+      Tritium: 300
