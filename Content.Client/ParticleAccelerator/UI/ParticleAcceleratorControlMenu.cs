@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Client.Resources;
 using Content.Client.Stylesheets;
+using Content.Client.Stylesheets.Redux;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Singularity.Components;
 using Robust.Client.Animations;
@@ -114,7 +115,7 @@ namespace Content.Client.ParticleAccelerator.UI
             {
                 ToggleMode = false,
                 Text = Loc.GetString("particle-accelerator-control-menu-off-button"),
-                StyleClasses = { StyleBase.ButtonOpenRight },
+                StyleClasses = { StyleClass.ButtonOpenRight },
             };
 
             _offButton.OnPressed += args => OnOverallState?.Invoke(false);
@@ -123,7 +124,7 @@ namespace Content.Client.ParticleAccelerator.UI
             {
                 ToggleMode = false,
                 Text = Loc.GetString("particle-accelerator-control-menu-on-button"),
-                StyleClasses = { StyleBase.ButtonOpenLeft },
+                StyleClasses = { StyleClass.ButtonOpenLeft },
             };
             _onButton.OnPressed += args => OnOverallState?.Invoke(true);
 
@@ -138,7 +139,7 @@ namespace Content.Client.ParticleAccelerator.UI
             var serviceManual = new Label
             {
                 HorizontalAlignment = HAlignment.Center,
-                StyleClasses = { StyleBase.StyleClassLabelSubText },
+                StyleClasses = { StyleClass.LabelSubText },
                 Text = Loc.GetString("particle-accelerator-control-menu-service-manual-reference")
             };
             _drawLabel = new Label();
@@ -157,14 +158,14 @@ namespace Content.Client.ParticleAccelerator.UI
                             {
                                 Text = Loc.GetString("particle-accelerator-control-menu-device-version-label"),
                                 FontOverride = font,
-                                FontColorOverride = StyleNano.NanoGold,
+                                StyleClasses = { StyleClass.LabelKeyText }
                             },
                             closeButton
                         }
                     },
                     new PanelContainer
                     {
-                        PanelOverride = new StyleBoxFlat {BackgroundColor = StyleNano.NanoGold},
+                        StyleClasses = { StyleClass.Highlight },
                         MinSize = new Vector2(0, 2),
                     },
                     new Control
@@ -301,7 +302,7 @@ namespace Content.Client.ParticleAccelerator.UI
                                 Margin = new Thickness(4, 4, 0, 4),
                                 Text = Loc.GetString("particle-accelerator-control-menu-check-containment-field-warning"),
                                 HorizontalAlignment = HAlignment.Center,
-                                StyleClasses = {StyleBase.StyleClassLabelSubText},
+                                StyleClasses = {StyleClass.LabelSubText},
                             }
                         }
                     },
@@ -314,7 +315,7 @@ namespace Content.Client.ParticleAccelerator.UI
                             new Label
                             {
                                 Text = Loc.GetString("particle-accelerator-control-menu-foo-bar-baz"),
-                                StyleClasses = {StyleBase.StyleClassLabelSubText}
+                                StyleClasses = {StyleClass.LabelSubText}
                             }
                         }
                     },

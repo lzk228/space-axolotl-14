@@ -5,6 +5,6 @@
     xmlns:paper="clr-namespace:Content.Client.Paper.UI" HorizontalAlignment="Center" Margin="6">
 
     <paper:StampLabel Name="StampedByLabel" StyleClasses="LabelHeadingBigger"
-        FontColorOverride="{x:Static style:StyleNano.DangerousRedFore}"
+        FontColorOverride="#cf2f2f"
         Margin="12 6 12 6"/>
 </paper:StampWidget>

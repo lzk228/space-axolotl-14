@@ -1,23 +1,43 @@
-using Robust.Client.ResourceManagement;
+using System.Diagnostics;
+using Content.Client.Stylesheets.Redux;
+using Content.Client.Stylesheets.Redux.Stylesheets;
 using Robust.Client.UserInterface;
-using Robust.Shared.IoC;
 
 namespace Content.Client.Stylesheets
 {
     public sealed class StylesheetManager : IStylesheetManager
     {
+        [Dependency] private readonly ILogManager _logManager = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
-        [Dependency] private readonly IResourceCache _resourceCache = default!;
 
-        public Stylesheet SheetNano { get; private set; } = default!;
-        public Stylesheet SheetSpace { get; private set; } = default!;
+        public Stylesheet SheetNanotransen { get; private set; } = default!;
+        public Stylesheet SheetSystem { get; private set; } = default!;
+
+        public Dictionary<string, Stylesheet> Stylesheets { get; private set; } = default!;
 
         public void Initialize()
         {
-            SheetNano = new StyleNano(_resourceCache).Stylesheet;
-            SheetSpace = new StyleSpace(_resourceCache).Stylesheet;
+            var sawmill = _logManager.GetSawmill("style");
+            sawmill.Debug("Initializing Stylesheets...");
+            var sw = Stopwatch.StartNew();
 
-            _userInterfaceManager.Stylesheet = SheetNano;
+            Stylesheets = new Dictionary<string, Stylesheet>();
+
+            SheetNanotransen = Init("Nanotransen", new NanotrasenStylesheet(new PalettedStylesheet.NoConfig()));
+            SheetSystem = Init("Interface", new SystemStylesheet(new PalettedStylesheet.NoConfig()));
+
+            _userInterfaceManager.Stylesheet = SheetNanotransen;
+
+            sawmill.Debug($"Initialized {_styleRuleCount} style rules in {sw.Elapsed}");
+        }
+
+        private int _styleRuleCount;
+
+        public Stylesheet Init(string name, BaseStylesheet baseSheet)
+        {
+            Stylesheets.Add(name, baseSheet.Stylesheet);
+            _styleRuleCount += baseSheet.Stylesheet.Rules.Count;
+            return baseSheet.Stylesheet;
         }
     }
 }
