@@ -125,7 +125,9 @@ namespace Content.Shared.Roles
                         playtime += otherTime;
                     }
 
-                    var deptDiff = deptRequirement.Time.TotalMinutes - playtime.TotalMinutes;
+                    var deptDiffSpan = deptRequirement.Time - playtime;
+                    var deptDiff = deptDiffSpan.TotalMinutes;
+                    var formattedDeptDiff = deptDiffSpan.ToString(Loc.GetString("role-timer-time-format"));
 
                     if (!deptRequirement.Inverted)
                     {
@@ -134,7 +136,7 @@ namespace Content.Shared.Roles
 
                         reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                             "role-timer-department-insufficient",
-                            ("time", Math.Ceiling(deptDiff)),
+                            ("time", formattedDeptDiff),
                             ("department", Loc.GetString(deptRequirement.Department)),
                             ("departmentColor", department.Color.ToHex())));
                         return false;
@@ -145,7 +147,7 @@ namespace Content.Shared.Roles
                         {
                             reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                                 "role-timer-department-too-high",
-                                ("time", -deptDiff),
+                                ("time", formattedDeptDiff),
                                 ("department", Loc.GetString(deptRequirement.Department)),
                                 ("departmentColor", department.Color.ToHex())));
                             return false;
@@ -156,7 +158,9 @@ namespace Content.Shared.Roles
 
                 case OverallPlaytimeRequirement overallRequirement:
                     var overallTime = playTimes.GetValueOrDefault(PlayTimeTrackingShared.TrackerOverall);
-                    var overallDiff = overallRequirement.Time.TotalMinutes - overallTime.TotalMinutes;
+                    var overallDiffSpan = overallRequirement.Time - overallTime;
+                    var overallDiff = overallDiffSpan.TotalMinutes;
+                    var formattedOverallDiff = overallDiffSpan.ToString(Loc.GetString("role-timer-time-format"));
 
                     if (!overallRequirement.Inverted)
                     {
@@ -165,14 +169,16 @@ namespace Content.Shared.Roles
 
                         reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                               "role-timer-overall-insufficient",
-                              ("time", Math.Ceiling(overallDiff))));
+                              ("time", formattedOverallDiff)));
                         return false;
                     }
                     else
                     {
                         if (overallDiff <= 0 || overallTime >= overallRequirement.Time)
                         {
-                            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-overall-too-high", ("time", -overallDiff)));
+                            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+                                "role-timer-overall-too-high",
+                                ("time", formattedOverallDiff)));
                             return false;
                         }
 
@@ -183,7 +189,9 @@ namespace Content.Shared.Roles
                     proto = roleRequirement.Role;
 
                     playTimes.TryGetValue(proto, out var roleTime);
-                    var roleDiff = roleRequirement.Time.TotalMinutes - roleTime.TotalMinutes;
+                    var roleDiffSpan = roleRequirement.Time - roleTime;
+                    var roleDiff = roleDiffSpan.TotalMinutes;
+                    var formattedRoleDiff = roleDiffSpan.ToString(Loc.GetString("role-timer-time-format"));
                     var departmentColor = Color.Yellow;
 
                     if (entManager.EntitySysManager.TryGetEntitySystem(out SharedJobSystem? jobSystem))
@@ -201,7 +209,7 @@ namespace Content.Shared.Roles
 
                         reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                             "role-timer-role-insufficient",
-                            ("time", Math.Ceiling(roleDiff)),
+                            ("time", formattedRoleDiff),
                             ("job", Loc.GetString(proto)),
                             ("departmentColor", departmentColor.ToHex())));
                         return false;
@@ -212,7 +220,7 @@ namespace Content.Shared.Roles
                         {
                             reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                                 "role-timer-role-too-high",
-                                ("time", -roleDiff),
+                                ("time", formattedRoleDiff),
                                 ("job", Loc.GetString(proto)),
                                 ("departmentColor", departmentColor.ToHex())));
                             return false;
