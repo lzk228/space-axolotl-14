@@ -9,6 +9,7 @@ using JetBrains.Annotations;
 using Robust.Shared.Console;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 
 namespace Content.Server.GameTicking;
 
@@ -149,6 +150,16 @@ public sealed partial class GameTicker
         {
             _allPreviousGameRules.Add((currentTime, id));
         }
+
+        if (ruleData.FalseActivationProb != 0f)
+        {
+            if (_robustRandom.Prob(ruleData.FalseActivationProb))
+            {
+                _adminLogger.Add(LogType.EventStarted, LogImpact.High, $"Event fake started: {ToPrettyString(ruleEntity)}");
+                EndGameRule(ruleEntity, ruleData);
+                return false;
+            }
+	    }
 
         _sawmill.Info($"Started game rule {ToPrettyString(ruleEntity)}");
         _adminLogger.Add(LogType.EventStarted, $"Started game rule {ToPrettyString(ruleEntity)}");

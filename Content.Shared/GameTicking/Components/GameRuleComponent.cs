@@ -16,6 +16,12 @@ public sealed partial class GameRuleComponent : Component
     /// </summary>
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     public TimeSpan ActivatedAt;
+    
+    /// <summary>
+    /// A floating indicator of how often an event can be falsely triggered
+    /// </summary>
+    [DataField]
+    public float FalseActivationProb = 0f;
 
     /// <summary>
     /// The minimum amount of players needed for this game rule.
