@@ -42,6 +42,9 @@ namespace Content.Server.Database
         public DbSet<AdminMessage> AdminMessages { get; set; } = null!;
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
+        public DbSet<AhelpExchange> AhelpExchanges { get; set; } = null!;
+        public DbSet<AhelpMessage> AhelpMessages { get; set; } = null!;
+        public DbSet<AhelpParticipant> AhelpParticipants { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -203,6 +206,47 @@ namespace Content.Server.Database
             // SetNull is necessary for created by/edited by-s here,
             // so you can safely delete admins (GDPR right to erasure) while keeping the notes intact
 
+            // Ahelp Logging configuration
+            modelBuilder.Entity<AhelpExchange>(entity =>
+            {
+                entity.HasKey(e => e.AhelpId);
+
+                entity.HasIndex(e => e.AhelpRound);
+
+                entity.HasIndex(e => e.AhelpTarget);
+
+                entity.HasMany(e => e.AhelpMessages)
+                    .WithOne(e => e.AhelpExchange)
+                    .HasForeignKey(e => e.AhelpId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasMany(e => e.AhelpParticipants)
+                    .WithOne(e => e.AhelpExchange)
+                    .HasForeignKey(e => e.AhelpId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<AhelpMessage>(entity =>
+            {
+                entity.HasKey(e => new { e.AhelpId, e.Id });
+
+                entity.HasIndex(e => e.SentAt);
+
+                entity.HasIndex(e => e.Sender);
+
+                entity.Property(e => e.Message)
+                    .IsRequired();
+            });
+
+            modelBuilder.Entity<AhelpParticipant>(entity =>
+            {
+                entity.HasKey(e => e.ParticipantId);
+
+                entity.HasIndex(e => e.PlayerId);
+
+                entity.HasIndex(e => e.AhelpId);
+            });
+
             modelBuilder.Entity<AdminNote>()
                 .HasOne(note => note.Player)
                 .WithMany(player => player.AdminNotesReceived)
@@ -326,6 +370,8 @@ namespace Content.Server.Database
                 .HasForeignKey(w => w.PlayerUserId)
                 .HasPrincipalKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+
         }
 
         public virtual IQueryable<AdminLog> SearchLogs(IQueryable<AdminLog> query, string searchText)
@@ -652,6 +698,73 @@ namespace Content.Server.Database
         [ForeignKey("RoundId,LogId")] public AdminLog Log { get; set; } = default!;
     }
 
+    //Ahelp Logging
+    public class AhelpExchange
+    {
+        [Key]
+        public int AhelpId { get; set; }
+
+        [Required] public int AhelpRound { get; set; }
+
+        [Required]
+        [ForeignKey("Player")]
+        public int AhelpTarget { get; set; }
+
+        public ICollection<AhelpMessage> AhelpMessages { get; set; } = new List<AhelpMessage>();
+        public ICollection<AhelpParticipant> AhelpParticipants { get; set; } = new List<AhelpParticipant>();
+    }
+
+    public class AhelpMessage
+    {
+        [Key]
+        [ForeignKey("AhelpExchange")]
+        public int AhelpId { get; set; }
+
+        [Key]
+        public int Id { get; set; }
+
+        [Required] public DateTime SentAt { get; set; }
+
+        [Required] public RoundStatus RoundStatus { get; set; }
+
+        [Required]
+        [ForeignKey("Player")]
+        public int Sender { get; set; }
+
+        public Player Player { get; set; } = null!;
+
+        public int SenderEntity { get; set; }
+        public bool IsAdminned { get; set; }
+        public bool TargetOnline { get; set; }
+        public string Message { get; set; } = null!;
+
+        public AhelpExchange AhelpExchange { get; set; } = null!;
+    }
+
+    public class AhelpParticipant
+    {
+        [Key]
+        public int ParticipantId { get; set; }
+
+        [Required]
+        [ForeignKey("AhelpExchange")]
+        public int AhelpId { get; set; }
+
+        [Required]
+        [ForeignKey("Player")]
+        public int PlayerId { get; set; }
+
+        public AhelpExchange AhelpExchange { get; set; } = null!;
+        public Player Player { get; set; } = null!;
+    }
+
+    public enum RoundStatus
+    {
+        Lobby,
+        InRound,
+        PostRound
+    }
+
     // Used by SS14.Admin
     public interface IBanCommon<TUnban> where TUnban : IUnbanCommon
     {
@@ -903,7 +1016,7 @@ namespace Content.Server.Database
         Panic = 3,
         /*
          * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
-         * 
+         *
          * If baby jail is removed, please reserve this value for as long as can reasonably be done to prevent causing ambiguity in connection denial reasons.
          * Reservation by commenting out the value is likely sufficient for this purpose, but may impact projects which depend on SS14 like SS14.Admin.
          */
