@@ -238,14 +238,8 @@ namespace Content.Server.Database
                     .IsRequired();
             });
 
-            modelBuilder.Entity<AhelpParticipant>(entity =>
-            {
-                entity.HasKey(e => e.ParticipantId);
-
-                entity.HasIndex(e => e.PlayerId);
-
-                entity.HasIndex(e => e.AhelpId);
-            });
+            modelBuilder.Entity<AhelpParticipant>()
+                .HasKey(ap => new { ap.AhelpId, ap.PlayerId });
 
             modelBuilder.Entity<AdminNote>()
                 .HasOne(note => note.Player)
@@ -708,7 +702,7 @@ namespace Content.Server.Database
 
         [Required]
         [ForeignKey("Player")]
-        public int AhelpTarget { get; set; }
+        public Guid AhelpTarget { get; set; }
 
         public ICollection<AhelpMessage> AhelpMessages { get; set; } = new List<AhelpMessage>();
         public ICollection<AhelpParticipant> AhelpParticipants { get; set; } = new List<AhelpParticipant>();
@@ -725,11 +719,11 @@ namespace Content.Server.Database
 
         [Required] public DateTime SentAt { get; set; }
 
-        [Required] public RoundStatus RoundStatus { get; set; }
+        [Required] public string? RoundStatus { get; set; }
 
         [Required]
         [ForeignKey("Player")]
-        public int Sender { get; set; }
+        public Guid Sender { get; set; }
 
         public Player Player { get; set; } = null!;
 
@@ -737,15 +731,13 @@ namespace Content.Server.Database
         public bool IsAdminned { get; set; }
         public bool TargetOnline { get; set; }
         public string Message { get; set; } = null!;
+        public DateTime TimeSent { get; set; }
 
         public AhelpExchange AhelpExchange { get; set; } = null!;
     }
 
     public class AhelpParticipant
     {
-        [Key]
-        public int ParticipantId { get; set; }
-
         [Required]
         [ForeignKey("AhelpExchange")]
         public int AhelpId { get; set; }
@@ -756,13 +748,6 @@ namespace Content.Server.Database
 
         public AhelpExchange AhelpExchange { get; set; } = null!;
         public Player Player { get; set; } = null!;
-    }
-
-    public enum RoundStatus
-    {
-        Lobby,
-        InRound,
-        PostRound
     }
 
     // Used by SS14.Admin
