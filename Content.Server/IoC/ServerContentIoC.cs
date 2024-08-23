@@ -68,6 +68,7 @@ namespace Content.Server.IoC
             IoCManager.Register<JobWhitelistManager>();
             IoCManager.Register<PlayerRateLimitManager>();
             IoCManager.Register<MappingManager>();
+            IoCManager.Register<AhelpLogging, AhelpLogging>();
         }
     }
 }

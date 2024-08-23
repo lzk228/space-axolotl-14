@@ -609,7 +609,7 @@ namespace Content.Server.Administration.Systems
                 sender: message.TrueSender,
                 senderEntity: Convert.ToInt32(senderSession.AttachedEntity.ToString()),
                 isAdminned: senderAdmin != null,
-                targetOnline: true, // For test, you may adjust based on actual logic
+                targetOnline: true, //to implement
                 message: message.Text,
                 roundStatus: _gameTicker.RunLevel switch
                 {
@@ -617,7 +617,7 @@ namespace Content.Server.Administration.Systems
                     GameRunLevel.InRound => "InRound",
                     GameRunLevel.PostRound => "PostRound",
                 },
-                timeSent: DateTime.Now
+                timeSent: DateTime.UtcNow
             );
 
             string adminPrefixWebhook = "";
