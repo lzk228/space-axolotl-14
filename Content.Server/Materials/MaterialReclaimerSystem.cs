@@ -1,4 +1,3 @@
-using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.GameTicking;
 using Content.Server.Popups;
@@ -7,7 +6,6 @@ using Content.Server.Stack;
 using Content.Server.Wires;
 using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -20,8 +18,12 @@ using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using System.Linq;
 using Content.Server.Administration.Logs;
+using Content.Shared.Chemistry.Components.Solutions;
+using Content.Shared.Chemistry.Reagent;
+using Content.Shared.Chemistry.Systems;
 using Content.Server.Repairable;
 using Content.Shared.Database;
+using Content.Shared.FixedPoint;
 using Content.Shared.Destructible;
 using Content.Shared.Emag.Components;
 using Robust.Shared.Prototypes;
@@ -37,7 +39,7 @@ public sealed class MaterialReclaimerSystem : SharedMaterialReclaimerSystem
     [Dependency] private readonly MaterialStorageSystem _materialStorage = default!;
     [Dependency] private readonly OpenableSystem _openable = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
+    [Dependency] private readonly SharedSolutionSystem _solutionSystem = default!;
     [Dependency] private readonly SharedBodySystem _body = default!; //bobby
     [Dependency] private readonly PuddleSystem _puddle = default!;
     [Dependency] private readonly StackSystem _stack = default!;
@@ -58,6 +60,10 @@ public sealed class MaterialReclaimerSystem : SharedMaterialReclaimerSystem
         SubscribeLocalEvent<MaterialReclaimerComponent, BreakageEventArgs>(OnBreakage);
         SubscribeLocalEvent<MaterialReclaimerComponent, RepairedEvent>(OnRepaired);
     }
+    private void OnStartup(Entity<MaterialReclaimerComponent> entity, ref ComponentStartup args)
+    {
+        _solutionSystem.TryEnsureSolution(entity.Owner, entity.Comp.SolutionContainerId, out _);
+    }
 
     private void OnPowerChanged(Entity<MaterialReclaimerComponent> entity, ref PowerChangedEvent args)
     {
@@ -72,10 +78,12 @@ public sealed class MaterialReclaimerSystem : SharedMaterialReclaimerSystem
             return;
 
         // if we're trying to get a solution out of the reclaimer, don't destroy it
-        if (_solutionContainer.TryGetSolution(entity.Owner, entity.Comp.SolutionContainerId, out _, out var outputSolution) && outputSolution.Contents.Any())
+        if (_solutionSystem.TryGetSolution(entity.Owner, entity.Comp.SolutionContainerId,  out var outputSolution)
+            && outputSolution.Comp.Volume > 0)
         {
-            if (TryComp<SolutionContainerManagerComponent>(args.Used, out var managerComponent) &&
-                _solutionContainer.EnumerateSolutions((args.Used, managerComponent)).Any(s => s.Solution.Comp.Solution.AvailableVolume > 0))
+            if (TryComp<SolutionHolderComponent>(args.Used, out var holderComp) &&
+                _solutionSystem.EnumerateSolutions((args.Used, holderComp)).Any(s =>
+                    s.Comp.AvailableVolume > 0))
             {
                 if (_openable.IsClosed(args.Used))
                     return;
@@ -244,31 +252,37 @@ public sealed class MaterialReclaimerSystem : SharedMaterialReclaimerSystem
     {
         if (!Resolve(reclaimer, ref reclaimerComponent, ref xform))
             return;
+        if (!_solutionSystem.TryGetSolution(reclaimer, reclaimerComponent.SolutionContainerId, out var outputSolution))
+            return;
 
         efficiency *= reclaimerComponent.Efficiency;
 
-        var totalChemicals = new Solution();
+        var compositionChems = new SolutionContents();
 
         if (Resolve(item, ref composition, false))
         {
             foreach (var (key, value) in composition.ChemicalComposition)
             {
-                // TODO use ReagentQuantity
-                totalChemicals.AddReagent(key, value * efficiency, false);
+                if (!_solutionSystem.TryGetReagentDef(key, out var reagentDef, null, true))
+                    continue;
+                compositionChems.Add((reagentDef, value * efficiency));
             }
         }
 
+        FixedPoint2 overflow = 0;
         // if the item we inserted has reagents, add it in.
-        if (_solutionContainer.TryGetDrainableSolution(item, out _, out var drainableSolution))
+        if (TryComp<SolutionHolderComponent>(item, out var solutionContainer))
         {
-            totalChemicals.AddSolution(drainableSolution, _prototype);
+            foreach (var solution in _solutionSystem.EnumerateSolutions((item, solutionContainer)))
+            {
+                _solutionSystem.TransferSolution(solution, outputSolution, solution.Comp.Volume, out overflow);
+            }
         }
 
-        if (!_solutionContainer.TryGetSolution(reclaimer, reclaimerComponent.SolutionContainerId, out var outputSolution) ||
-            !_solutionContainer.TryTransferSolution(outputSolution.Value, totalChemicals, totalChemicals.Volume) ||
-            totalChemicals.Volume > 0)
+        _solutionSystem.AddReagents(outputSolution, reagents: compositionChems);
+        if (outputSolution.Comp.Volume > 0)
         {
-            _puddle.TrySpillAt(reclaimer, totalChemicals, out _, sound, transformComponent: xform);
+            _puddle.TrySpillAt(reclaimer, outputSolution, out _, sound, transformComponent: xform);
         }
     }
 }
