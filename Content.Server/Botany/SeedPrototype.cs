@@ -254,6 +254,14 @@ public partial class SeedData
     [DataField("mutationPrototypes", customTypeSerializer: typeof(PrototypeIdListSerializer<SeedPrototype>))]
     public List<string> MutationPrototypes = new();
 
+    /// <summary>
+    /// The growth components used by this seed. 
+    /// </summary>
+    [DataField]
+    //TODO: should this be a ComponentRegistry?
+    public List<PlantGrowthComponent> GrowthComponents = new() { new WaterGrowthComponent() };
+    //public ComponentRegistry GrowthComponents = new();
+
     public SeedData Clone()
     {
         DebugTools.Assert(!Immutable, "There should be no need to clone an immutable seed.");

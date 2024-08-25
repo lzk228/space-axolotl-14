@@ -1,4 +1,3 @@
-using Content.Server.Atmos;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Botany.Components;
 using Content.Server.Chemistry.Containers.EntitySystems;
@@ -44,7 +43,7 @@ public sealed class PlantHolderSystem : EntitySystem
     [Dependency] private readonly TagSystem _tagSystem = default!;
     [Dependency] private readonly RandomHelperSystem _randomHelper = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-
+    
 
     public const float HydroponicsSpeedMultiplier = 1f;
     public const float HydroponicsConsumptionMultiplier = 2f;
@@ -178,6 +177,10 @@ public sealed class PlantHolderSystem : EntitySystem
                     component.Health = component.Seed.Endurance;
                 }
                 component.LastCycle = _gameTiming.CurTime;
+
+                //This is probably closer to the right way to do what I want: Add specific components to the entity on planting, remove when cleared.
+                //Probably requires a ComponentRegistry set up for the seed.
+                //EntityManager.AddComponents(uid, seed.GrowthComponents);
 
                 QueueDel(args.Used);
 
@@ -313,7 +316,7 @@ public sealed class PlantHolderSystem : EntitySystem
             var displayName = Loc.GetString(component.Seed.DisplayName);
             _popup.PopupCursor(Loc.GetString("plant-holder-component-take-sample-message",
                 ("seedName", displayName)), args.User);
-            
+
             DoScream(entity.Owner, component.Seed);
 
             if (_random.Prob(0.3f))
@@ -365,11 +368,6 @@ public sealed class PlantHolderSystem : EntitySystem
     private void OnInteractHand(Entity<PlantHolderComponent> entity, ref InteractHandEvent args)
     {
         DoHarvest(entity, args.User, entity.Comp);
-    }
-
-    public void WeedInvasion()
-    {
-        // TODO
     }
 
 
@@ -427,13 +425,6 @@ public sealed class PlantHolderSystem : EntitySystem
             component.Health = 0;
         }
 
-        // There's a chance for a weed explosion to happen if weeds take over.
-        // Plants that are themselves weeds (WeedTolerance > 8) are unaffected.
-        if (component.WeedLevel >= 10 && _random.Prob(0.1f))
-        {
-            if (component.Seed == null || component.WeedLevel >= component.Seed.WeedTolerance + 2)
-                WeedInvasion();
-        }
 
         // If we have no seed planted, or the plant is dead, stop processing here.
         if (component.Seed == null || component.Dead)
@@ -464,19 +455,24 @@ public sealed class PlantHolderSystem : EntitySystem
             component.UpdateSpriteAfterUpdate = true;
         }
 
+        //Process Growth
+        //NOTE: this now pulls all the growth components off of the entity.
+        if (component.Seed.GrowthComponents != null)
+        {
+            var growthComponents = component.Seed.GrowthComponents;
+            //var growthComponents = EntityManager.GetComponents<PlantGrowthComponent>(uid);
+            foreach (var c in growthComponents)
+            {
+                var e = new GrowEvent(c, component);
+                RaiseLocalEvent(uid, ref e); //NOTE: This might fire all systems off for this component, so each may need to check types to handle it.
+                //This can probably be improved once  the components are properly on an entity instead of Plantholder.Seed
+            }
+        }
+
         // Nutrient consumption.
         if (component.Seed.NutrientConsumption > 0 && component.NutritionLevel > 0 && _random.Prob(0.75f))
         {
             component.NutritionLevel -= MathF.Max(0f, component.Seed.NutrientConsumption * HydroponicsSpeedMultiplier);
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-
-        // Water consumption.
-        if (component.Seed.WaterConsumption > 0 && component.WaterLevel > 0 && _random.Prob(0.75f))
-        {
-            component.WaterLevel -= MathF.Max(0f,
-                component.Seed.WaterConsumption * HydroponicsConsumptionMultiplier * HydroponicsSpeedMultiplier);
             if (component.DrawWarnings)
                 component.UpdateSpriteAfterUpdate = true;
         }
