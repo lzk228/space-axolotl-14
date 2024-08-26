@@ -1,6 +1,7 @@
 using Content.Server.GameTicking;
 using Content.Server.Popups;
 using Content.Shared.Administration;
+using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Robust.Shared.Console;
 
@@ -10,6 +11,8 @@ namespace Content.Server.Ghost
     public sealed class GhostCommand : IConsoleCommand
     {
         [Dependency] private readonly IEntityManager _entities = default!;
+        [Dependency] private readonly GameTicker _ticker = default!;
+        [Dependency] private readonly SharedMindSystem _mind = default!;
 
         public string Command => "ghost";
         public string Description => Loc.GetString("ghost-command-description");
@@ -34,14 +37,20 @@ namespace Content.Server.Ghost
                 return;
             }
 
-            var minds = _entities.System<SharedMindSystem>();
-            if (!minds.TryGetMind(player, out var mindId, out var mind))
+            if (_ticker.PlayerGameStatuses.TryGetValue(player.UserId, out var status) &&
+                status != PlayerGameStatus.JoinedGame)
             {
-                mindId = minds.CreateMind(player.UserId);
+                shell.WriteLine(Loc.GetString("ghost-command-lobby"));
+                return;
+            }
+
+            if (!_mind.TryGetMind(player, out var mindId, out var mind))
+            {
+                mindId = _mind.CreateMind(player.UserId);
                 mind = _entities.GetComponent<MindComponent>(mindId);
             }
 
-            if (!_entities.System<GameTicker>().OnGhostAttempt(mindId, true, true, mind))
+            if (!_ticker.OnGhostAttempt(mindId, true, true, mind))
             {
                 shell.WriteLine(Loc.GetString("ghost-command-denied"));
             }
