@@ -3,7 +3,7 @@ using Robust.Shared.Random;
 
 namespace Content.Server.Botany.Systems
 {
-    public sealed class WaterGrowthSystem : EntitySystem
+    public sealed class WaterGrowthSystem : PlantGrowthSystem // EntitySystem?
     {
         [Dependency] private readonly IRobustRandom _random = default!;
         public override void Initialize()
@@ -26,6 +26,21 @@ namespace Content.Server.Botany.Systems
                     holder.Seed.WaterConsumption * PlantHolderSystem.HydroponicsConsumptionMultiplier * PlantHolderSystem.HydroponicsSpeedMultiplier);
                 if (holder.DrawWarnings)
                     holder.UpdateSpriteAfterUpdate = true;
+            }
+
+            var healthMod = _random.Next(1, 3) * PlantHolderSystem.HydroponicsSpeedMultiplier;
+            if (holder.SkipAging < 10)
+            {
+                // Make sure the plant is not thirsty.
+                if (holder.WaterLevel > 10)
+                {
+                    holder.Health += Convert.ToInt32(_random.Prob(0.35f)) * healthMod;
+                }
+                else
+                {
+                    AffectGrowth(-1, holder);
+                    holder.Health -= healthMod;
+                }
             }
         }
     }

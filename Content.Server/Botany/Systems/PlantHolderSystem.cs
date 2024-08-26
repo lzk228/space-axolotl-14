@@ -501,17 +501,6 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.Health -= healthMod;
             }
 
-            // Make sure the plant is not thirsty.
-            if (component.WaterLevel > 10)
-            {
-                component.Health += Convert.ToInt32(_random.Prob(0.35f)) * healthMod;
-            }
-            else
-            {
-                AffectGrowth(uid, -1, component);
-                component.Health -= healthMod;
-            }
-
             if (component.DrawWarnings)
                 component.UpdateSpriteAfterUpdate = true;
         }
