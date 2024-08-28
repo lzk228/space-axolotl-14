@@ -438,19 +438,6 @@ public sealed class PlantHolderSystem : EntitySystem
 
 
         var environment = _atmosphere.GetContainingMixture(uid, true, true) ?? GasMixture.SpaceGas;
-        // SeedPrototype pressure resistance.
-        var pressure = environment.Pressure;
-        if (pressure < component.Seed.LowPressureTolerance || pressure > component.Seed.HighPressureTolerance)
-        {
-            component.Health -= healthMod;
-            component.ImproperPressure = true;
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-        else
-        {
-            component.ImproperPressure = false;
-        }
 
         // SeedPrototype ideal temperature.
         if (MathF.Abs(environment.Temperature - component.Seed.IdealHeat) > component.Seed.HeatTolerance)
@@ -465,7 +452,6 @@ public sealed class PlantHolderSystem : EntitySystem
             component.ImproperHeat = false;
         }
 
-        
 
         // Toxin levels beyond the plant's tolerance cause damage.
         // They are, however, slowly reduced over time.

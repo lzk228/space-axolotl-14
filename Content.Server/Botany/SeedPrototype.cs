@@ -250,8 +250,6 @@ public partial class SeedData
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            LowPressureTolerance = LowPressureTolerance,
-            HighPressureTolerance = HighPressureTolerance,
             PestTolerance = PestTolerance,
             WeedTolerance = WeedTolerance,
 
@@ -308,8 +306,6 @@ public partial class SeedData
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            LowPressureTolerance = LowPressureTolerance,
-            HighPressureTolerance = HighPressureTolerance,
             PestTolerance = PestTolerance,
             WeedTolerance = WeedTolerance,
 
