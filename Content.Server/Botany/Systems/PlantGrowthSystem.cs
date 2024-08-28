@@ -4,13 +4,12 @@ namespace Content.Server.Botany.Systems
 {
     public abstract class PlantGrowthSystem : EntitySystem
     {
+        public TimeSpan nextUpdate = TimeSpan.Zero;
+        public TimeSpan updateDelay = TimeSpan.FromSeconds(15); //PlantHolder has a 15 second delay on cycles, but checks every 3 for sprite updates.
         public override void Initialize()
         {
             base.Initialize();
         }
-
-        //TODO: it is possible that I need a generic call here for OnGrow(), and it implements some setup that
-        //pass that along to the right system by the type of the component?
 
         public void AffectGrowth(int amount, PlantHolderComponent? component = null)
         {
@@ -33,7 +32,4 @@ namespace Content.Server.Botany.Systems
             }
         }
     }
-
-    [ByRefEvent]
-    public readonly record struct GrowEvent(PlantGrowthComponent component, PlantHolderComponent holder);
 }

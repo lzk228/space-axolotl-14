@@ -178,9 +178,8 @@ public sealed class PlantHolderSystem : EntitySystem
                 }
                 component.LastCycle = _gameTiming.CurTime;
 
-                //This is probably closer to the right way to do what I want: Add specific components to the entity on planting, remove when cleared.
-                //Probably requires a ComponentRegistry set up for the seed.
-                //EntityManager.AddComponents(uid, seed.GrowthComponents);
+                foreach(var g in seed.GrowthComponents)
+                    EntityManager.AddComponent(uid, g);
 
                 QueueDel(args.Used);
 
@@ -453,20 +452,6 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.Age += (int) (1 * HydroponicsSpeedMultiplier);
 
             component.UpdateSpriteAfterUpdate = true;
-        }
-
-        //Process Growth
-        //NOTE: this now pulls all the growth components off of the entity.
-        if (component.Seed.GrowthComponents != null)
-        {
-            var growthComponents = component.Seed.GrowthComponents;
-            //var growthComponents = EntityManager.GetComponents<PlantGrowthComponent>(uid);
-            foreach (var c in growthComponents)
-            {
-                var e = new GrowEvent(c, component);
-                RaiseLocalEvent(uid, ref e); //NOTE: This might fire all systems off for this component, so each may need to check types to handle it.
-                //This can probably be improved once  the components are properly on an entity instead of Plantholder.Seed
-            }
         }
 
         // Nutrient consumption.
@@ -804,6 +789,10 @@ public sealed class PlantHolderSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return;
+
+        if (component.Seed != null)
+            foreach (var g in component.Seed.GrowthComponents)
+                EntityManager.RemoveComponent(uid, g);
 
         component.YieldMod = 1;
         component.MutationMod = 1;
