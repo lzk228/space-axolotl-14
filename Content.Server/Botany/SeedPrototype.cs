@@ -112,11 +112,7 @@ public partial class SeedData
     [DataField("heatTolerance")] public float HeatTolerance = 10f;
     [DataField("idealLight")] public float IdealLight = 7f;
     [DataField("lightTolerance")] public float LightTolerance = 3f;
-    [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;
-
-    [DataField("lowPressureTolerance")] public float LowPressureTolerance = 81f;
-
-    [DataField("highPressureTolerance")] public float HighPressureTolerance = 121f;
+    [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;        
 
     [DataField("pestTolerance")] public float PestTolerance = 5f;
 
@@ -242,8 +238,6 @@ public partial class SeedData
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            LowPressureTolerance = LowPressureTolerance,
-            HighPressureTolerance = HighPressureTolerance,
             PestTolerance = PestTolerance,
             WeedTolerance = WeedTolerance,
 
@@ -300,8 +294,6 @@ public partial class SeedData
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            LowPressureTolerance = LowPressureTolerance,
-            HighPressureTolerance = HighPressureTolerance,
             PestTolerance = PestTolerance,
             WeedTolerance = WeedTolerance,
 
