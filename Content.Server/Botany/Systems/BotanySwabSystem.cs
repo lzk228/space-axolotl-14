@@ -4,6 +4,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Swab;
+using System.Linq;
 
 namespace Content.Server.Botany.Systems;
 
@@ -12,6 +13,7 @@ public sealed class BotanySwabSystem : EntitySystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly MutationSystem _mutationSystem = default!;
+    [Dependency] private readonly PlantGrowthSystem _growthSystem = default!;
 
     public override void Initialize()
     {
@@ -64,6 +66,9 @@ public sealed class BotanySwabSystem : EntitySystem
         {
             // Pick up pollen
             swab.SeedData = plant.Seed;
+            if (plant.Seed != null)
+                swab.components = plant.Seed.GrowthComponents;
+
             _popupSystem.PopupEntity(Loc.GetString("botany-swab-from"), args.Args.Target.Value, args.Args.User);
         }
         else
@@ -71,6 +76,17 @@ public sealed class BotanySwabSystem : EntitySystem
             var old = plant.Seed;
             if (old == null)
                 return;
+
+            for (int index = 0; index < old.GrowthComponents.Count(); index++)
+            {
+                var c1 = old.GrowthComponents[index];
+                foreach (var c2 in swab.components)
+                {
+                    if (c1.GetType() == c2.GetType())
+                        _growthSystem.Cross(ref c1, c2);
+                }
+            }
+
             plant.Seed = _mutationSystem.Cross(swab.SeedData, old); // Cross-pollenate
             swab.SeedData = old; // Transfer old plant pollen to swab
             _popupSystem.PopupEntity(Loc.GetString("botany-swab-to"), args.Args.Target.Value, args.Args.User);

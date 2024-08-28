@@ -1,3 +1,4 @@
+using Content.Server.Botany.Components;
 using System.Threading;
 
 namespace Content.Server.Botany
@@ -15,5 +16,8 @@ namespace Content.Server.Botany
         /// SeedData from the first plant that got swabbed.
         /// </summary>
         public SeedData? SeedData;
+
+        //data from first plant.
+        public List<PlantGrowthComponent> components;
     }
 }
