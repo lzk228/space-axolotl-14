@@ -518,28 +518,7 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        if (component.Age > component.Seed.Lifespan)
-        {
-            component.Health -= _random.Next(3, 5) * HydroponicsSpeedMultiplier;
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-        else if (component.Age < 0) // Revert back to seed packet!
-        {
-            var packetSeed = component.Seed;
-            if (packetSeed.Sentient)
-            {
-                if (!packetSeed.Unique) // clone if necessary before modifying the seed
-                    packetSeed = packetSeed.Clone();
-                packetSeed.Sentient = false; // remove Sentient to avoid ghost role spam
-            }
-            // will put it in the trays hands if it has any, please do not try doing this
-            _botany.SpawnSeedPacket(packetSeed, Transform(uid).Coordinates, uid);
-            RemovePlant(uid, component);
-            component.ForceUpdate = true;
-            Update(uid, component);
-            return;
-        }
+        
 
         CheckHealth(uid, component);
 
