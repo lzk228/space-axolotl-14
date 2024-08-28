@@ -105,8 +105,6 @@ public partial class SeedData
 
     [DataField("chemicals")] public Dictionary<string, SeedChemQuantity> Chemicals = new();
 
-    [DataField] public Dictionary<Gas, float> ExudeGasses = new();
-
     #endregion
 
     #region Tolerances
@@ -246,7 +244,6 @@ public partial class SeedData
             ProductPrototypes = new List<string>(ProductPrototypes),
             MutationPrototypes = new List<string>(MutationPrototypes),
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
-            ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
             IdealHeat = IdealHeat,
             HeatTolerance = HeatTolerance,
@@ -305,7 +302,6 @@ public partial class SeedData
             MutationPrototypes = new List<string>(other.MutationPrototypes),
 
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
-            ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
             IdealHeat = IdealHeat,
             HeatTolerance = HeatTolerance,
