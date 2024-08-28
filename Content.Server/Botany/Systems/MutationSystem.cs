@@ -62,9 +62,6 @@ public sealed class MutationSystem : EntitySystem
         MutateFloat(ref seed.Production           , 1f   , 10f , 5, totalbits, 2 * severity);
         MutateFloat(ref seed.Potency              , 30f  , 100f, 5, totalbits, 2 * severity);
 
-        // Kill the plant (30)
-        MutateBool(ref seed.Viable        , false, 30, totalbits, severity);
-
         // Fun (72)
         MutateBool(ref seed.Seedless      , true , 10, totalbits, severity);
         MutateBool(ref seed.Slip          , true , 10, totalbits, severity);
@@ -96,8 +93,6 @@ public sealed class MutationSystem : EntitySystem
 
         CrossChemicals(ref result.Chemicals, a.Chemicals);
 
-        //CrossFloat(ref result.NutrientConsumption, a.NutrientConsumption);
-        //CrossFloat(ref result.WaterConsumption, a.WaterConsumption);
         CrossFloat(ref result.IdealHeat, a.IdealHeat);
         CrossFloat(ref result.HeatTolerance, a.HeatTolerance);
         CrossFloat(ref result.IdealLight, a.IdealLight);
@@ -117,7 +112,6 @@ public sealed class MutationSystem : EntitySystem
 
         // we do not transfer Sentient to another plant to avoid ghost role spam
         CrossBool(ref result.Seedless, a.Seedless);
-        CrossBool(ref result.Viable, a.Viable);
         CrossBool(ref result.Slip, a.Slip);
         CrossBool(ref result.Ligneous, a.Ligneous);
         CrossBool(ref result.Bioluminescent, a.Bioluminescent);

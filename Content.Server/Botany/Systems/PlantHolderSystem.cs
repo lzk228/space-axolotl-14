@@ -446,12 +446,6 @@ public sealed class PlantHolderSystem : EntitySystem
 
         var healthMod = _random.Next(1, 3) * HydroponicsSpeedMultiplier;
 
-        // Make sure genetics are viable.
-        if (!component.Seed.Viable)
-        {
-            AffectGrowth(uid, -1, component);
-            component.Health -= 6 * healthMod;
-        }
 
         var environment = _atmosphere.GetContainingMixture(uid, true, true) ?? GasMixture.SpaceGas;
 

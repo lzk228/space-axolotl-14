@@ -23,36 +23,6 @@ public enum HarvestType : byte
     SelfHarvest
 }
 
-/*
-    public enum PlantSpread : byte
-    {
-        NoSpread,
-        Creepers,
-        Vines,
-    }
-
-    public enum PlantMutation : byte
-    {
-        NoMutation,
-        Mutable,
-        HighlyMutable,
-    }
-
-    public enum PlantCarnivorous : byte
-    {
-        NotCarnivorous,
-        EatPests,
-        EatLivingBeings,
-    }
-
-    public enum PlantJuicy : byte
-    {
-        NotJuicy,
-        Juicy,
-        Slippery,
-    }
-*/
-
 [DataDefinition]
 public partial struct SeedChemQuantity
 {
@@ -142,9 +112,6 @@ public partial class SeedData
 
     #region Tolerances
 
-    [DataField("nutrientConsumption")] public float NutrientConsumption = 0.75f;
-
-    [DataField("waterConsumption")] public float WaterConsumption = 0.5f;
     [DataField("idealHeat")] public float IdealHeat = 293f;
     [DataField("heatTolerance")] public float HeatTolerance = 10f;
     [DataField("idealLight")] public float IdealLight = 7f;
@@ -183,12 +150,6 @@ public partial class SeedData
     ///     mutations.
     /// </summary>
     [DataField("seedless")] public bool Seedless = false;
-
-    /// <summary>
-    ///     If false, rapidly decrease health while growing. Used to kill off
-    ///     plants with "bad" mutations.
-    /// </summary>
-    [DataField("viable")] public bool Viable = true;
 
     /// <summary>
     ///     If true, fruit slips players.
@@ -282,8 +243,6 @@ public partial class SeedData
             ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
-            NutrientConsumption = NutrientConsumption,
-            WaterConsumption = WaterConsumption,
             IdealHeat = IdealHeat,
             HeatTolerance = HeatTolerance,
             IdealLight = IdealLight,
@@ -304,7 +263,6 @@ public partial class SeedData
             Potency = Potency,
 
             Seedless = Seedless,
-            Viable = Viable,
             Slip = Slip,
             Sentient = Sentient,
             Ligneous = Ligneous,
@@ -345,8 +303,6 @@ public partial class SeedData
             ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
-            NutrientConsumption = NutrientConsumption,
-            WaterConsumption = WaterConsumption,
             IdealHeat = IdealHeat,
             HeatTolerance = HeatTolerance,
             IdealLight = IdealLight,
@@ -367,7 +323,6 @@ public partial class SeedData
             Potency = Potency,
 
             Seedless = Seedless,
-            Viable = Viable,
             Slip = Slip,
             Sentient = Sentient,
             Ligneous = Ligneous,
