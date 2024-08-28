@@ -477,32 +477,7 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        
-
         CheckHealth(uid, component);
-        
-
-        // If enough time has passed since the plant was harvested, we're ready to harvest again!
-        if (!component.Dead && component.Seed.ProductPrototypes.Count > 0)
-        {
-            if (component.Age > component.Seed.Production)
-            {
-                if (component.Age - component.LastProduce > component.Seed.Production && !component.Harvest)
-                {
-                    component.Harvest = true;
-                    component.LastProduce = component.Age;
-                }
-            }
-            else
-            {
-                if (component.Harvest)
-                {
-                    component.Harvest = false;
-                    component.LastProduce = component.Age;
-                }
-            }
-        }
-
         CheckLevelSanity(uid, component);
 
         if (component.UpdateSpriteAfterUpdate)

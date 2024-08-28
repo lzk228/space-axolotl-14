@@ -67,6 +67,27 @@ namespace Content.Server.Botany.Systems
                 holder.ForceUpdate = true;
                 _plantHolderSystem.Update(uid, holder);
             }
+
+            // If enough time has passed since the plant was harvested, we're ready to harvest again!
+            if (holder.Seed.ProductPrototypes.Count > 0)
+            {
+                if (holder.Age > holder.Seed.Production)
+                {
+                    if (holder.Age - holder.LastProduce > holder.Seed.Production && !holder.Harvest)
+                    {
+                        holder.Harvest = true;
+                        holder.LastProduce = holder.Age;
+                    }
+                }
+                else
+                {
+                    if (holder.Harvest)
+                    {
+                        holder.Harvest = false;
+                        holder.LastProduce = holder.Age;
+                    }
+                }
+            }
         }
     }
 }
