@@ -4,6 +4,8 @@ using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Swab;
+using Robust.Shared.Random;
+using Robust.Shared.Serialization.Manager;
 using System.Linq;
 
 namespace Content.Server.Botany.Systems;
@@ -13,7 +15,8 @@ public sealed class BotanySwabSystem : EntitySystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly MutationSystem _mutationSystem = default!;
-    [Dependency] private readonly PlantGrowthSystem _growthSystem = default!;
+    [Dependency] private readonly ISerializationManager _serializationManager = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
 
     public override void Initialize()
     {
@@ -67,7 +70,7 @@ public sealed class BotanySwabSystem : EntitySystem
             // Pick up pollen
             swab.SeedData = plant.Seed;
             if (plant.Seed != null)
-                swab.components = plant.Seed.GrowthComponents;
+                swab.components = plant.Seed.GrowthComponents.ToList(); //copy list in case plant changes after sampling
 
             _popupSystem.PopupEntity(Loc.GetString("botany-swab-from"), args.Args.Target.Value, args.Args.User);
         }
@@ -83,7 +86,10 @@ public sealed class BotanySwabSystem : EntitySystem
                 foreach (var c2 in swab.components)
                 {
                     if (c1.GetType() == c2.GetType())
-                        _growthSystem.Cross(ref c1, c2);
+                    {
+                        if (_random.Prob(0.5f))
+                            _serializationManager.CopyTo(c2, ref c1, notNullableOverride: true);
+                    }
                 }
             }
 

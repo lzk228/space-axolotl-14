@@ -37,7 +37,7 @@ namespace Content.Server.Botany.Systems
             if (component.WaterConsumption > 0 && holder.WaterLevel > 0 && _random.Prob(0.75f))
             {
                 holder.WaterLevel -= MathF.Max(0f,
-                    holder.Seed.WaterConsumption * HydroponicsConsumptionMultiplier * HydroponicsSpeedMultiplier);
+                    component.WaterConsumption * HydroponicsConsumptionMultiplier * HydroponicsSpeedMultiplier);
                 if (holder.DrawWarnings)
                     holder.UpdateSpriteAfterUpdate = true;
             }
