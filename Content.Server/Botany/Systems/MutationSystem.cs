@@ -84,7 +84,6 @@ public sealed class MutationSystem : EntitySystem
         CrossBool(ref result.CanScream, a.CanScream);
 
         CrossGasses(ref result.ExudeGasses, a.ExudeGasses);
-        CrossGasses(ref result.ConsumeGasses, a.ConsumeGasses);
 
         // LINQ Explanation
         // For the list of mutation effects on both plants, use a 50% chance to pick each one.

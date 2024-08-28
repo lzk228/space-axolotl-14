@@ -103,9 +103,7 @@ public partial class SeedData
     [DataField("productPrototypes", customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
     public List<string> ProductPrototypes = new();
 
-    [DataField] public Dictionary<string, SeedChemQuantity> Chemicals = new();
-
-    [DataField] public Dictionary<Gas, float> ConsumeGasses = new();
+    [DataField("chemicals")] public Dictionary<string, SeedChemQuantity> Chemicals = new();
 
     [DataField] public Dictionary<Gas, float> ExudeGasses = new();
 
@@ -248,7 +246,6 @@ public partial class SeedData
             ProductPrototypes = new List<string>(ProductPrototypes),
             MutationPrototypes = new List<string>(MutationPrototypes),
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
-            ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
             IdealHeat = IdealHeat,
@@ -308,7 +305,6 @@ public partial class SeedData
             MutationPrototypes = new List<string>(other.MutationPrototypes),
 
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
-            ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
             IdealHeat = IdealHeat,

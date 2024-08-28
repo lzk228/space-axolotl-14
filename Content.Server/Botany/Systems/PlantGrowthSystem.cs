@@ -1,12 +1,13 @@
 using Content.Server.Botany.Components;
 using Robust.Shared.Random;
-using Robust.Shared.Serialization.Manager;
+using Robust.Shared.Timing;
 
 namespace Content.Server.Botany.Systems
 {
     public abstract class PlantGrowthSystem : EntitySystem
     {
-        [Dependency] private readonly IRobustRandom _random = default!;
+        [Dependency] protected readonly IRobustRandom _random = default!;
+        [Dependency] protected readonly IGameTiming _gameTiming = default!;
 
         public TimeSpan nextUpdate = TimeSpan.Zero;
         public TimeSpan updateDelay = TimeSpan.FromSeconds(15); //PlantHolder has a 15 second delay on cycles, but checks every 3 for sprite updates.

@@ -6,8 +6,6 @@ namespace Content.Server.Botany.Systems
 {
     public sealed class NutrientGrowthSystem : PlantGrowthSystem
     {
-        [Dependency] private readonly IRobustRandom _random = default!;
-        [Dependency] private readonly IGameTiming _gameTiming = default!;
         public override void Initialize()
         {
             base.Initialize();
