@@ -1,24 +1,38 @@
 using Content.Server.Botany.Components;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 
 namespace Content.Server.Botany.Systems
 {
-    public sealed class WaterGrowthSystem : PlantGrowthSystem // EntitySystem?
+    public sealed class WaterGrowthSystem : PlantGrowthSystem
     {
         [Dependency] private readonly IRobustRandom _random = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<PlantHolderComponent, GrowEvent>(OnGrow);
         }
 
-        public void OnGrow(Entity<PlantHolderComponent> ent, ref GrowEvent args)
+        public override void Update(float frameTime)
         {
-            if (args.holder.Seed == null || args.component is not WaterGrowthComponent)
+            if (nextUpdate > _gameTiming.CurTime)
                 return;
 
-            var holder = args.holder;
-            var component = (WaterGrowthComponent)args.component;
+            var query = EntityQueryEnumerator<WaterGrowthComponent>();
+            while (query.MoveNext(out var uid, out var waterGrowthComponent))
+            {
+                Update(uid, waterGrowthComponent);
+            }
+            nextUpdate = _gameTiming.CurTime + updateDelay;
+        }
+
+        public void Update(EntityUid uid, WaterGrowthComponent component)
+        {
+            PlantHolderComponent? holder = null;
+            Resolve<PlantHolderComponent>(uid, ref holder);
+
+            if (holder == null || holder.Seed == null)
+                return;
 
             if (component.WaterConsumption > 0 && holder.WaterLevel > 0 && _random.Prob(0.75f))
             {
