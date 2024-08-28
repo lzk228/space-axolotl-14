@@ -475,16 +475,7 @@ public sealed class PlantHolderSystem : EntitySystem
             component.ImproperHeat = false;
         }
 
-        // Gas production.
-        var exudeCount = component.Seed.ExudeGasses.Count;
-        if (exudeCount > 0)
-        {
-            foreach (var (gas, amount) in component.Seed.ExudeGasses)
-            {
-                environment.AdjustMoles(gas,
-                    MathF.Max(1f, MathF.Round(amount * MathF.Round(component.Seed.Potency) / exudeCount)));
-            }
-        }
+        
 
         // Toxin levels beyond the plant's tolerance cause damage.
         // They are, however, slowly reduced over time.
