@@ -1787,6 +1787,7 @@
       waterConsumption: 0.5
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
+    - !type:AgeGrowthComponent
 
 - type: seed
   id: worldPea

@@ -434,17 +434,6 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        // Advance plant age here.
-        if (component.SkipAging > 0)
-            component.SkipAging--;
-        else
-        {
-            if (_random.Prob(0.8f))
-                component.Age += (int)(1 * HydroponicsSpeedMultiplier);
-
-            component.UpdateSpriteAfterUpdate = true;
-        }
-
         var healthMod = _random.Next(1, 3) * HydroponicsSpeedMultiplier;
 
         // Make sure genetics are viable.

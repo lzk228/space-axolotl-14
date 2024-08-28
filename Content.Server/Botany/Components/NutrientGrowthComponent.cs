@@ -1,5 +1,3 @@
-using Content.Server.Botany.Systems;
-
 namespace Content.Server.Botany.Components
 {
     [RegisterComponent]
