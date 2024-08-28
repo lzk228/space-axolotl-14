@@ -61,8 +61,6 @@ public sealed class MutationSystem : EntitySystem
 
         CrossChemicals(ref result.Chemicals, a.Chemicals);
 
-        CrossFloat(ref result.IdealHeat, a.IdealHeat);
-        CrossFloat(ref result.HeatTolerance, a.HeatTolerance);
         CrossFloat(ref result.IdealLight, a.IdealLight);
         CrossFloat(ref result.LightTolerance, a.LightTolerance);
         CrossFloat(ref result.ToxinsTolerance, a.ToxinsTolerance);

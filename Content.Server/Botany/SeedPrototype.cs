@@ -245,8 +245,6 @@ public partial class SeedData
             MutationPrototypes = new List<string>(MutationPrototypes),
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
 
-            IdealHeat = IdealHeat,
-            HeatTolerance = HeatTolerance,
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
@@ -301,8 +299,6 @@ public partial class SeedData
 
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
 
-            IdealHeat = IdealHeat,
-            HeatTolerance = HeatTolerance,
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
