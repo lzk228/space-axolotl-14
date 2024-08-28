@@ -1,5 +1,4 @@
 using Content.Server.Botany.Components;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization.Manager;
 
@@ -8,8 +7,6 @@ namespace Content.Server.Botany.Systems
     public abstract class PlantGrowthSystem : EntitySystem
     {
         [Dependency] private readonly IRobustRandom _random = default!;
-        [Dependency] private readonly ISerializationManager _serializationManager = default!;
-
 
         public TimeSpan nextUpdate = TimeSpan.Zero;
         public TimeSpan updateDelay = TimeSpan.FromSeconds(15); //PlantHolder has a 15 second delay on cycles, but checks every 3 for sprite updates.
@@ -20,12 +17,6 @@ namespace Content.Server.Botany.Systems
         public override void Initialize()
         {
             base.Initialize();
-        }
-
-        public void Cross(ref PlantGrowthComponent main, PlantGrowthComponent other)
-        {
-            if (_random.Prob(0.5f))
-                _serializationManager.CopyTo(other, ref main, notNullableOverride: true);
         }
 
         public void AffectGrowth(int amount, PlantHolderComponent? component = null)

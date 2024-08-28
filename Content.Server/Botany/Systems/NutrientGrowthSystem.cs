@@ -37,7 +37,7 @@ namespace Content.Server.Botany.Systems
             if (component.NutrientConsumption > 0 && holder.NutritionLevel > 0 && _random.Prob(0.75f))
             {
                 holder.NutritionLevel -= MathF.Max(0f,
-                    holder.Seed.NutrientConsumption * HydroponicsConsumptionMultiplier * HydroponicsSpeedMultiplier);
+                    component.NutrientConsumption * HydroponicsConsumptionMultiplier * HydroponicsSpeedMultiplier);
                 if (holder.DrawWarnings)
                     holder.UpdateSpriteAfterUpdate = true;
             }
