@@ -6,6 +6,10 @@ namespace Content.Server.Botany.Systems
     {
         public TimeSpan nextUpdate = TimeSpan.Zero;
         public TimeSpan updateDelay = TimeSpan.FromSeconds(15); //PlantHolder has a 15 second delay on cycles, but checks every 3 for sprite updates.
+
+        public const float HydroponicsSpeedMultiplier = 1f;
+        public const float HydroponicsConsumptionMultiplier = 2f;
+
         public override void Initialize()
         {
             base.Initialize();

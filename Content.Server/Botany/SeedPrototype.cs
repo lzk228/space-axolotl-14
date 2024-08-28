@@ -247,9 +247,10 @@ public partial class SeedData
     /// The growth components used by this seed. 
     /// </summary>
     [DataField]
-    //TODO: should this be a ComponentRegistry?
-    public List<PlantGrowthComponent> GrowthComponents = new() { new WaterGrowthComponent() };
-    //public ComponentRegistry GrowthComponents = new();
+    public List<PlantGrowthComponent> GrowthComponents = new() { 
+        new WaterGrowthComponent(),
+        new NutrientGrowthComponent(),
+        };
 
     public SeedData Clone()
     {

@@ -44,6 +44,7 @@ public sealed class PlantHolderSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     
 
+    //TODO: remove these. These will be part of PlantGrowth instead of PlantHolder
     public const float HydroponicsSpeedMultiplier = 1f;
     public const float HydroponicsConsumptionMultiplier = 2f;
 
@@ -444,14 +445,6 @@ public sealed class PlantHolderSystem : EntitySystem
             component.UpdateSpriteAfterUpdate = true;
         }
 
-        // Nutrient consumption.
-        if (component.Seed.NutrientConsumption > 0 && component.NutritionLevel > 0 && _random.Prob(0.75f))
-        {
-            component.NutritionLevel -= MathF.Max(0f, component.Seed.NutrientConsumption * HydroponicsSpeedMultiplier);
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-
         var healthMod = _random.Next(1, 3) * HydroponicsSpeedMultiplier;
 
         // Make sure genetics are viable.
@@ -459,25 +452,6 @@ public sealed class PlantHolderSystem : EntitySystem
         {
             AffectGrowth(uid, -1, component);
             component.Health -= 6 * healthMod;
-        }
-
-        // Prevents the plant from aging when lacking resources.
-        // Limits the effect on aging so that when resources are added, the plant starts growing in a reasonable amount of time.
-        if (component.SkipAging < 10)
-        {
-            // Make sure the plant is not starving.
-            if (component.NutritionLevel > 5)
-            {
-                component.Health += Convert.ToInt32(_random.Prob(0.35f)) * healthMod;
-            }
-            else
-            {
-                AffectGrowth(uid, -1, component);
-                component.Health -= healthMod;
-            }
-
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
         }
 
         var environment = _atmosphere.GetContainingMixture(uid, true, true) ?? GasMixture.SpaceGas;
