@@ -82,29 +82,33 @@
   - type: Hands
     showInHands: false
     disableExplosionRecursion: true
+  - type: EncryptionKeyHolder
+    keySlots: 8
+    keysExtractionMethod: Prying
   - type: ComplexInteraction
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
     - Binary
     - Common
-    - Science
   - type: ActiveRadio
     channels:
     - Binary
     - Common
-    - Science
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
     allowSelfRepair: false
   - type: BorgChassis
+    defaultRadioChannels:
+    - Binary
   - type: LockingWhitelist
     blacklist:
       components:
       - BorgChassis
       - RoboticsConsole
   - type: WiresPanel
+    examineWhenOpenOnly: true
   - type: ActivatableUIRequiresPanel
   - type: NameIdentifier
     group: Silicon

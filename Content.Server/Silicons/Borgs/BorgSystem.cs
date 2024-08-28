@@ -5,8 +5,10 @@ using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Hands.Systems;
 using Content.Server.PowerCell;
+using Content.Server.Radio.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Alert;
+using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -19,6 +21,7 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Pointing;
 using Content.Shared.PowerCell;
 using Content.Shared.PowerCell.Components;
+using Content.Shared.Radio;
 using Content.Shared.Roles;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
@@ -75,6 +78,8 @@ public sealed partial class BorgSystem : SharedBorgSystem
         SubscribeLocalEvent<BorgChassisComponent, GetCharactedDeadIcEvent>(OnGetDeadIC);
         SubscribeLocalEvent<BorgChassisComponent, ItemToggledEvent>(OnToggled);
 
+        SubscribeLocalEvent<BorgChassisComponent, EncryptionChannelsChangedEvent>(OnKeysChanged);
+
         SubscribeLocalEvent<BorgBrainComponent, MindAddedMessage>(OnBrainMindAdded);
         SubscribeLocalEvent<BorgBrainComponent, PointAttemptEvent>(OnBrainPointAttempt);
 
@@ -83,7 +88,6 @@ public sealed partial class BorgSystem : SharedBorgSystem
         InitializeUI();
         InitializeTransponder();
     }
-
     private void OnMapInit(EntityUid uid, BorgChassisComponent component, MapInitEvent args)
     {
         UpdateBatteryAlert((uid, component));
@@ -247,7 +251,6 @@ public sealed partial class BorgSystem : SharedBorgSystem
 
         _mind.TransferTo(mindId, containerEnt, mind: mind);
     }
-
     private void OnBrainPointAttempt(EntityUid uid, BorgBrainComponent component, PointAttemptEvent args)
     {
         args.Cancel();
@@ -262,7 +265,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
             return;
         }
 
-        var chargePercent = (short) MathF.Round(battery.CurrentCharge / battery.MaxCharge * 10f);
+        var chargePercent = (short)MathF.Round(battery.CurrentCharge / battery.MaxCharge * 10f);
 
         // we make sure 0 only shows if they have absolutely no battery.
         // also account for floating point imprecision
@@ -307,5 +310,15 @@ public sealed partial class BorgSystem : SharedBorgSystem
             return false;
 
         return true;
+    }
+
+    private void OnKeysChanged(Entity<BorgChassisComponent> ent, ref EncryptionChannelsChangedEvent args)
+    {
+        var channels = new HashSet<string>(ent.Comp.DefaultRadioChannels);
+        channels.UnionWith(args.Component.Channels);
+        if (TryComp<IntrinsicRadioTransmitterComponent>(ent.Owner, out var intrinsicRadio))
+            intrinsicRadio.Channels = new HashSet<string>(channels);
+        if (TryComp<ActiveRadioComponent>(ent.Owner, out var activeRadio))
+            activeRadio.Channels = new HashSet<string>(channels);
     }
 }

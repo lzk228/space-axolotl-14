@@ -177,6 +177,12 @@ public sealed partial class EncryptionKeySystem : EntitySystem
         if (!args.IsInDetailsRange)
             return;
 
+        if (TryComp<WiresPanelComponent>(uid, out var panel))
+        {
+            if (panel.ExamineWhenOpenOnly && !panel.Open)
+                return;
+        }
+
         if (component.KeyContainer.ContainedEntities.Count == 0)
         {
             args.PushMarkup(Loc.GetString("encryption-keys-no-keys"));
@@ -189,7 +195,7 @@ public sealed partial class EncryptionKeySystem : EntitySystem
             {
                 args.PushMarkup(Loc.GetString("examine-encryption-channels-prefix"));
                 AddChannelsExamine(component.Channels,
-                    component.DefaultChannel,
+                    panel != null ? null : component.DefaultChannel,
                     args,
                     _protoManager,
                     "examine-encryption-channel");
