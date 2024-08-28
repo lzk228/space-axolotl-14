@@ -4,7 +4,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.Botany.Systems
 {
-    public sealed class WaterGrowthSystem : PlantGrowthSystem
+    public sealed class NutrientGrowthSystem : PlantGrowthSystem
     {
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -18,15 +18,15 @@ namespace Content.Server.Botany.Systems
             if (nextUpdate > _gameTiming.CurTime)
                 return;
 
-            var query = EntityQueryEnumerator<WaterGrowthComponent>();
-            while (query.MoveNext(out var uid, out var waterGrowthComponent))
+            var query = EntityQueryEnumerator<NutrientGrowthComponent>();
+            while (query.MoveNext(out var uid, out var nutrientGrowthComponent))
             {
-                Update(uid, waterGrowthComponent);
+                Update(uid, nutrientGrowthComponent);
             }
             nextUpdate = _gameTiming.CurTime + updateDelay;
         }
 
-        public void Update(EntityUid uid, WaterGrowthComponent component)
+        public void Update(EntityUid uid, NutrientGrowthComponent component)
         {
             PlantHolderComponent? holder = null;
             Resolve<PlantHolderComponent>(uid, ref holder);
@@ -34,10 +34,10 @@ namespace Content.Server.Botany.Systems
             if (holder == null || holder.Seed == null || holder.Dead)
                 return;
 
-            if (component.WaterConsumption > 0 && holder.WaterLevel > 0 && _random.Prob(0.75f))
+            if (component.NutrientConsumption > 0 && holder.NutritionLevel > 0 && _random.Prob(0.75f))
             {
-                holder.WaterLevel -= MathF.Max(0f,
-                    holder.Seed.WaterConsumption * HydroponicsConsumptionMultiplier * HydroponicsSpeedMultiplier);
+                holder.NutritionLevel -= MathF.Max(0f,
+                    holder.Seed.NutrientConsumption * HydroponicsConsumptionMultiplier * HydroponicsSpeedMultiplier);
                 if (holder.DrawWarnings)
                     holder.UpdateSpriteAfterUpdate = true;
             }
@@ -45,8 +45,8 @@ namespace Content.Server.Botany.Systems
             var healthMod = _random.Next(1, 3) * HydroponicsSpeedMultiplier;
             if (holder.SkipAging < 10)
             {
-                // Make sure the plant is not thirsty.
-                if (holder.WaterLevel > 10)
+                // Make sure the plant is not hungry
+                if (holder.NutritionLevel > 5)
                 {
                     holder.Health += Convert.ToInt32(_random.Prob(0.35f)) * healthMod;
                 }
