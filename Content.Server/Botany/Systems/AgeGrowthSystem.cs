@@ -6,6 +6,8 @@ namespace Content.Server.Botany.Systems
 {
     public sealed class AgeGrowthSystem : PlantGrowthSystem
     {
+        [Dependency] private readonly BotanySystem _botany = default!;
+        [Dependency] private readonly PlantHolderSystem _plantHolderSystem = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -42,6 +44,28 @@ namespace Content.Server.Botany.Systems
                     holder.Age += (int)(1 * HydroponicsSpeedMultiplier);
                     holder.UpdateSpriteAfterUpdate = true;
                 }
+            }
+
+            if (holder.Age > holder.Seed.Lifespan)
+            {
+                holder.Health -= _random.Next(3, 5) * HydroponicsSpeedMultiplier;
+                if (holder.DrawWarnings)
+                    holder.UpdateSpriteAfterUpdate = true;
+            }
+            else if (holder.Age < 0) // Revert back to seed packet!
+            {
+                var packetSeed = holder.Seed;
+                if (packetSeed.Sentient) //TODO: swap this to check for sentientComponent when merged with mutations.
+                {
+                    if (!packetSeed.Unique) // clone if necessary before modifying the seed
+                        packetSeed = packetSeed.Clone();
+                    packetSeed.Sentient = false; // remove Sentient to avoid ghost role spam
+                }
+                // will put it in the trays hands if it has any, please do not try doing this
+                _botany.SpawnSeedPacket(packetSeed, Transform(uid).Coordinates, uid);
+                _plantHolderSystem.RemovePlant(uid, holder);
+                holder.ForceUpdate = true;
+                _plantHolderSystem.Update(uid, holder);
             }
         }
     }
