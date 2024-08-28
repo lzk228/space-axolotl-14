@@ -170,7 +170,7 @@
     state: pda-internmed
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - Medical
 
 - type: entity
   parent: BasePDA
@@ -542,7 +542,7 @@
     state: pda-medical
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - Medical
 
 - type: entity
   parent: BaseMedicalPDA
