@@ -42,10 +42,6 @@ public sealed class MutationSystem : EntitySystem
 
         #pragma warning disable IDE0055 // disable formatting warnings because this looks more readable
         // Tolerances (55)
-        //MutateFloat(ref seed.NutrientConsumption  , 0.05f, 1.2f, 5, totalbits, severity);
-        //MutateFloat(ref seed.WaterConsumption     , 3f   , 9f  , 5, totalbits, severity);
-        MutateFloat(ref seed.IdealHeat            , 263f , 323f, 5, totalbits, severity);
-        MutateFloat(ref seed.HeatTolerance        , 2f   , 25f , 5, totalbits, severity);
         MutateFloat(ref seed.IdealLight           , 0f   , 14f , 5, totalbits, severity);
         MutateFloat(ref seed.LightTolerance       , 1f   , 5f  , 5, totalbits, severity);
         MutateFloat(ref seed.ToxinsTolerance      , 1f   , 10f , 5, totalbits, severity);
@@ -87,8 +83,6 @@ public sealed class MutationSystem : EntitySystem
 
         CrossChemicals(ref result.Chemicals, a.Chemicals);
 
-        CrossFloat(ref result.IdealHeat, a.IdealHeat);
-        CrossFloat(ref result.HeatTolerance, a.HeatTolerance);
         CrossFloat(ref result.IdealLight, a.IdealLight);
         CrossFloat(ref result.LightTolerance, a.LightTolerance);
         CrossFloat(ref result.ToxinsTolerance, a.ToxinsTolerance);

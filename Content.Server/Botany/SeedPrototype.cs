@@ -108,8 +108,6 @@ public partial class SeedData
 
     #region Tolerances
 
-    [DataField("idealHeat")] public float IdealHeat = 293f;
-    [DataField("heatTolerance")] public float HeatTolerance = 10f;
     [DataField("idealLight")] public float IdealLight = 7f;
     [DataField("lightTolerance")] public float LightTolerance = 3f;
     [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;        
@@ -233,8 +231,6 @@ public partial class SeedData
             MutationPrototypes = new List<string>(MutationPrototypes),
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
 
-            IdealHeat = IdealHeat,
-            HeatTolerance = HeatTolerance,
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
@@ -289,8 +285,6 @@ public partial class SeedData
 
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
 
-            IdealHeat = IdealHeat,
-            HeatTolerance = HeatTolerance,
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,

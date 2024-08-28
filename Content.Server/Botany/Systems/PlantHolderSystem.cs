@@ -446,23 +446,6 @@ public sealed class PlantHolderSystem : EntitySystem
 
         var healthMod = _random.Next(1, 3) * HydroponicsSpeedMultiplier;
 
-
-        var environment = _atmosphere.GetContainingMixture(uid, true, true) ?? GasMixture.SpaceGas;
-
-        // SeedPrototype ideal temperature.
-        if (MathF.Abs(environment.Temperature - component.Seed.IdealHeat) > component.Seed.HeatTolerance)
-        {
-            component.Health -= healthMod;
-            component.ImproperHeat = true;
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-        else
-        {
-            component.ImproperHeat = false;
-        }
-
-
         // Toxin levels beyond the plant's tolerance cause damage.
         // They are, however, slowly reduced over time.
         if (component.Toxins > 0)
