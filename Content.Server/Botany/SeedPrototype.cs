@@ -261,6 +261,7 @@ public partial class SeedData
     public List<PlantGrowthComponent> GrowthComponents = new() { 
         new WaterGrowthComponent(),
         new NutrientGrowthComponent(),
+        new AgeGrowthComponent(),
         };
 
     public SeedData Clone()
