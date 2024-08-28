@@ -448,29 +448,6 @@ public sealed class PlantHolderSystem : EntitySystem
 
 
         var environment = _atmosphere.GetContainingMixture(uid, true, true) ?? GasMixture.SpaceGas;
-
-        component.MissingGas = 0;
-        if (component.Seed.ConsumeGasses.Count > 0)
-        {
-            foreach (var (gas, amount) in component.Seed.ConsumeGasses)
-            {
-                if (environment.GetMoles(gas) < amount)
-                {
-                    component.MissingGas++;
-                    continue;
-                }
-
-                environment.AdjustMoles(gas, -amount);
-            }
-
-            if (component.MissingGas > 0)
-            {
-                component.Health -= component.MissingGas * HydroponicsSpeedMultiplier;
-                if (component.DrawWarnings)
-                    component.UpdateSpriteAfterUpdate = true;
-            }
-        }
-
         // SeedPrototype pressure resistance.
         var pressure = environment.Pressure;
         if (pressure < component.Seed.LowPressureTolerance || pressure > component.Seed.HighPressureTolerance)

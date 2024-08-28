@@ -75,10 +75,8 @@ public sealed class MutationSystem : EntitySystem
 
         // ConstantUpgade (10)
         MutateHarvestType(ref seed.HarvestRepeat, 10, totalbits, severity);
-
         // Gas (5)
         MutateGasses(ref seed.ExudeGasses, 0.01f, 0.5f, 4, totalbits, severity);
-        MutateGasses(ref seed.ConsumeGasses, 0.01f, 0.5f, 1, totalbits, severity);
 
         // Chems (20)
         MutateChemicals(ref seed.Chemicals, 20, totalbits, severity);
@@ -119,7 +117,6 @@ public sealed class MutationSystem : EntitySystem
         CrossBool(ref result.CanScream, a.CanScream);
 
         CrossGasses(ref result.ExudeGasses, a.ExudeGasses);
-        CrossGasses(ref result.ConsumeGasses, a.ConsumeGasses);
 
         result.BioluminescentColor = Random(0.5f) ? a.BioluminescentColor : result.BioluminescentColor;
 
