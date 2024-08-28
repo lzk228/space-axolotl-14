@@ -521,9 +521,7 @@ public sealed class PlantHolderSystem : EntitySystem
         
 
         CheckHealth(uid, component);
-
-        if (component.Harvest && component.Seed.HarvestRepeat == HarvestType.SelfHarvest)
-            AutoHarvest(uid, component);
+        
 
         // If enough time has passed since the plant was harvested, we're ready to harvest again!
         if (!component.Dead && component.Seed.ProductPrototypes.Count > 0)
@@ -790,6 +788,11 @@ public sealed class PlantHolderSystem : EntitySystem
         {
             EnsureUniqueSeed(uid, component);
             _mutation.MutateSeed(ref component.Seed, severity);
+
+            //TODO: this is a temp check to apply autoharvest. New mutation system should handle this correctly.
+            if (component.Seed.HarvestRepeat == HarvestType.SelfHarvest)
+                Comp<AutoHarvestGrowthComponent>(uid);
+
         }
     }
 
