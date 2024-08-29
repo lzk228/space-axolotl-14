@@ -390,7 +390,7 @@ public sealed class PlantHolderSystem : EntitySystem
 
         component.LastCycle = curTime;
 
-        // Process mutations
+        // Process mutations. All plants can mutate, so this stays here.
         if (component.MutationLevel > 0)
         {
             Mutate(uid, Math.Min(component.MutationLevel, 25), component);
@@ -398,7 +398,7 @@ public sealed class PlantHolderSystem : EntitySystem
             component.MutationLevel = 0;
         }
 
-        // Weeds like water and nutrients! They may appear even if there's not a seed planted.
+        // Weeds like water and nutrients! They may appear even if there's not a seed planted. Isnt connected to the plant, stays here in PlantHolder.
         if (component.WaterLevel > 10 && component.NutritionLevel > 5)
         {
             var chance = 0f;
@@ -454,32 +454,6 @@ public sealed class PlantHolderSystem : EntitySystem
             }
 
             component.Toxins -= toxinUptake;
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-
-        // Pest levels.
-        if (component.PestLevel > 0)
-        {
-            // TODO: Carnivorous plants?
-            if (component.PestLevel > component.Seed.PestTolerance)
-            {
-                component.Health -= HydroponicsSpeedMultiplier;
-            }
-
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-
-        // Weed levels.
-        if (component.WeedLevel > 0)
-        {
-            // TODO: Parasitic plants.
-            if (component.WeedLevel >= component.Seed.WeedTolerance)
-            {
-                component.Health -= HydroponicsSpeedMultiplier;
-            }
-
             if (component.DrawWarnings)
                 component.UpdateSpriteAfterUpdate = true;
         }

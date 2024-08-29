@@ -112,10 +112,6 @@ public partial class SeedData
     [DataField("lightTolerance")] public float LightTolerance = 3f;
     [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;
 
-    [DataField("pestTolerance")] public float PestTolerance = 5f;
-
-    [DataField("weedTolerance")] public float WeedTolerance = 5f;
-
     [DataField("weedHighLevelThreshold")] public float WeedHighLevelThreshold = 10f;
 
     #endregion
@@ -215,6 +211,7 @@ public partial class SeedData
         new AgeGrowthComponent(),
         new PressureGrowthComponent(),
         new TemperatureGrowthComponent(),
+        new WeedPestGrowthComponent(),
         };
         //TODO: the mutation system should add the missing components when they mutate.
         //This would be done with EnsureComp<>
@@ -238,8 +235,6 @@ public partial class SeedData
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            PestTolerance = PestTolerance,
-            WeedTolerance = WeedTolerance,
 
             Endurance = Endurance,
             Yield = Yield,
@@ -292,8 +287,6 @@ public partial class SeedData
             IdealLight = IdealLight,
             LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            PestTolerance = PestTolerance,
-            WeedTolerance = WeedTolerance,
 
             Endurance = Endurance,
             Yield = Yield,

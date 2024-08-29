@@ -45,8 +45,6 @@ public sealed class MutationSystem : EntitySystem
         MutateFloat(ref seed.IdealLight           , 0f   , 14f , 5, totalbits, severity);
         MutateFloat(ref seed.LightTolerance       , 1f   , 5f  , 5, totalbits, severity);
         MutateFloat(ref seed.ToxinsTolerance      , 1f   , 10f , 5, totalbits, severity);
-        MutateFloat(ref seed.PestTolerance        , 0f   , 15f , 5, totalbits, severity);
-        MutateFloat(ref seed.WeedTolerance        , 0f   , 15f , 5, totalbits, severity);
 
         // Stats (30*2 = 60)
         MutateFloat(ref seed.Endurance            , 50f  , 150f, 5, totalbits, 2 * severity);
@@ -86,8 +84,6 @@ public sealed class MutationSystem : EntitySystem
         CrossFloat(ref result.IdealLight, a.IdealLight);
         CrossFloat(ref result.LightTolerance, a.LightTolerance);
         CrossFloat(ref result.ToxinsTolerance, a.ToxinsTolerance);
-        CrossFloat(ref result.PestTolerance, a.PestTolerance);
-        CrossFloat(ref result.WeedTolerance, a.WeedTolerance);
 
         CrossFloat(ref result.Endurance, a.Endurance);
         CrossInt(ref result.Yield, a.Yield);
