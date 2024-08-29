@@ -1,0 +1,20 @@
+- type: constructionGraph
+  id: GlowshroomStructure
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: plantedGlowshrooms
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - tag: GlowshroomSpores
+              name: glowshroom spores
+              icon:
+                sprite: Objects/Misc/glowshroom.rsi
+                state: seed
+              doAfter: 5
+
+    - node: plantedGlowshrooms
+      entity: Glowshroom

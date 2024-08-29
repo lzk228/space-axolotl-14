@@ -657,6 +657,9 @@
   id: GlassShard
 
 - type: Tag
+  id: GlowshroomSpores
+
+- type: Tag
   id: Goat
 
 - type: Tag
