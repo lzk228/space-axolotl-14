@@ -12,7 +12,6 @@
   production: 3
   yield: 3
   potency: 5
-  idealLight: 8
   nutrientConsumption: 0.40
   chemicals:
     Nutriment:
@@ -38,7 +37,6 @@
   production: 3
   yield: 3
   potency: 5
-  idealLight: 8
   nutrientConsumption: 0.40
   chemicals:
     Nutriment:
@@ -66,7 +64,6 @@
   maturation: 6
   production: 6
   yield: 2
-  idealLight: 9
   waterConsumption: 0.60
   idealHeat: 298
   chemicals:
@@ -93,7 +90,6 @@
   maturation: 6
   production: 6
   yield: 2
-  idealLight: 9
   waterConsumption: 0.60
   idealHeat: 298
   chemicals:
@@ -151,7 +147,6 @@
   production: 5
   yield: 3
   potency: 20
-  idealLight: 8
   harvestRepeat: Repeat
   nutrientConsumption: 0.6
   waterConsumption: 0.6
@@ -186,7 +181,6 @@
   production: 6
   yield: 3
   potency: 10
-  idealLight: 8
   chemicals:
     Nutriment:
       Min: 1
@@ -212,7 +206,6 @@
   production: 6
   yield: 4
   potency: 1
-  idealLight: 8
   chemicals:
     Vitamin:
       Min: 1
@@ -238,7 +231,6 @@
   production: 6
   yield: 3
   potency: 10
-  idealLight: 8
   chemicals:
     Nutriment:
       Min: 1
@@ -264,7 +256,6 @@
   production: 6
   yield: 3
   potency: 10
-  idealLight: 8
   chemicals:
     Nutriment:
       Min: 1
@@ -290,7 +281,6 @@
   production: 6
   yield: 3
   potency: 10
-  idealLight: 8
   growthStages: 3
   chemicals:
     Nutriment:
@@ -374,7 +364,6 @@
   potency: 20
   growthStages: 5
   waterConsumption: 0.6
-  idealLight: 9
   idealHeat: 298
   chemicals:
     Vitamin:
@@ -464,7 +453,6 @@
   potency: 10
   waterConsumption: 0.60
   nutrientConsumption: 0.40
-  idealLight: 8
   idealHeat: 298
   splatPrototype: PuddleSplatter
   chemicals:
@@ -498,7 +486,6 @@
   potency: 10
   waterConsumption: 0.60
   nutrientConsumption: 0.70
-  idealLight: 8
   idealHeat: 298
   splatPrototype: PuddleSplatter
   chemicals:
@@ -534,7 +521,6 @@
   potency: 10
   waterConsumption: 0.60
   nutrientConsumption: 0.70
-  idealLight: 8
   idealHeat: 298
   splatPrototype: PuddleSplatter
   chemicals:
@@ -564,7 +550,6 @@
   potency: 10
   waterConsumption: 0.60
   nutrientConsumption: 0.70
-  idealLight: 8
   idealHeat: 298
   growthStages: 2
   splatPrototype: PuddleSplatter
@@ -595,7 +580,6 @@
   production: 6
   yield: 2
   potency: 20
-  idealLight: 9
   idealHeat: 298
   chemicals:
     Nutriment:
@@ -678,7 +662,6 @@
   production: 6
   yield: 3
   potency: 10
-  idealLight: 6
   chemicals:
     Nutriment:
       Min: 1
@@ -704,7 +687,6 @@
   production: 6
   yield: 3
   potency: 10
-  idealLight: 6
   waterConsumption: 0.75
   nutrientConsumption: 0.75
   chemicals:
@@ -736,7 +718,6 @@
   yield: 2
   potency: 20
   growthStages: 3
-  idealLight: 8
   waterConsumption: 0.60
   idealHeat: 298
   chemicals:
@@ -766,7 +747,6 @@
   yield: 2
   potency: 20
   growthStages: 3
-  idealLight: 8
   waterConsumption: 0.60
   idealHeat: 298
   chemicals:
@@ -798,7 +778,6 @@
   yield: 2
   potency: 20
   growthStages: 3
-  idealLight: 8
   waterConsumption: 0.60
   idealHeat: 298
   chemicals:
@@ -856,7 +835,6 @@
   yield: 2
   potency: 20
   nutrientConsumption: 0.50
-  idealLight: 9
   idealHeat: 298
   chemicals:
     Egg:
@@ -883,7 +861,6 @@
   potency: 20
   growthStages: 3
   waterConsumption: 0.40
-  idealLight: 9
   idealHeat: 298
   chemicals:
     THC:
@@ -908,7 +885,6 @@
   potency: 20
   growthStages: 3
   waterConsumption: 0.40
-  idealLight: 9
   idealHeat: 298
   chemicals:
     SpaceDrugs:
@@ -953,7 +929,6 @@
   potency: 20
   growthStages: 3
   waterConsumption: 0.40
-  idealLight: 9
   idealHeat: 298
   chemicals:
     Nicotine:
@@ -978,7 +953,6 @@
   yield: 2
   potency: 20
   growthStages: 5
-  idealLight: 8
   waterConsumption: 0.60
   idealHeat: 298
   chemicals:
@@ -1002,7 +976,6 @@
   yield: 2
   potency: 20
   growthStages: 5
-  idealLight: 8
   waterConsumption: 0.70
   nutrientConsumption: 0.80
   idealHeat: 298
@@ -1033,7 +1006,6 @@
   production: 6
   yield: 2
   potency: 20
-  idealLight: 9
   idealHeat: 298
   chemicals:
     CapsaicinOil:
@@ -1064,7 +1036,6 @@
   production: 6
   yield: 2
   potency: 20
-  idealLight: 9
   idealHeat: 298
   chemicals:
     Frostoil:
@@ -1353,7 +1324,6 @@
   yield: 1
   potency: 10
   growthStages: 2
-  idealLight: 6
   chemicals:
     Nutriment:
       Min: 1
@@ -1379,7 +1349,6 @@
   yield: 1
   potency: 10
   growthStages: 2
-  idealLight: 6
   chemicals:
     Nutriment:
       Min: 1
@@ -1405,7 +1374,6 @@
   yield: 1
   potency: 10
   growthStages: 2
-  idealLight: 6
   chemicals:
     Nutriment:
       Min: 1
@@ -1431,7 +1399,6 @@
   yield: 3
   potency: 5
   growthStages: 4
-  idealLight: 5
   nutrientConsumption: 0.40
   waterConsumption: 0.60
   chemicals:
@@ -1461,7 +1428,6 @@
   production: 6
   yield: 3
   potency: 5
-  idealLight: 7
   nutrientConsumption: 0.40
   chemicals:
     Nutriment:
@@ -1510,7 +1476,6 @@
   production: 6
   yield: 3
   potency: 5
-  idealLight: 7
   nutrientConsumption: 0.40
   chemicals:
     Nutriment:
@@ -1561,7 +1526,6 @@
   production: 3
   yield: 1
   potency: 1
-  idealLight: 8
   chemicals:
     Nutriment:
       Min: 1
@@ -1590,7 +1554,6 @@
   maturation: 6
   production: 6
   yield: 6
-  idealLight: 7
   waterConsumption: 1
   nutrientConsumption: 0.8
   idealHeat: 298
@@ -1618,7 +1581,6 @@
   maturation: 6
   production: 6
   yield: 4
-  idealLight: 7
   nutrientConsumption: 0.6
   chemicals:
     Nutriment:
@@ -1645,7 +1607,6 @@
   production: 6
   potency: 10
   yield: 3
-  idealLight: 8
   idealHeat: 298
   growthStages: 4
   waterConsumption: 0.6
@@ -1676,7 +1637,6 @@
   production: 6
   yield: 3
   potency: 25
-  idealLight: 8
   harvestRepeat: Repeat
   chemicals:
     Nutriment:
@@ -1768,7 +1728,6 @@
   production: 3
   yield: 3
   potency: 5
-  idealLight: 8
   growthStages: 3
   waterConsumption: 0.60
   chemicals:
@@ -1791,7 +1750,6 @@
   production: 3
   yield: 2
   potency: 5
-  idealLight: 8
   growthStages: 3
   waterConsumption: 0.80
   chemicals:
