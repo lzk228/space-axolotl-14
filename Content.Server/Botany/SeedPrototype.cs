@@ -108,9 +108,6 @@ public partial class SeedData
     #endregion
 
     #region Tolerances
-
-    [DataField("idealLight")] public float IdealLight = 7f;
-    [DataField("lightTolerance")] public float LightTolerance = 3f;
     [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;
 
     [DataField] public float WeedHighLevelThreshold = 10f;
@@ -237,8 +234,6 @@ public partial class SeedData
             MutationPrototypes = new List<string>(MutationPrototypes),
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
 
-            IdealLight = IdealLight,
-            LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
 
             Endurance = Endurance,
@@ -289,8 +284,6 @@ public partial class SeedData
 
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
 
-            IdealLight = IdealLight,
-            LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
 
             Endurance = Endurance,
