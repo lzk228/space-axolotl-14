@@ -1771,8 +1771,6 @@
   potency: 25
   idealLight: 8
   harvestRepeat: Repeat
-  nutrientConsumption: 0.5
-  waterConsumption: 0.5
   chemicals:
     Nutriment:
       Min: 1

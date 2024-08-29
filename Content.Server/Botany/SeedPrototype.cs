@@ -109,16 +109,9 @@ public partial class SeedData
 
     #region Tolerances
 
-    [DataField] public float NutrientConsumption = 0.75f;
-
-    [DataField] public float WaterConsumption = 0.5f;
-    [DataField] public float IdealHeat = 293f;
-    [DataField] public float HeatTolerance = 10f;
-    [DataField] public float IdealLight = 7f;
-    [DataField] public float LightTolerance = 3f;
-    [DataField] public float ToxinsTolerance = 4f;
-
-    [DataField] public float LowPressureTolerance = 81f;
+    [DataField("idealLight")] public float IdealLight = 7f;
+    [DataField("lightTolerance")] public float LightTolerance = 3f;
+    [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;
 
     [DataField] public float HighPressureTolerance = 121f;
 
@@ -223,11 +216,15 @@ public partial class SeedData
     /// The growth components used by this seed. 
     /// </summary>
     [DataField]
-    public List<PlantGrowthComponent> GrowthComponents = new() { 
+    public List<PlantGrowthComponent> GrowthComponents = new() {
         new WaterGrowthComponent(),
         new NutrientGrowthComponent(),
         new AgeGrowthComponent(),
+        new PressureGrowthComponent(),
+        new TemperatureGrowthComponent(),
         };
+        //TODO: the mutation system should add the missing components when they mutate.
+        //This would be done with EnsureComp<>
 
     public SeedData Clone()
     {

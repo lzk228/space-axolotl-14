@@ -434,8 +434,6 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        var healthMod = _random.Next(1, 3) * HydroponicsSpeedMultiplier;
-
         // Toxin levels beyond the plant's tolerance cause damage.
         // They are, however, slowly reduced over time.
         if (component.Toxins > 0)
@@ -451,7 +449,7 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        // Weed levels.
+        // Pest levels.
         if (component.PestLevel > 0)
         {
             // TODO: Carnivorous plants?
