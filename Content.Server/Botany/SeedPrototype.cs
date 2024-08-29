@@ -110,7 +110,7 @@ public partial class SeedData
 
     [DataField("idealLight")] public float IdealLight = 7f;
     [DataField("lightTolerance")] public float LightTolerance = 3f;
-    [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;        
+    [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;
 
     [DataField("pestTolerance")] public float PestTolerance = 5f;
 
@@ -209,11 +209,15 @@ public partial class SeedData
     /// The growth components used by this seed. 
     /// </summary>
     [DataField]
-    public List<PlantGrowthComponent> GrowthComponents = new() { 
+    public List<PlantGrowthComponent> GrowthComponents = new() {
         new WaterGrowthComponent(),
         new NutrientGrowthComponent(),
         new AgeGrowthComponent(),
+        new PressureGrowthComponent(),
+        new TemperatureGrowthComponent(),
         };
+        //TODO: the mutation system should add the missing components when they mutate.
+        //This would be done with EnsureComp<>
 
     public SeedData Clone()
     {

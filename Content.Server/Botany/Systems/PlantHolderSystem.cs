@@ -5,7 +5,6 @@ using Content.Server.Fluids.Components;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Kitchen.Components;
 using Content.Server.Popups;
-using Content.Shared.Atmos;
 using Content.Shared.Botany;
 using Content.Shared.Burial.Components;
 using Content.Shared.Chemistry.Reagent;
@@ -444,8 +443,6 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        var healthMod = _random.Next(1, 3) * HydroponicsSpeedMultiplier;
-
         // Toxin levels beyond the plant's tolerance cause damage.
         // They are, however, slowly reduced over time.
         if (component.Toxins > 0)
@@ -461,7 +458,7 @@ public sealed class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        // Weed levels.
+        // Pest levels.
         if (component.PestLevel > 0)
         {
             // TODO: Carnivorous plants?
