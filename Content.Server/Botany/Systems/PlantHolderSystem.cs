@@ -425,15 +425,6 @@ public sealed class PlantHolderSystem : EntitySystem
             return;
         }
 
-        // There's a small chance the pest population increases.
-        // Can only happen when there's a live seed planted.
-        if (_random.Prob(0.01f))
-        {
-            component.PestLevel += 0.5f * HydroponicsSpeedMultiplier;
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-
         // Toxin levels beyond the plant's tolerance cause damage.
         // They are, however, slowly reduced over time.
         if (component.Toxins > 0)

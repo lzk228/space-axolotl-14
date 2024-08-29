@@ -1,6 +1,5 @@
 using Content.Server.Botany.Components;
 using Robust.Shared.Random;
-using Robust.Shared.Timing;
 
 namespace Content.Server.Botany.Systems
 {
@@ -31,6 +30,14 @@ namespace Content.Server.Botany.Systems
 
             if (holder == null || holder.Seed == null || holder.Dead)
                 return;
+
+            // There's a small chance the pest population increases. Only happens with plants present.
+            if (_random.Prob(0.01f))
+            {
+                holder.PestLevel += 0.5f * HydroponicsSpeedMultiplier;
+                if (holder.DrawWarnings)
+                    holder.UpdateSpriteAfterUpdate = true;
+            }
 
             // Pest levels.
             if (holder.PestLevel > component.PestTolerance)
