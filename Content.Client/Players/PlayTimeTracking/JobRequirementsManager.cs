@@ -91,61 +91,64 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         Updated?.Invoke();
     }
 
-    public bool IsAllowed(JobPrototype job, HumanoidCharacterProfile? profile, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool IsAllowed(JobPrototype job, HumanoidCharacterProfile? profile, out FormattedMessage details)
     {
-        reason = null;
-
         if (_roleBans.Contains($"Job:{job.ID}"))
         {
-            reason = FormattedMessage.FromUnformatted(Loc.GetString("role-ban"));
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-ban"));
             return false;
         }
 
-        if (!CheckWhitelist(job, out reason))
+        if (!CheckWhitelist(job, out details))
             return false;
 
         var player = _playerManager.LocalSession;
         if (player == null)
             return true;
 
-        return CheckRoleRequirements(job, profile, out reason);
+        return CheckRoleRequirements(job, profile, out details);
     }
 
-    public bool CheckRoleRequirements(JobPrototype job, HumanoidCharacterProfile? profile, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool CheckRoleRequirements(JobPrototype job, HumanoidCharacterProfile? profile, out FormattedMessage details)
     {
         var reqs = _entManager.System<SharedRoleSystem>().GetJobRequirement(job);
-        return CheckRoleRequirements(reqs, profile, out reason);
+        return CheckRoleRequirements(reqs, profile, out details);
     }
 
-    public bool CheckRoleRequirements(HashSet<JobRequirement>? requirements, HumanoidCharacterProfile? profile, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool CheckRoleRequirements(HashSet<JobRequirement>? requirements, HumanoidCharacterProfile? profile, out FormattedMessage details)
     {
-        reason = null;
+        details = new FormattedMessage();
 
         if (requirements == null || !_cfg.GetCVar(CCVars.GameRoleTimers))
             return true;
 
-        var reasons = new List<string>();
+        var success = true;
         foreach (var requirement in requirements)
         {
-            if (requirement.Check(_entManager, _prototypes, profile, _roles, out var jobReason))
-                continue;
+            success = requirement.Check(_entManager,
+                _prototypes,
+                profile,
+                _roles,
+                out var checkDetails) && success;
 
-            reasons.Add(jobReason.ToMarkup());
+            if (!details.IsEmpty)
+                details.PushNewline();
+            details.AddMessage(checkDetails);
         }
 
-        reason = reasons.Count == 0 ? null : FormattedMessage.FromMarkup(string.Join('\n', reasons));
-        return reason == null;
+        return success;
     }
 
-    public bool CheckWhitelist(JobPrototype job, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool CheckWhitelist(JobPrototype job, out FormattedMessage details)
     {
-        reason = default;
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-whitelisted"));
+
         if (!_cfg.GetCVar(CCVars.GameRoleWhitelist))
             return true;
 
         if (job.Whitelisted && !_jobWhitelists.Contains(job.ID))
         {
-            reason = FormattedMessage.FromUnformatted(Loc.GetString("role-not-whitelisted"));
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-not-whitelisted"));
             return false;
         }
 

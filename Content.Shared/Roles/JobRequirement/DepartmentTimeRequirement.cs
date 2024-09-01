@@ -27,9 +27,9 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason)
+        out FormattedMessage details)
     {
-        reason = new FormattedMessage();
+        details = new FormattedMessage();
         var playtime = TimeSpan.Zero;
 
         // Check all jobs' departments
@@ -55,14 +55,22 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
             nameDepartment = departmentIndexed.Name;
         }
 
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            Inverted ? "role-timer-department-not-too-high" : "role-timer-department-sufficient",
+            ("current", playtime.TotalMinutes),
+            ("required", Time.TotalMinutes),
+            ("department", Loc.GetString(nameDepartment)),
+            ("departmentColor", department.Color.ToHex())));
+
         if (!Inverted)
         {
             if (deptDiff <= 0)
                 return true;
 
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-department-insufficient",
-                ("time", Math.Ceiling(deptDiff)),
+                ("current", playtime.TotalMinutes),
+                ("required", Time.TotalMinutes),
                 ("department", Loc.GetString(nameDepartment)),
                 ("departmentColor", department.Color.ToHex())));
             return false;
@@ -70,9 +78,10 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
 
         if (deptDiff <= 0)
         {
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-department-too-high",
-                ("time", -deptDiff),
+                ("current", playtime.TotalMinutes),
+                ("required", Time.TotalMinutes),
                 ("department", Loc.GetString(nameDepartment)),
                 ("departmentColor", department.Color.ToHex())));
             return false;

@@ -27,9 +27,9 @@ public sealed partial class RoleTimeRequirement : JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason)
+        out FormattedMessage details)
     {
-        reason = new FormattedMessage();
+        details = new FormattedMessage();
 
         string proto = Role;
 
@@ -45,14 +45,22 @@ public sealed partial class RoleTimeRequirement : JobRequirement
                 departmentColor = departmentProto.Color;
         }
 
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            Inverted ? "role-timer-not-too-high" : "role-timer-role-sufficient",
+            ("current", roleTime.TotalMinutes),
+            ("required", Time.TotalMinutes),
+            ("job", Loc.GetString(proto)),
+            ("departmentColor", departmentColor.ToHex())));
+
         if (!Inverted)
         {
             if (roleDiff <= 0)
                 return true;
 
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-role-insufficient",
-                ("time", Math.Ceiling(roleDiff)),
+                ("current", roleTime.TotalMinutes),
+                ("required", Time.TotalMinutes),
                 ("job", Loc.GetString(proto)),
                 ("departmentColor", departmentColor.ToHex())));
             return false;
@@ -60,9 +68,10 @@ public sealed partial class RoleTimeRequirement : JobRequirement
 
         if (roleDiff <= 0)
         {
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-role-too-high",
-                ("time", -roleDiff),
+                ("current", roleTime.TotalMinutes),
+                ("required", Time.TotalMinutes),
                 ("job", Loc.GetString(proto)),
                 ("departmentColor", departmentColor.ToHex())));
             return false;

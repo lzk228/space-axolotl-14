@@ -23,37 +23,33 @@ public sealed partial class SpeciesRequirement : JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason)
+        out FormattedMessage details)
     {
-        reason = new FormattedMessage();
+        details = new FormattedMessage();
 
         if (profile is null) //the profile could be null if the player is a ghost. In this case we don't need to block the role selection for ghostrole
             return true;
 
         var sb = new StringBuilder();
-        sb.Append("[color=yellow]");
         foreach (var s in Species)
         {
             sb.Append(Loc.GetString(protoManager.Index(s).Name) + " ");
         }
 
-        sb.Append("[/color]");
+        // Default message is success.
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            Inverted ? "role-timer-blacklisted-species-pass" : "role-timer-whitelisted-species-pass",
+            ("species", sb)));
 
-        if (!Inverted)
-        {
-            reason = FormattedMessage.FromMarkupPermissive($"{Loc.GetString("role-timer-whitelisted-species")}\n{sb}");
+        // !Inverted = Whitelist mode, meaning player should have ONE of the species.
+        // Inverted = Blacklist mode, meaning player must have NONE of those species.
+        if (!Inverted == Species.Contains(profile.Species))
+            return true;
 
-            if (!Species.Contains(profile.Species))
-                return false;
-        }
-        else
-        {
-            reason = FormattedMessage.FromMarkupPermissive($"{Loc.GetString("role-timer-blacklisted-species")}\n{sb}");
-
-            if (Species.Contains(profile.Species))
-                return false;
-        }
-
-        return true;
+        // Change to fail message.
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            Inverted ? "role-timer-blacklisted-species-fail" : "role-timer-whitelisted-species-fail",
+            ("species", sb)));
+        return false;
     }
 }
