@@ -21,6 +21,7 @@ namespace Content.Server.Nutrition.EntitySystems
     [UsedImplicitly]
     public sealed class CreamPieSystem : SharedCreamPieSystem
     {
+        [Dependency] private readonly FoodSystem _food = default!;
         [Dependency] private readonly SolutionContainerSystem _solutions = default!;
         [Dependency] private readonly PuddleSystem _puddle = default!;
         [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
@@ -43,23 +44,19 @@ namespace Content.Server.Nutrition.EntitySystems
         {
             _audio.PlayPvs(_audio.GetSound(creamPie.Sound), uid, AudioParams.Default.WithVariation(0.125f));
 
-            if (EntityManager.TryGetComponent(uid, out FoodComponent? foodComp))
+            ActivatePayload(uid);
+            if (TryComp<FoodComponent>(uid, out var food))
             {
-                if (_solutions.TryGetSolution(uid, foodComp.Solution, out _, out var solution))
+                if (_solutions.TryGetSolution(uid, food.Solution, out _, out var solution))
                 {
                     _puddle.TrySpillAt(uid, solution, out _, false);
                 }
-                if (foodComp.Trash.Count == 0)
-                {
-                    foreach (var trash in foodComp.Trash)
-                    {
-                        EntityManager.SpawnEntity(trash, Transform(uid).Coordinates);
-                    }
-                }
+                _food.DeleteAndSpawnTrash((uid, food), user: null);
             }
-            ActivatePayload(uid);
-
-            EntityManager.QueueDeleteEntity(uid);
+            else
+            {
+                QueueDel(uid);
+            }
         }
 
         private void OnConsume(Entity<CreamPieComponent> entity, ref ConsumeDoAfterEvent args)

@@ -64,6 +64,25 @@ public record struct SliceFoodEvent();
 /// is called after a successful attempt at slicing food.
 /// </summary>
 [Serializable, NetSerializable]
-public sealed partial class SliceFoodDoAfterEvent : SimpleDoAfterEvent
+public sealed partial class SliceFoodDoAfterEvent : SimpleDoAfterEvent;
+
+/// <summary>
+/// Raised directed at the food after finishing eating a food before it's deleted.
+/// Cancel this if you want to do something special before a food is deleted.
+/// If not cancelled trash can be spawned and the food is deleted.
+/// Also raised when slicing the last slice of a food.
+/// </summary>
+[ByRefEvent]
+public record struct BeforeFullyEatenEvent(EntityUid? User, bool Cancelled = false)
 {
+    public void Cancel()
+    {
+        Cancelled = true;
+    }
 }
+
+/// <summary>
+/// Raised on food after its trash has been spawned, but before it gets deleted.
+/// </summary>
+[ByRefEvent]
+public record struct FoodSpawnedTrashEvent(EntityUid Trash, EntityUid? User);

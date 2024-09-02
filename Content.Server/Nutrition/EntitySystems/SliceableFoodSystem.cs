@@ -19,6 +19,7 @@ namespace Content.Server.Nutrition.EntitySystems;
 
 public sealed class SliceableFoodSystem : EntitySystem
 {
+    [Dependency] private readonly FoodSystem _food = default!;
     [Dependency] private readonly SolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
@@ -97,7 +98,7 @@ public sealed class SliceableFoodSystem : EntitySystem
         var ev = new SliceFoodEvent();
         RaiseLocalEvent(uid, ref ev);
 
-        DeleteFood(uid, user, food);
+        _food.DeleteAndSpawnTrash((uid, food), user);
         return true;
     }
 
@@ -128,29 +129,6 @@ public sealed class SliceableFoodSystem : EntitySystem
         }
 
         return sliceUid;
-    }
-
-    private void DeleteFood(EntityUid uid, EntityUid user, FoodComponent foodComp)
-    {
-        var ev = new BeforeFullySlicedEvent
-        {
-            User = user
-        };
-        RaiseLocalEvent(uid, ev);
-        if (ev.Cancelled)
-            return;
-
-        // Locate the sliced food and spawn its trash
-        foreach (var trash in foodComp.Trash)
-        {
-            var trashUid = Spawn(trash, _transform.GetMapCoordinates(uid));
-
-            // try putting the trash in the food's container too, to be consistent with slice spawning?
-            _transform.DropNextTo(trashUid, uid);
-            _transform.SetLocalRotation(trashUid, 0);
-        }
-
-        QueueDel(uid);
     }
 
     private void FillSlice(EntityUid sliceUid, Solution solution)
