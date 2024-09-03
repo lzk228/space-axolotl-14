@@ -16767,7 +16767,7 @@ entities:
     - type: Transform
       pos: 57.293247,57.90518
       parent: 12
-- proto: ArrivalsShuttleTimer
+- proto: ArrivalsScreen
   entities:
   - uid: 16552
     components:
