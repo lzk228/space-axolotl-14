@@ -2047,3 +2047,23 @@
     whitelist:
     - Chef
     - Mime
+
+# Objective-specific
+- type: listing
+  id: UplinkCoreExtractionToolbox
+  name: uplink-core-extraction-toolbox-name
+  description: uplink-core-extraction-toolbox-desc
+  icon:
+    sprite: Objects/Misc/nuke_core_container.rsi
+    state: closed
+  productEntity: ToolboxSyndicateFilledCoreExtraction
+  categories:
+  - UplinkObjectives
+  conditions:
+  - !type:ObjectiveUnlockCondition
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
