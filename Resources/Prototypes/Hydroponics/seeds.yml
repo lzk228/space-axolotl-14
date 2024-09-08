@@ -27,6 +27,12 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.4
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: oat
@@ -57,6 +63,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.4
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: banana
@@ -90,6 +99,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: mimana
@@ -121,6 +133,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: carrots
@@ -156,6 +171,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: laughinPea
@@ -192,6 +210,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.6
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: lemon
@@ -225,6 +246,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: lemoon
@@ -256,6 +280,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: lime
@@ -287,6 +314,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: orange
@@ -318,6 +348,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: pineapple
@@ -354,6 +387,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: potato
@@ -385,6 +421,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: sugarcane
@@ -416,6 +455,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: teaPlant
@@ -445,6 +487,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: papercane
@@ -469,6 +514,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: towercap
@@ -496,6 +544,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: steelcap
@@ -521,6 +572,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.8
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: tomato
@@ -561,6 +615,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.4
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: blueTomato
@@ -598,6 +655,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.7
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: bloodTomato
@@ -633,6 +693,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.7
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: killerTomato
@@ -667,6 +730,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.7
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: eggplant
@@ -701,6 +767,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: cabbage
@@ -732,6 +801,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: garlic
@@ -767,6 +839,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: apple
@@ -800,6 +875,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
       
 
 - type: seed
@@ -836,6 +914,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.75
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: corn
@@ -868,6 +949,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: onion
@@ -906,6 +990,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: onionred
@@ -942,6 +1029,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: chanterelle
@@ -971,6 +1061,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: eggy
@@ -999,6 +1092,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: cannabis
@@ -1030,6 +1126,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: rainbowCannabis
@@ -1079,6 +1178,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: tobacco
@@ -1108,6 +1210,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: nettle
@@ -1138,6 +1243,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: deathNettle
@@ -1170,6 +1278,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.8
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: chili
@@ -1208,6 +1319,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: chilly
@@ -1244,6 +1358,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: poppy
@@ -1277,6 +1394,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: aloe
@@ -1308,6 +1428,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: lily
@@ -1341,6 +1464,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: lingzhi
@@ -1372,6 +1498,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: ambrosiaVulgaris
@@ -1417,6 +1546,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: ambrosiaDeus
@@ -1456,6 +1588,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: galaxythistle
@@ -1485,6 +1620,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: glasstle
@@ -1512,6 +1650,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: flyAmanita
@@ -1543,6 +1684,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: gatfruit
@@ -1577,6 +1721,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: fakeCapfruit
@@ -1608,6 +1755,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: realCapfruit
@@ -1639,6 +1789,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: rice
@@ -1670,6 +1823,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.4
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: soybeans
@@ -1699,6 +1855,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.4
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: spacemansTrumpet
@@ -1730,6 +1889,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: koibean
@@ -1761,6 +1923,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: grape
@@ -1792,6 +1957,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: watermelon
@@ -1826,6 +1994,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: cocoa
@@ -1857,6 +2028,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.8
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: berries
@@ -1887,6 +2061,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.6
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: bungo
@@ -1920,6 +2097,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: pea
@@ -1954,6 +2134,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: pumpkin
@@ -1988,6 +2171,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: bluePumpkin
@@ -2024,6 +2210,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: cotton
@@ -2053,6 +2242,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: pyrotton
@@ -2084,6 +2276,9 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
 
 - type: seed
   id: cherry
@@ -2116,3 +2311,6 @@
     - !type:NutrientGrowthComponent
       nutrientConsumption: 0.5
     - !type:AgeGrowthComponent
+    - !type:WeedPestGrowthComponent
+    - !type:TemperatureGrowthComponent
+    - !type:PressureGrowthComponent
