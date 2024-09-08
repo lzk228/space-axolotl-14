@@ -30,9 +30,6 @@
     - !type:WeedPestGrowthComponent
     - !type:TemperatureGrowthComponent
     - !type:PressureGrowthComponent
-    - !type:WeedPestGrowthComponent
-    - !type:TemperatureGrowthComponent
-    - !type:PressureGrowthComponent
 
 - type: seed
   id: oat
