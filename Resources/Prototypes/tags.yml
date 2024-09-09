@@ -1226,6 +1226,9 @@
   id: SpeedLoaderRifle
 
 - type: Tag
+  id: SpeedLoaderShotgun
+
+- type: Tag
   id: SpiderCraft
 
 - type: Tag
