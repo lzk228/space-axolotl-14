@@ -135,12 +135,6 @@ public partial class SeedData
     [DataField("seedless")] public bool Seedless = false;
 
     /// <summary>
-    ///     If false, rapidly decrease health while growing. Used to kill off
-    ///     plants with "bad" mutations.
-    /// </summary>
-    [DataField("viable")] public bool Viable = true;
-
-    /// <summary>
     ///     If true, fruit slips players.
     /// </summary>
     [DataField("slip")] public bool Slip = false;
@@ -246,7 +240,6 @@ public partial class SeedData
             Potency = Potency,
 
             Seedless = Seedless,
-            Viable = Viable,
             Slip = Slip,
             Sentient = Sentient,
             Ligneous = Ligneous,
@@ -298,7 +291,6 @@ public partial class SeedData
             Mutations = Mutations,
 
             Seedless = Seedless,
-            Viable = Viable,
             Slip = Slip,
             Sentient = Sentient,
             Ligneous = Ligneous,
