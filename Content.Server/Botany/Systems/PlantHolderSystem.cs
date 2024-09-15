@@ -676,12 +676,11 @@ public sealed class PlantHolderSystem : EntitySystem
         if (component.Seed != null)
         {
             EnsureUniqueSeed(uid, component);
-            _mutation.MutateSeed(ref component.Seed, severity);
+            _mutation.MutateSeed(uid, ref component.Seed, severity);
 
             //TODO: this is a temp check to apply autoharvest. New mutation system should handle this correctly.
             if (component.Seed.HarvestRepeat == HarvestType.SelfHarvest)
                 Comp<AutoHarvestGrowthComponent>(uid);
-
         }
     }
 
