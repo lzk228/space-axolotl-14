@@ -1,12 +1,15 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using Content.Shared.Maps;
 using Content.Shared.Tag;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameStates;
+using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 using Robust.Shared.Serialization;
-using Robust.Shared.Timing;
-using Robust.Shared.Utility;
 
 namespace Content.Shared.Pinpointer;
 
@@ -23,7 +26,10 @@ public abstract class SharedNavMapSystem : EntitySystem
     public const int WallMask = AllDirMask << (int) NavMapChunkType.Wall;
     public const int FloorMask = AllDirMask << (int) NavMapChunkType.Floor;
 
+    [Robust.Shared.IoC.Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Robust.Shared.IoC.Dependency] private readonly IRobustRandom _random = default!;
     [Robust.Shared.IoC.Dependency] private readonly TagSystem _tagSystem = default!;
+    [Robust.Shared.IoC.Dependency] private readonly SharedTransformSystem _transformSystem = default!;
 
     private static readonly ProtoId<TagPrototype>[] WallTags = {"Wall", "Window"};
     private EntityQuery<NavMapDoorComponent> _doorQuery;
@@ -34,6 +40,9 @@ public abstract class SharedNavMapSystem : EntitySystem
 
         // Data handling events
         SubscribeLocalEvent<NavMapComponent, ComponentGetState>(OnGetState);
+
+        SubscribeAllEvent<MapWarpRequest>(OnMapWarp);
+
         _doorQuery = GetEntityQuery<NavMapDoorComponent>();
     }
 
@@ -79,6 +88,37 @@ public abstract class SharedNavMapSystem : EntitySystem
         beaconData = new NavMapBeacon(meta.NetEntity, component.Color, name, xform.LocalPosition);
 
         return true;
+    }
+
+    public void RequestWarpTo(EntityUid uid, Vector2 target)
+    {
+        var message = new MapWarpRequest(GetNetEntity(uid), target);
+        RaiseNetworkEvent(message);
+    }
+
+    private void OnMapWarp(MapWarpRequest args)
+    {
+        var uid = GetEntity(args.Uid);
+
+        // This was only tested with the AI Eye but should theoretically work with any other future remote-controlled things
+        if (TryComp<EyeComponent>(uid, out var eye) && eye.Target is not null)
+            uid = eye.Target.Value;
+
+        if (!TryComp<NavMapWarpComponent>(uid, out var warpComp))
+            return;
+
+        var xform = Transform(uid);
+
+        if (xform.MapUid is null)
+            return;
+
+        _audio.PlayGlobal(warpComp.Sounds,
+            GetEntity(args.Uid),
+            AudioParams.Default.WithVariation(warpComp.PitchVariation));
+
+        // This was designed for incorporeal entities, thus there aren't any collision checks or anything
+        _transformSystem.SetCoordinates(uid, xform, new EntityCoordinates(xform.MapUid.Value, args.Target));
+        _transformSystem.AttachToGridOrMap(uid, xform);
     }
 
     #region: Event handling
