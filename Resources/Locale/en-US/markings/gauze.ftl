@@ -49,6 +49,7 @@ marking-GauzeBlindfold = Gauze Blindfold
 marking-GauzeHead-gauze_head = Gauze Head Wrap
 marking-GauzeHead = Gauze Head Wrap
 
+
 marking-GauzeLizardBlindfold-gauze_lizard_blindfold = Gauze Blindfold
 marking-GauzeLizardBlindfold = Gauze Blindfold
 
@@ -63,6 +64,7 @@ marking-GauzeLizardLefteyePatch = Reptilian Gauze eyepatch (Left)
 
 marking-GauzeLizardRighteyePatch-gauze_lizard_righteye = Reptilian Gauze eyepatch (Right)
 marking-GauzeLizardRighteyePatch = Reptilian Gauze Eyepatch (Right)
+
 
 marking-GauzeMothStomach-gauze_moth_abdomen = Insectoid Stomach Wrap
 marking-GauzeMothStomach = Insectoid Stomach Wrap
