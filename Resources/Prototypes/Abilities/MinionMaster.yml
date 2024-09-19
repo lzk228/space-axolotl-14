@@ -1,0 +1,83 @@
+- type: entity
+  id: ActionMinionMasterRaiseArmy
+  name: minion-master-summon-minion-title
+  description: minion-master-summon-minion-description
+  components:
+  - type: InstantAction
+    useDelay: 4
+    icon:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: ratKingArmy
+    event: !type:MinionMasterRaiseArmyActionEvent
+
+- type: entity
+  id: ActionMinionMasterOrderStay
+  name: minion-master-command-stay-title
+  description: minion-master-command-stay-description
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: stayOff
+    iconOn:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: stay
+    event:
+      !type:MinionMasterOrderActionEvent
+        type: Stay
+    priority: 5
+
+- type: entity
+  id: ActionMinionMasterOrderFollow
+  name: minion-master-command-follow-title
+  description: minion-master-command-follow-description
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: followOff
+    iconOn:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: follow
+    event:
+      !type:MinionMasterOrderActionEvent
+      type: Follow
+    priority: 6
+
+- type: entity
+  id: ActionMinionMasterOrderAttack
+  name: minion-master-command-attack-title
+  description: minion-master-command-attack-description
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: attackOff
+    iconOn:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: attack
+    event:
+      !type:MinionMasterOrderActionEvent
+      type: Attack
+    priority: 7
+
+- type: entity
+  id: ActionMinionMasterOrderLoose
+  name: minion-master-command-loose-title
+  description: minion-master-command-loose-description
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: looseOff
+    iconOn:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: loose
+    event:
+      !type:MinionMasterOrderActionEvent
+      type: Loose
+    priority: 8
