@@ -3,6 +3,7 @@ using Content.Server.Botany.Components;
 using Content.Server.Fluids.Components;
 using Content.Server.Kitchen.Components;
 using Content.Server.Popups;
+using Content.Shared.Administration.Logs;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Atmos;
 using Content.Shared.Botany;
@@ -42,6 +43,7 @@ public sealed class PlantHolderSystem : EntitySystem
     [Dependency] private readonly TagSystem _tagSystem = default!;
     [Dependency] private readonly RandomHelperSystem _randomHelper = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly ISharedAdminLogManager _logger = default!;
 
 
     public const float HydroponicsSpeedMultiplier = 1f;
@@ -871,7 +873,7 @@ public sealed class PlantHolderSystem : EntitySystem
             foreach (var entry in _solutionContainerSystem.RemoveEachReagent(component.SoilSolution.Value, amt))
             {
                 var reagentProto = _prototype.Index<ReagentPrototype>(entry.Reagent.Prototype);
-                reagentProto.ReactionPlant(uid, entry, solution);
+                reagentProto.ReactionPlant(uid, entry, solution, EntityManager, _random, _logger);
             }
         }
 
