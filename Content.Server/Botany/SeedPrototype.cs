@@ -24,36 +24,6 @@ public enum HarvestType : byte
     SelfHarvest
 }
 
-/*
-    public enum PlantSpread : byte
-    {
-        NoSpread,
-        Creepers,
-        Vines,
-    }
-
-    public enum PlantMutation : byte
-    {
-        NoMutation,
-        Mutable,
-        HighlyMutable,
-    }
-
-    public enum PlantCarnivorous : byte
-    {
-        NotCarnivorous,
-        EatPests,
-        EatLivingBeings,
-    }
-
-    public enum PlantJuicy : byte
-    {
-        NotJuicy,
-        Juicy,
-        Slippery,
-    }
-*/
-
 [DataDefinition]
 public partial struct SeedChemQuantity
 {
@@ -81,7 +51,7 @@ public partial struct SeedChemQuantity
 
 // TODO reduce the number of friends to a reasonable level. Requires ECS-ing things like plant holder component.
 [Virtual, DataDefinition]
-[Access(typeof(BotanySystem), typeof(PlantHolderSystem), typeof(SeedExtractorSystem), typeof(PlantHolderComponent), typeof(EntityEffect), typeof(MutationSystem))]
+[Access(typeof(BotanySystem), typeof(PlantHolderSystem), typeof(SeedExtractorSystem), typeof(PlantHolderComponent), typeof(EntityEffect), typeof(MutationSystem), typeof(AgeGrowthSystem))]
 public partial class SeedData
 {
     #region Tracking
@@ -133,32 +103,12 @@ public partial class SeedData
     [DataField("productPrototypes", customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
     public List<string> ProductPrototypes = new();
 
-    [DataField] public Dictionary<string, SeedChemQuantity> Chemicals = new();
-
-    [DataField] public Dictionary<Gas, float> ConsumeGasses = new();
-
-    [DataField] public Dictionary<Gas, float> ExudeGasses = new();
+    [DataField("chemicals")] public Dictionary<string, SeedChemQuantity> Chemicals = new();
 
     #endregion
 
     #region Tolerances
-
-    [DataField] public float NutrientConsumption = 0.75f;
-
-    [DataField] public float WaterConsumption = 0.5f;
-    [DataField] public float IdealHeat = 293f;
-    [DataField] public float HeatTolerance = 10f;
-    [DataField] public float IdealLight = 7f;
-    [DataField] public float LightTolerance = 3f;
-    [DataField] public float ToxinsTolerance = 4f;
-
-    [DataField] public float LowPressureTolerance = 81f;
-
-    [DataField] public float HighPressureTolerance = 121f;
-
-    [DataField] public float PestTolerance = 5f;
-
-    [DataField] public float WeedTolerance = 5f;
+    [DataField("toxinsTolerance")] public float ToxinsTolerance = 4f;
 
     [DataField] public float WeedHighLevelThreshold = 10f;
 
@@ -182,13 +132,17 @@ public partial class SeedData
     ///     If true, cannot be harvested for seeds. Balances hybrids and
     ///     mutations.
     /// </summary>
-    [DataField] public bool Seedless = false;
+    [DataField("seedless")] public bool Seedless = false;
 
     /// <summary>
-    ///     If false, rapidly decrease health while growing. Used to kill off
-    ///     plants with "bad" mutations.
+    ///     If true, fruit slips players.
     /// </summary>
-    [DataField] public bool Viable = true;
+    [DataField("slip")] public bool Slip = false;
+
+    /// <summary>
+    ///     If true, fruits are sentient.
+    /// </summary>
+    [DataField("sentient")] public bool Sentient = false;
 
     /// <summary>
     ///     If true, a sharp tool is required to harvest this plant.
@@ -243,6 +197,21 @@ public partial class SeedData
     [DataField(customTypeSerializer: typeof(PrototypeIdListSerializer<SeedPrototype>))]
     public List<string> MutationPrototypes = new();
 
+    /// <summary>
+    /// The growth components used by this seed. 
+    /// </summary>
+    [DataField]
+    public List<PlantGrowthComponent> GrowthComponents = new() {
+        new WaterGrowthComponent(),
+        new NutrientGrowthComponent(),
+        new AgeGrowthComponent(),
+        new PressureGrowthComponent(),
+        new TemperatureGrowthComponent(),
+        new WeedPestGrowthComponent(),
+        };
+        //TODO: the mutation system should add the missing components when they mutate.
+        //This would be done with EnsureComp<>
+
     public SeedData Clone()
     {
         DebugTools.Assert(!Immutable, "There should be no need to clone an immutable seed.");
@@ -258,20 +227,8 @@ public partial class SeedData
             ProductPrototypes = new List<string>(ProductPrototypes),
             MutationPrototypes = new List<string>(MutationPrototypes),
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
-            ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
-            ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
-            NutrientConsumption = NutrientConsumption,
-            WaterConsumption = WaterConsumption,
-            IdealHeat = IdealHeat,
-            HeatTolerance = HeatTolerance,
-            IdealLight = IdealLight,
-            LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            LowPressureTolerance = LowPressureTolerance,
-            HighPressureTolerance = HighPressureTolerance,
-            PestTolerance = PestTolerance,
-            WeedTolerance = WeedTolerance,
 
             Endurance = Endurance,
             Yield = Yield,
@@ -283,7 +240,8 @@ public partial class SeedData
             Potency = Potency,
 
             Seedless = Seedless,
-            Viable = Viable,
+            Slip = Slip,
+            Sentient = Sentient,
             Ligneous = Ligneous,
 
             PlantRsi = PlantRsi,
@@ -319,20 +277,8 @@ public partial class SeedData
             MutationPrototypes = new List<string>(other.MutationPrototypes),
 
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
-            ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
-            ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
 
-            NutrientConsumption = NutrientConsumption,
-            WaterConsumption = WaterConsumption,
-            IdealHeat = IdealHeat,
-            HeatTolerance = HeatTolerance,
-            IdealLight = IdealLight,
-            LightTolerance = LightTolerance,
             ToxinsTolerance = ToxinsTolerance,
-            LowPressureTolerance = LowPressureTolerance,
-            HighPressureTolerance = HighPressureTolerance,
-            PestTolerance = PestTolerance,
-            WeedTolerance = WeedTolerance,
 
             Endurance = Endurance,
             Yield = Yield,
@@ -346,7 +292,8 @@ public partial class SeedData
             Mutations = Mutations,
 
             Seedless = Seedless,
-            Viable = Viable,
+            Slip = Slip,
+            Sentient = Sentient,
             Ligneous = Ligneous,
 
             PlantRsi = other.PlantRsi,
