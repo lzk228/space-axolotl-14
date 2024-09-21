@@ -844,7 +844,7 @@ namespace Content.Shared.CCVar
             CVarDef.Create("admin.alert.particle_accelerator_min_power_state", 5, CVar.SERVERONLY); // strength 4
 
         /// <summary>
-        ///     Should the ban details in admin channel include PII? (IP, HWID, etc)
+        ///     Should the ban details in admin channel and in the audit log include PII? (IP, HWID, etc).
         /// </summary>
         public static readonly CVarDef<bool> AdminShowPIIOnBan =
             CVarDef.Create("admin.show_pii_onban", false, CVar.SERVERONLY);
@@ -1095,6 +1095,9 @@ namespace Content.Shared.CCVar
 
         public static readonly CVarDef<string> AdminLogsServerName =
             CVarDef.Create("adminlogs.server_name", "unknown", CVar.SERVERONLY);
+
+        public static readonly CVarDef<bool> AuditLogsEnabled =
+            CVarDef.Create("auditlogs.enabled", true, CVar.SERVERONLY);
 
         /*
          * Atmos
