@@ -5,12 +5,14 @@ using Content.Server.Roles;
 using Content.Shared.Actions;
 using Content.Shared.Dragon;
 using Content.Shared.Maps;
+using Content.Shared.NPC.Components;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Shared.NPC.Systems;
+using Content.Shared.Voting.Events;
 using Content.Shared.Zombies;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
@@ -56,6 +58,16 @@ public sealed partial class DragonSystem : EntitySystem
         SubscribeLocalEvent<DragonComponent, RefreshMovementSpeedModifiersEvent>(OnDragonMove);
         SubscribeLocalEvent<DragonComponent, MobStateChangedEvent>(OnMobStateChanged);
         SubscribeLocalEvent<DragonComponent, EntityZombifiedEvent>(OnZombified);
+        SubscribeLocalEvent<NpcFactionMemberComponent, RestartVoteAttemptEvent>(OnRestartAttempt);
+    }
+
+    private void OnRestartAttempt(Entity<NpcFactionMemberComponent> entity, ref RestartVoteAttemptEvent args)
+    {
+        if (!_faction.IsMember(entity.Owner, "Dragon"))
+            return;
+
+        args.DeadPlayers += 1;
+
     }
 
     public override void Update(float frameTime)
