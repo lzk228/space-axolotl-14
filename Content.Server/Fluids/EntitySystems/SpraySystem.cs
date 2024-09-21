@@ -3,6 +3,7 @@ using Content.Server.Chemistry.EntitySystems;
 using Content.Server.Fluids.Components;
 using Content.Server.Gravity;
 using Content.Server.Popups;
+using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Fluids;
 using Content.Shared.Interaction;
@@ -66,7 +67,7 @@ public sealed class SpraySystem : EntitySystem
         var userXform = xformQuery.GetComponent(args.User);
 
         var userMapPos = _transform.GetMapCoordinates(userXform);
-        var clickMapPos = args.ClickLocation.ToMap(EntityManager, _transform);
+        var clickMapPos = _transform.ToMapCoordinates(args.ClickLocation);
 
         var diffPos = clickMapPos.Position - userMapPos.Position;
         if (diffPos == Vector2.Zero || diffPos == Vector2Helpers.NaN)
@@ -138,7 +139,18 @@ public sealed class SpraySystem : EntitySystem
             if (TryComp<PhysicsComponent>(args.User, out var body))
             {
                 if (_gravity.IsWeightless(args.User, body))
-                    _physics.ApplyLinearImpulse(args.User, -impulseDirection.Normalized() * entity.Comp.PushbackAmount, body: body);
+                {
+                    // push back the player
+                    _physics.ApplyLinearImpulse(args.User, -impulseDirection * entity.Comp.PushbackAmount, body: body);
+                }
+                else
+                {
+                    // push back the grid the player is standing on
+                    var userTransform = Transform(args.User);
+                    if (userTransform.GridUid != null)
+                        // apply both linear and angular momentum depending on the player position
+                        _physics.ApplyLinearImpulse(userTransform.GridUid.Value, -impulseDirection * entity.Comp.GridPushbackAmount, userTransform.LocalPosition);
+                }
             }
         }
 
