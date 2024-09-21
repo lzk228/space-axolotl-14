@@ -43,6 +43,8 @@ namespace Content.Server.Database
         public DbSet<AdminMessage> AdminMessages { get; set; } = null!;
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
+        public DbSet<AhelpExchange> AhelpExchanges { get; set; } = null!;
+        public DbSet<AhelpMessage> AhelpMessages { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -204,6 +206,53 @@ namespace Content.Server.Database
             // SetNull is necessary for created by/edited by-s here,
             // so you can safely delete admins (GDPR right to erasure) while keeping the notes intact
 
+            // Ahelp Logging configuration
+            modelBuilder.Entity<AhelpMessage>(entity =>
+            {
+                entity.HasKey(e => new { e.AhelpId, e.Id });
+
+                entity.HasIndex(e => e.TimeSent);
+
+                entity.HasOne(e => e.Player)
+                    .WithMany()
+                    .HasForeignKey(e => e.Sender)
+                    .HasPrincipalKey(p => p.UserId);
+
+                entity.Property(e => e.Message)
+                    .IsRequired();
+
+                entity.Property(e => e.TimeSent)
+                    .HasConversion(
+                        v => v.ToUniversalTime(),
+                        v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+
+                entity.Property(e => e.TimeSent)
+                    .HasConversion(
+                        v => v.ToUniversalTime(),
+                        v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+
+            });
+
+            modelBuilder.Entity<AhelpExchange>(entity =>
+            {
+                entity.HasKey(e => e.AhelpId);
+
+                entity.HasIndex(e => e.AhelpRound);
+
+                entity.HasOne<Player>()
+                    .WithMany()
+                    .HasForeignKey(e => e.AhelpTarget)
+                    .HasPrincipalKey(p => p.UserId);
+
+                entity.HasMany(e => e.AhelpMessages)
+                    .WithOne(e => e.AhelpExchange)
+                    .HasForeignKey(e => e.AhelpId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.Property(e => e.ServerId)
+                    .IsRequired();
+            });
+
             modelBuilder.Entity<AdminNote>()
                 .HasOne(note => note.Player)
                 .WithMany(player => player.AdminNotesReceived)
@@ -327,6 +376,8 @@ namespace Content.Server.Database
                 .HasForeignKey(w => w.PlayerUserId)
                 .HasPrincipalKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+
         }
 
         public virtual IQueryable<AdminLog> SearchLogs(IQueryable<AdminLog> query, string searchText)
@@ -660,6 +711,49 @@ namespace Content.Server.Database
         public Player Player { get; set; } = default!;
 
         [ForeignKey("RoundId,LogId")] public AdminLog Log { get; set; } = default!;
+    }
+
+    //Ahelp Logging
+    public class AhelpExchange
+    {
+        [Key]
+        public int AhelpId { get; set; }
+
+        [Required]
+        public int AhelpRound { get; set; }
+
+        [Required]
+        [ForeignKey(nameof(Player))]
+        public Guid AhelpTarget { get; set; }
+        public int ServerId { get; set; }
+
+        public ICollection<AhelpMessage> AhelpMessages { get; set; } = new List<AhelpMessage>();
+    }
+
+    public class AhelpMessage
+    {
+        [Key]
+        [ForeignKey("AhelpExchange")]
+        public int AhelpId { get; set; }
+
+        [Key]
+        public int Id { get; set; }
+
+        [Required] public DateTime TimeSent { get; set; }
+
+        [Required] public string? RoundStatus { get; set; }
+
+        [Required]
+        [ForeignKey(nameof(Player))]
+        public Guid Sender { get; set; }
+        public Player Player { get; set; } = null!;
+        public int? SenderEntity { get; set; }
+        public string? SenderEntityName { get; set; }
+        public bool AdminsOnline { get; set; }
+        public bool IsAdminned { get; set; }
+        public bool TargetOnline { get; set; }
+        public string Message { get; set; } = null!;
+        public AhelpExchange AhelpExchange { get; set; } = null!;
     }
 
     // Used by SS14.Admin
