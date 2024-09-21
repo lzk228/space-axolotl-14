@@ -18,7 +18,7 @@
   description: Shows job icons for crew members.
   components:
   - type: InstantAction
-    priority: -5
+    priority: -2
     itemIconStyle: BigAction
     icon:
       sprite: Interface/Actions/actions_ai.rsi
@@ -33,7 +33,7 @@
   description: Enable surveillance camera lights near wherever you're viewing.
   components:
   - type: InstantAction
-    priority: -6
+    priority: -3
     itemIconStyle: BigAction
     icon:
       sprite: Interface/Actions/actions_ai.rsi
@@ -52,17 +52,38 @@
             layer:
             - GhostImpassable
 
-
 - type: entity
   id: ActionAIViewLaws
   name: View Laws
   description: View the laws that you must follow.
   components:
   - type: InstantAction
-    priority: -3
+    priority: 0
     itemIconStyle: NoItem
     icon:
       sprite: Interface/Actions/actions_ai.rsi
       state: state_laws
     event: !type:ToggleLawsScreenEvent
     useDelay: 0.5
+
+- type: entity
+  id: ActionAIShowPowerMonitoring
+  name: Power Monitoring Interface
+  description: View a power monitoring interface.
+  components:
+  - type: InstantAction
+    icon: { sprite: Interface/Actions/actions_ai.rsi, state: power_monitor }
+    keywords: [ "AI", "console", "interface" ]
+    priority: -5
+    event: !type:ToggleIntrinsicUIEvent { key: enum.PowerMonitoringConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAIShowCrewManifest
+  name: Crew Manifest
+  description: View crew manifest.
+  components:
+  - type: InstantAction
+    icon: { sprite: Interface/Actions/actions_ai.rsi, state: manifest }
+    keywords: [ "AI", "console", "interface" ]
+    priority: -7
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CrewManifestUiKey.Key }
