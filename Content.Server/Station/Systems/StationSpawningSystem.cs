@@ -128,8 +128,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         if (prototype?.JobEntity != null)
         {
             DebugTools.Assert(entity is null);
-            var jobEntity = EntityManager.SpawnEntity(prototype.JobEntity, coordinates);
-            MakeSentientCommand.MakeSentient(jobEntity, EntityManager);
+            var jobEntity = SpawnEntity(prototype.JobEntity, coordinates, job);
 
             // Make sure custom names get handled, what is gameticker control flow whoopy.
             if (loadout != null)
@@ -137,9 +136,31 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 EquipRoleName(jobEntity, loadout, roleProto!);
             }
 
-            DoJobSpecials(job, jobEntity);
-            _identity.QueueIdentityUpdate(jobEntity);
             return jobEntity;
+        }
+
+        profile?.Loadouts.TryGetValue(jobLoadout, out loadout);
+
+        if (loadout != null && roleProto != null)
+        {
+            foreach (var group in loadout.SelectedLoadouts.OrderBy(x => roleProto.Groups.FindIndex(e => e == x.Key)))
+            {
+                foreach (var items in group.Value)
+                {
+                    if (!_prototypeManager.TryIndex(items.Prototype, out var loadoutProto))
+                    {
+                        continue;
+                    }
+
+                    if (loadoutProto.Entity != null)
+                    {
+                        var newEntity = SpawnEntity(loadoutProto.Entity, coordinates, job);
+                        EquipLoadout(newEntity, jobLoadout, loadout, roleProto, prototype, profile);
+                        EntityManager.DeleteEntity(entity);
+                        return newEntity;
+                    }
+                }
+            }
         }
 
         string speciesId;
@@ -161,26 +182,24 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         if (!_prototypeManager.TryIndex<SpeciesPrototype>(speciesId, out var species))
             throw new ArgumentException($"Invalid species prototype was used: {speciesId}");
 
-        entity ??= Spawn(species.Prototype, coordinates);
+        entity ??= SpawnEntity(species.Prototype, coordinates, job);
 
         if (_randomizeCharacters)
         {
             profile = HumanoidCharacterProfile.RandomWithSpecies(speciesId);
         }
 
-        if (loadout != null)
+        if (roleProto != null)
         {
-            EquipRoleLoadout(entity.Value, loadout, roleProto!);
-        }
+            // Set to default if not present
+            if (loadout == null)
+            {
+                loadout = new RoleLoadout(jobLoadout);
+                loadout.SetDefault(profile, _actors.GetSession(entity), _prototypeManager);
+            }
 
-        if (prototype?.StartingGear != null)
-        {
-            var startingGear = _prototypeManager.Index<StartingGearPrototype>(prototype.StartingGear);
-            EquipStartingGear(entity.Value, startingGear, raiseEvent: false);
+            EquipLoadout(entity.Value, jobLoadout, loadout, roleProto, prototype, profile);
         }
-
-        var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
-        RaiseLocalEvent(entity.Value, ref gearEquippedEv);
 
         if (profile != null)
         {
@@ -195,9 +214,32 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             }
         }
 
-        DoJobSpecials(job, entity.Value);
         _identity.QueueIdentityUpdate(entity.Value);
         return entity.Value;
+    }
+
+    private EntityUid SpawnEntity(string prototype, EntityCoordinates coordinates, JobComponent? job)
+    {
+        var entity = EntityManager.SpawnEntity(prototype, coordinates);
+        MakeSentientCommand.MakeSentient(entity, EntityManager);
+        DoJobSpecials(job, entity);
+        _identity.QueueIdentityUpdate(entity);
+        return entity;
+    }
+
+    private void EquipLoadout(EntityUid entity, string jobLoadout, RoleLoadout loadout, RoleLoadoutPrototype roleProto, JobPrototype? prototype, HumanoidCharacterProfile? profile)
+    {
+        EquipRoleLoadout(entity, loadout, roleProto);
+
+        if (prototype?.StartingGear != null)
+        {
+            var startingGear = _prototypeManager.Index<StartingGearPrototype>(prototype.StartingGear);
+            EquipStartingGear(entity, startingGear, raiseEvent: false);
+        }
+
+        var gearEquippedEv = new StartingGearEquippedEvent(entity);
+        RaiseLocalEvent(entity, ref gearEquippedEv);
+
     }
 
     private void DoJobSpecials(JobComponent? job, EntityUid entity)
