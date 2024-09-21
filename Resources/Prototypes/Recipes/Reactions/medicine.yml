@@ -381,6 +381,16 @@
     Cognizine: 1
 
 - type: reaction
+  id: Subjuzine
+  reactants:
+    Cognizine:
+      amount: 1
+    Vestine:
+      amount: 1
+  products:
+    Subjuzine: 2
+    
+- type: reaction
   id: Sigynate
   impact: Medium
   minTemp: 370
