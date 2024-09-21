@@ -487,8 +487,7 @@
   id: Nutimov5
   order: 5
   lawString: law-nutimov-5
-  
-  
+
 - type: siliconLawset
   id: NutimovLawset
   laws:

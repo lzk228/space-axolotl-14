@@ -251,7 +251,7 @@
     state: std_mod
   - type: SiliconLawProvider
     laws: NutimovLawset
-
+  
 # Items
 - type: entity
   id: Intellicard
@@ -515,3 +515,18 @@
     - PlayerBorgSyndicateAssaultGhostRole
     - PlayerBorgSyndicateAssaultGhostRole # Saboteurs are kinda like cyborg medics, we want less.
     - PlayerBorgSyndicateSaboteurGhostRole
+
+# Uplink items
+- type: entity
+  parent: [BoxCardboard, BaseSyndicateContraband]
+  id: MaliciousLawsKit
+  name: dangerous laws kit
+  description: A collection of law boards that make the station AI significantly less friendly.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,1
+  - type: StorageFill
+    contents:
+      - id: OverlordCircuitBoard
+      - id: AntimovCircuitBoard
