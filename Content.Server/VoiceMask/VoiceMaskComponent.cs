@@ -7,17 +7,14 @@ namespace Content.Server.VoiceMask;
 public sealed partial class VoiceMaskComponent : Component
 {
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
-    public bool Enabled = true;
+    public string? VoiceMaskName = null;
 
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
-    public string VoiceName = "Unknown";
+    public ProtoId<SpeechVerbPrototype>? VoiceMaskSpeechVerb;
 
-    /// <summary>
-    /// If EnableSpeechVerbModification is true, overrides the speech verb used when this entity speaks.
-    /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
-    public ProtoId<SpeechVerbPrototype>? SpeechVerb;
+    public EntProtoId Action = "ActionChangeVoiceMask";
+
+    [DataField]
+    public EntityUid? ActionEntity;
 }
