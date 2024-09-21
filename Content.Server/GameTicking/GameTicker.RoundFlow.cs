@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Server.Announcements;
+using Content.Server.Chat.Systems;
 using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
@@ -27,6 +28,7 @@ namespace Content.Server.GameTicking
     {
         [Dependency] private readonly DiscordWebhook _discord = default!;
         [Dependency] private readonly ITaskManager _taskManager = default!;
+        [Dependency] private readonly IEntityManager _entityManager = default!;
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -341,6 +343,7 @@ namespace Content.Server.GameTicking
 
             ShowRoundEndScoreboard(text);
             SendRoundEndDiscordMessage();
+            SendLastMessagesBeforeDeath();
         }
 
         public void ShowRoundEndScoreboard(string text = "")
@@ -473,6 +476,12 @@ namespace Content.Server.GameTicking
             {
                 Log.Error($"Error while sending discord round end message:\n{e}");
             }
+        }
+
+        public void SendLastMessagesBeforeDeath()
+        {
+            var lastMessageSystem = _entityManager.System<LastMessageBeforeDeathSystem>();
+            lastMessageSystem.OnRoundEnd();
         }
 
         public void RestartRound()
