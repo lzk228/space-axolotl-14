@@ -1,4 +1,4 @@
-using Content.Client.GPS.Components;
+using Content.Shared.GPS.Components;
 using Content.Client.Message;
 using Content.Client.Stylesheets;
 using Robust.Client.GameObjects;
@@ -44,9 +44,9 @@ public sealed class HandheldGpsStatusControl : Control
         var posText = "Error";
         if (_entMan.TryGetComponent(_parent, out TransformComponent? transComp))
         {
-            var pos =  _transform.GetMapCoordinates(_parent.Owner, xform: transComp);
-            var x = (int) pos.X;
-            var y = (int) pos.Y;
+            var pos = _transform.GetMapCoordinates(_parent.Owner, xform: transComp);
+            var x = (int)pos.X;
+            var y = (int)pos.Y;
             posText = $"({x}, {y})";
         }
         _label.SetMarkup(Loc.GetString("handheld-gps-coordinates-title", ("coordinates", posText)));
