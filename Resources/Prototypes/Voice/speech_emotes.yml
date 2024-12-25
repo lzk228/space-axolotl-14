@@ -28,6 +28,17 @@
     - yells
     - yelled
     - yelling
+    # Axolotl-Localization-Start
+    - кричит
+    - кричит.
+    - кричит!
+    - орёт
+    - орёт.
+    - орёт!
+    - визжит
+    - визжит.
+    - визжит!
+    # Axolotl-Localization-End
 
 - type: emote
   id: Laugh
@@ -57,6 +68,15 @@
     - chortle
     - chortles
     - chortling
+    # Axolotl-Localization-Start
+    - смеется
+    - смеётся
+    - хохочет
+    - хихикает
+    - хихикнул
+    - хихикнула
+    - ржёт
+    # Axolotl-Localization-End
 
 - type: emote
   id: Honk
@@ -74,6 +94,9 @@
     - honks
     - honked
     - honking
+    # Axolotl-Localization-Start
+    - хонк
+    # Axolotl-Localization-End
 
 - type: emote
   id: Sigh
@@ -91,6 +114,11 @@
     - sigh
     - sighs
     - sighed
+    # Axolotl-Localization-Start
+    - вздыхает
+    - вздохнул
+    - вздохнула
+    # Axolotl-Localization-End
 
 - type: emote
   id: Whistle
@@ -108,6 +136,10 @@
     - whistle
     - whistles
     - whistleblowing
+    # Axolotl-Localization-Start
+    - свистит
+    - свистнул
+    # Axolotl-Localization-End
 
 - type: emote
   id: Crying
@@ -128,6 +160,10 @@
     - sob
     - sobs
     - sobbing
+    # Axolotl-Localization-Start
+    - плачет
+    - рыдает
+    # Axolotl-Localization-End
 
 - type: emote
   id: Squish
@@ -146,6 +182,9 @@
     - squish
     - squishing
     - squishes
+    # Axolotl-Localization-Start
+    - хлюпает
+    # Axolotl-Localization-End
 
 - type: emote
   id: Chitter
@@ -164,6 +203,9 @@
    - chitter
    - chitters
    - chittered
+   # Axolotl-Localization-Start
+   - стрекочет
+   # Axolotl-Localization-End
 
 - type: emote
   id: Squeak
@@ -182,6 +224,9 @@
    - squeak
    - squeaks
    - squeaked
+   # Axolotl-Localization-Start
+   - пищит
+   # Axolotl-Localization-End
 
 - type: emote
   id: Click
@@ -199,6 +244,10 @@
   chatTriggers:
    - click
    - clicks
+   # Axolotl-Localization-Start
+   - клац
+   - клацает
+   # Axolotl-Localization-End
 
 # hand emotes
 - type: emote
@@ -218,6 +267,15 @@
     - claps
     - clapping
     - clapped
+    # Axolotl-Localization-Start
+    - хлопает
+    - хлопнул
+    - хлопнула
+    - хлопает в ладоши
+    - хлопнул в ладоши
+    - хлопнула в ладоши
+    - апплодирует
+    # Axolotl-Localization-End
 
 - type: emote
   id: Snap
@@ -241,6 +299,20 @@
     - snaps their fingers
     - snapping fingers
     - snapped fingers
+    # Axolotl-Localization-Start
+    - щелкает
+    - щелкнул
+    - щелкнула
+    - щёлкает
+    - щёлкнул
+    - щёлкнула
+    - щелкает пальцами
+    - щелкнул пальцами
+    - щелкнула пальцами
+    - щёлкает пальцами
+    - щёлкнул пальцами
+    - щёлкнула пальцами
+    # Axolotl-Localization-End
 
 - type: emote
   id: Thump
@@ -266,6 +338,13 @@
     - thumps her tail
     - thumps his tail
     - thumps its tail
+    # Axolotl-Localization-Start
+    - стучит хвостом
+    - стукнул хвостом
+    - стукнула хвостом
+    - стукнул своим хвостом
+    - стукнула своим хвостом
+    # Axolotl-Localization-End
 
 - type: emote
   id: Salute
@@ -282,6 +361,12 @@
   chatTriggers:
     - salute
     - salutes
+    # Axolotl-Localization-Start
+    - салютует
+    - отдаёт честь
+    - отдал честь
+    - отдала честь
+    # Axolotl-Localization-End
 
 - type: emote
   id: Gasp
@@ -328,6 +413,11 @@
     - buzz
     - buzzed
     - buzzes
+    # Axolotl-Localization-Start
+    - жужжит
+    - зажужжал
+    - зажужжала
+    # Axolotl-Localization-End
 
 - type: emote
   id: Weh
@@ -358,6 +448,9 @@
     - chirps
     - chirped
     - chirping
+    # Axolotl-Localization-Start
+    - чирикает
+    # Axolotl-Localization-End
 
 # Machine Emotes
 - type: emote
@@ -376,6 +469,9 @@
     - beeps
     - beeped
     - beeping
+    # Axolotl-Localization-Start
+    - бип
+    # Axolotl-Localization-End
 
 - type: emote
   id: Chime
@@ -393,6 +489,9 @@
     - chimes
     - chimed
     - chiming
+    # Axolotl-Localization-Start
+    - дзынь
+    # Axolotl-Localization-End
 
 - type: emote
   id: Buzz-Two
@@ -416,6 +515,14 @@
     - buzzes twice
     - buzzing twice
     - buzzed twice
+    # Axolotl-Localization-Start
+    - бипбуп
+    - бип буп
+    - бип-буп
+    - бипбип
+    - бип бип
+    - бип-бип
+    # Axolotl-Localization-End
 
 - type: emote
   id: Ping
@@ -433,3 +540,6 @@
     - pings
     - pinged
     - pinging
+    # Axolotl-Localization-Start
+    - пинг
+    # Axolotl-Localization-End
