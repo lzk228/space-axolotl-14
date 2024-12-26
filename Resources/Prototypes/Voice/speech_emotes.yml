@@ -28,7 +28,7 @@
     - yells
     - yelled
     - yelling
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - кричит
     - кричит.
     - кричит!
@@ -38,7 +38,7 @@
     - визжит
     - визжит.
     - визжит!
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Laugh
@@ -68,7 +68,7 @@
     - chortle
     - chortles
     - chortling
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - смеется
     - смеётся
     - хохочет
@@ -76,7 +76,7 @@
     - хихикнул
     - хихикнула
     - ржёт
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Honk
@@ -94,9 +94,9 @@
     - honks
     - honked
     - honking
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - хонк
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Sigh
@@ -114,11 +114,11 @@
     - sigh
     - sighs
     - sighed
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - вздыхает
     - вздохнул
     - вздохнула
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Whistle
@@ -136,10 +136,10 @@
     - whistle
     - whistles
     - whistleblowing
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - свистит
     - свистнул
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Crying
@@ -160,10 +160,10 @@
     - sob
     - sobs
     - sobbing
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - плачет
     - рыдает
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Squish
@@ -182,9 +182,9 @@
     - squish
     - squishing
     - squishes
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - хлюпает
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Chitter
@@ -203,9 +203,9 @@
    - chitter
    - chitters
    - chittered
-   # Axolotl-Localization-Start
+   # RU-Localization-Start
    - стрекочет
-   # Axolotl-Localization-End
+   # RU-Localization-End
 
 - type: emote
   id: Squeak
@@ -224,9 +224,9 @@
    - squeak
    - squeaks
    - squeaked
-   # Axolotl-Localization-Start
+   # RU-Localization-Start
    - пищит
-   # Axolotl-Localization-End
+   # RU-Localization-End
 
 - type: emote
   id: Click
@@ -244,10 +244,10 @@
   chatTriggers:
    - click
    - clicks
-   # Axolotl-Localization-Start
+   # RU-Localization-Start
    - клац
    - клацает
-   # Axolotl-Localization-End
+   # RU-Localization-End
 
 # hand emotes
 - type: emote
@@ -267,7 +267,7 @@
     - claps
     - clapping
     - clapped
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - хлопает
     - хлопнул
     - хлопнула
@@ -275,7 +275,7 @@
     - хлопнул в ладоши
     - хлопнула в ладоши
     - апплодирует
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Snap
@@ -299,7 +299,7 @@
     - snaps their fingers
     - snapping fingers
     - snapped fingers
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - щелкает
     - щелкнул
     - щелкнула
@@ -312,7 +312,7 @@
     - щёлкает пальцами
     - щёлкнул пальцами
     - щёлкнула пальцами
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Thump
@@ -338,13 +338,13 @@
     - thumps her tail
     - thumps his tail
     - thumps its tail
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - стучит хвостом
     - стукнул хвостом
     - стукнула хвостом
     - стукнул своим хвостом
     - стукнула своим хвостом
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Salute
@@ -361,12 +361,12 @@
   chatTriggers:
     - salute
     - salutes
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - салютует
     - отдаёт честь
     - отдал честь
     - отдала честь
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Gasp
@@ -413,11 +413,11 @@
     - buzz
     - buzzed
     - buzzes
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - жужжит
     - зажужжал
     - зажужжала
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Weh
@@ -448,9 +448,9 @@
     - chirps
     - chirped
     - chirping
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - чирикает
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 # Machine Emotes
 - type: emote
@@ -469,9 +469,9 @@
     - beeps
     - beeped
     - beeping
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - бип
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Chime
@@ -489,9 +489,9 @@
     - chimes
     - chimed
     - chiming
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - дзынь
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Buzz-Two
@@ -515,14 +515,14 @@
     - buzzes twice
     - buzzing twice
     - buzzed twice
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - бипбуп
     - бип буп
     - бип-буп
     - бипбип
     - бип бип
     - бип-бип
-    # Axolotl-Localization-End
+    # RU-Localization-End
 
 - type: emote
   id: Ping
@@ -540,6 +540,6 @@
     - pings
     - pinged
     - pinging
-    # Axolotl-Localization-Start
+    # RU-Localization-Start
     - пинг
-    # Axolotl-Localization-End
+    # RU-Localization-End

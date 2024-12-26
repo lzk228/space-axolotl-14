@@ -71,12 +71,12 @@ public sealed class SlurredSystem : SharedSlurredSystem
                     'a' => "ah",
                     'u' => "oo",
                     'c' => "k",
-                    // Axolotl-Localization Start
+                    // RU-Localization Start
                     'о' => "а",
                     'к' => "кх",
                     'щ' => "шч",
                     'ц' => "тс",
-                    // Axolotl-Localization End
+                    // RU-Localization End
                     _ => $"{character}",
                 };
 

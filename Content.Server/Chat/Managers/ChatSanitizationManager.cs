@@ -14,7 +14,7 @@ public sealed class ChatSanitizationManager : IChatSanitizationManager
 {
     private static readonly Dictionary<string, string> ShorthandToEmote = new()
     {
-        // Axolotl-Localization-Start
+        // RU-Localization-Start
         { "хд", "chatsan-laughs" },
         { "о-о", "chatsan-wide-eyed" }, // cyrillic о
         { "о.о", "chatsan-wide-eyed" }, // cyrillic о
@@ -39,7 +39,7 @@ public sealed class ChatSanitizationManager : IChatSanitizationManager
         { ")", "chatsan-smiles" },
         { "((", "chatsan-frowns-deeply" },
         { "(", "chatsan-frowns" },
-        // Axolotl-Localization-End
+        // RU-Localization-End
         { ":)", "chatsan-smiles" },
         { ":]", "chatsan-smiles" },
         { "=)", "chatsan-smiles" },

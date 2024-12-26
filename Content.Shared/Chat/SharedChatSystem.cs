@@ -16,13 +16,13 @@ public abstract class SharedChatSystem : EntitySystem
     public const char LocalPrefix = '>';
     public const char ConsolePrefix = '/';
     public const char DeadPrefix = '\\';
-    public const char LOOCPrefix = '_'; // Axolotl-Localization
+    public const char LOOCPrefix = '_'; // RU-Localization
     public const char OOCPrefix = '[';
-    public const char EmotesPrefix = '%'; // Axolotl-Localization
+    public const char EmotesPrefix = '%'; // RU-Localization
     public const char EmotesAltPrefix = '*';
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
-    public const char DefaultChannelKey = 'р'; // Axolotl-Localization
+    public const char DefaultChannelKey = 'р'; // RU-Localization
 
     [ValidatePrototypeId<RadioChannelPrototype>]
     public const string CommonChannel = "Common";

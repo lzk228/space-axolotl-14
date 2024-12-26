@@ -4,7 +4,7 @@
                       xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
                       Title="{Loc 'research-console-menu-title'}"
                       MinSize="625 400"
-                      SetSize="760 550"> <!-- Axolotl-Localization -->
+                      SetSize="760 550"> <!-- RU-Localization -->
     <BoxContainer Orientation="Vertical"
                   HorizontalExpand="True"
                   VerticalExpand="True">

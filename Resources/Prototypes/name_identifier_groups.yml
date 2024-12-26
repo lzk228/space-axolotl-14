@@ -1,31 +1,31 @@
 ﻿# Non-fungible apes, anyone?
 - type: nameIdentifierGroup
   id: Monkey
-  prefix: ОБ # Axolotl-Localization
+  prefix: ОБ # RU-Localization
 
 - type: nameIdentifierGroup
   id: Kobold
-  prefix: КБ # Axolotl-Localization
+  prefix: КБ # RU-Localization
 
 - type: nameIdentifierGroup
   id: Holoparasite
-  prefix: ГОЛО # Axolotl-Localization
+  prefix: ГОЛО # RU-Localization
 
 - type: nameIdentifierGroup
   id: MMI
-  prefix: ЧМИ # Axolotl-Localization
+  prefix: ЧМИ # RU-Localization
   minValue: 100
   maxValue: 999
 
 - type: nameIdentifierGroup
   id: PositronicBrain
-  prefix: ПМ # Axolotl-Localization
+  prefix: ПМ # RU-Localization
   minValue: 10
   maxValue: 99
 
 - type: nameIdentifierGroup
   id: Silicon
-  prefix: Кр # Axolotl-Localization
+  prefix: Кр # RU-Localization
   minValue: 1000
   maxValue: 9999
 

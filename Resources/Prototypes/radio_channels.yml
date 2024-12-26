@@ -8,7 +8,7 @@
 - type: radioChannel
   id: CentCom
   name: chat-radio-centcom
-  keycode: 'ц' # Axolotl-Localization
+  keycode: 'ц' # RU-Localization
   frequency: 1337
   color: "#2681a5"
   longRange: true
@@ -16,56 +16,56 @@
 - type: radioChannel
   id: Command
   name: chat-radio-command
-  keycode: 'к' # Axolotl-Localization
+  keycode: 'к' # RU-Localization
   frequency: 1353
   color: "#fcdf03"
 
 - type: radioChannel
   id: Engineering
   name: chat-radio-engineering
-  keycode: 'и' # Axolotl-Localization
+  keycode: 'и' # RU-Localization
   frequency: 1357
   color: "#ff733c"
 
 - type: radioChannel
   id: Medical
   name: chat-radio-medical
-  keycode: 'м' # Axolotl-Localization
+  keycode: 'м' # RU-Localization
   frequency: 1355
   color: "#57b8f0"
 
 - type: radioChannel
   id: Science
   name: chat-radio-science
-  keycode: 'н' # Axolotl-Localization
+  keycode: 'н' # RU-Localization
   frequency: 1351
   color: "#cd7ccd"
 
 - type: radioChannel
   id: Security
   name: chat-radio-security
-  keycode: 'о' # Axolotl-Localization
+  keycode: 'о' # RU-Localization
   frequency: 1359
   color: "#ff4242"
 
 - type: radioChannel
   id: Service
   name: chat-radio-service
-  keycode: 'с' # Axolotl-Localization
+  keycode: 'с' # RU-Localization
   frequency: 1349
   color: "#539c00"
 
 - type: radioChannel
   id: Supply
   name: chat-radio-supply
-  keycode: 'п' # Axolotl-Localization
+  keycode: 'п' # RU-Localization
   frequency: 1347
   color: "#b48b57"
 
 - type: radioChannel
   id: Syndicate
   name: chat-radio-syndicate
-  keycode: 'т' # Axolotl-Localization
+  keycode: 'т' # RU-Localization
   frequency: 1213
   color: "#8f4a4b"
   longRange: true
@@ -81,7 +81,7 @@
 - type: radioChannel
   id: Binary
   name: chat-radio-binary
-  keycode: 'д' # Axolotl-Localization
+  keycode: 'д' # RU-Localization
   frequency: 1001
   color: "#5ed7aa"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
@@ -90,7 +90,7 @@
 - type: radioChannel
   id: Freelance
   name: chat-radio-freelance
-  keycode: 'ф' # Axolotl-Localization
+  keycode: 'ф' # RU-Localization
   frequency: 1984
   color: "#f6ce64"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
