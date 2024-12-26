@@ -1,10 +1,10 @@
 using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
-using Robust.Shared.Random; // Axolotl-Localization
+using Robust.Shared.Random; // RU-Localization
 
 namespace Content.Server.Speech.EntitySystems;
 
-public sealed class FrontalLispSystem : EntitySystem
+public sealed partial class FrontalLispSystem : EntitySystem
 {
     // @formatter:off
     private static readonly Regex RegexUpperTh = new(@"[T]+[Ss]+|[S]+[Cc]+(?=[IiEeYy]+)|[C]+(?=[IiEeYy]+)|[P][Ss]+|([S]+[Tt]+|[T]+)(?=[Ii]+[Oo]+[Uu]*[Nn]*)|[C]+[Hh]+(?=[Ii]*[Ee]*)|[Z]+|[S]+|[X]+(?=[Ee]+)");
@@ -13,7 +13,33 @@ public sealed class FrontalLispSystem : EntitySystem
     private static readonly Regex RegexLowerEcks = new(@"[e]+[x]+[c]*|[x]+");
     // @formatter:on
 
-    [Dependency] private readonly IRobustRandom _random = default!; // Axolotl-Localization
+    // RU-Localization Start
+    [GeneratedRegex(@"с", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexS();
+
+    [GeneratedRegex(@"ч", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexCh();
+
+    [GeneratedRegex(@"ц", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexTs();
+
+    [GeneratedRegex(@"\B[т](?![АЕЁИОУЫЭЮЯаеёиоуыэюя])", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexNonVocalT();
+
+    [GeneratedRegex(@"з", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexZ();
+
+    private static readonly (Func<Regex> regex, string lowerReplacement, string upperReplacement)[] Rules = new (Func<Regex>, string, string)[]
+    {
+        (RegexS, "ш", "Ш"),
+        (RegexCh, "ш", "Ш"),
+        (RegexTs, "ч", "Ч"),
+        (RegexNonVocalT, "ч", "Ч"),
+        (RegexZ, "ж", "Ж"),
+    };
+    // RU-Localization End
+
+    [Dependency] private readonly IRobustRandom _random = default!; // RU-Localization
 
     public override void Initialize()
     {
@@ -32,23 +58,19 @@ public sealed class FrontalLispSystem : EntitySystem
         message = RegexUpperEcks.Replace(message, "EKTH");
         message = RegexLowerEcks.Replace(message, "ekth");
 
-        // Axolotl-Localization Start
-        // с - ш
-        message = Regex.Replace(message, @"с", _random.Prob(0.90f) ? "ш" : "с");
-        message = Regex.Replace(message, @"С", _random.Prob(0.90f) ? "Ш" : "С");
-        // ч - ш
-        message = Regex.Replace(message, @"ч", _random.Prob(0.90f) ? "ш" : "ч");
-        message = Regex.Replace(message, @"Ч", _random.Prob(0.90f) ? "Ш" : "Ч");
-        // ц - ч
-        message = Regex.Replace(message, @"ц", _random.Prob(0.90f) ? "ч" : "ц");
-        message = Regex.Replace(message, @"Ц", _random.Prob(0.90f) ? "Ч" : "Ц");
-        // т - ч
-        message = Regex.Replace(message, @"\B[т](?![АЕЁИОУЫЭЮЯаеёиоуыэюя])", _random.Prob(0.90f) ? "ч" : "т");
-        message = Regex.Replace(message, @"\B[Т](?![АЕЁИОУЫЭЮЯаеёиоуыэюя])", _random.Prob(0.90f) ? "Ч" : "Т");
-        // з - ж
-        message = Regex.Replace(message, @"з", _random.Prob(0.90f) ? "ж" : "з");
-        message = Regex.Replace(message, @"З", _random.Prob(0.90f) ? "Ж" : "З");
-        // Axolotl-Localization End
+        // RU-Localization Start
+        foreach (var (regex, lowerReplacement, upperReplacement) in Rules)
+        {
+            message = regex()
+                .Replace(message,
+                    match =>
+                    {
+                // Checking whether a letter is capitalised
+                var replacement = char.IsUpper(match.Value[0]) ? upperReplacement : lowerReplacement;
+                return _random.Prob(0.90f) ? replacement : match.Value;
+            });
+        }
+        // RU-Localization End
 
         args.Message = message;
     }
