@@ -1,10 +1,10 @@
 ﻿using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
-using Robust.Shared.Random; // Axolotl-Localization
+using Robust.Shared.Random; // RU-Localization
 
 namespace Content.Server.Speech.EntitySystems;
 
-public sealed class LizardAccentSystem : EntitySystem
+public sealed partial class LizardAccentSystem : EntitySystem
 {
     private static readonly Regex RegexLowerS = new("s+");
     private static readonly Regex RegexUpperS = new("S+");
@@ -12,7 +12,33 @@ public sealed class LizardAccentSystem : EntitySystem
     private static readonly Regex RegexLowerEndX = new(@"\bx([\-|r|R]|\b)");
     private static readonly Regex RegexUpperEndX = new(@"\bX([\-|r|R]|\b)");
 
-    [Dependency] private readonly IRobustRandom _random = default!; // Axolotl-Localization
+    // RU-Localization-Start
+    [GeneratedRegex(@"с+", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexS();
+
+    [GeneratedRegex(@"з+", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexZ();
+
+    [GeneratedRegex(@"ш+", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexSh();
+
+    [GeneratedRegex(@"ч+", RegexOptions.IgnoreCase)]
+    private static partial Regex RegexCh();
+
+    private static readonly (Func<Regex> regex, string[] lowerReplacements, string[] upperReplacements)[] Rules = new (Func<Regex>, string[], string[])[]
+    {
+        // c => ссс
+        (RegexS, ["сс", "ссс"], ["СС", "ССС"]),
+        // з => ссс
+        (RegexZ, ["сс", "ссс"], ["СС", "ССС"]),
+        // ш => шшш
+        (RegexSh, ["шш", "шшш"], ["ШШ", "ШШШ"]),
+        // ч => щщщ
+        (RegexCh, ["щщ", "щщщ"], ["ЩЩ", "ЩЩЩ"]),
+    };
+    // RU-Localization-End
+
+    [Dependency] private readonly IRobustRandom _random = default!; // RU-Localization
 
     public override void Initialize()
     {
@@ -35,56 +61,19 @@ public sealed class LizardAccentSystem : EntitySystem
         // eckS
         message = RegexUpperEndX.Replace(message, "ECKS$1");
 
-        // Axolotl-Localization-Start
-        // c => ссс
-        message = Regex.Replace(
-            message,
-            "с+",
-            _random.Pick(new List<string>() { "сс", "ссс" })
-        );
-        // С => CCC
-        message = Regex.Replace(
-            message,
-            "С+",
-            _random.Pick(new List<string>() { "СС", "ССС" })
-        );
-        // з => ссс
-        message = Regex.Replace(
-            message,
-            "з+",
-            _random.Pick(new List<string>() { "сс", "ссс" })
-        );
-        // З => CCC
-        message = Regex.Replace(
-            message,
-            "З+",
-            _random.Pick(new List<string>() { "СС", "ССС" })
-        );
-        // ш => шшш
-        message = Regex.Replace(
-            message,
-            "ш+",
-            _random.Pick(new List<string>() { "шш", "шшш" })
-        );
-        // Ш => ШШШ
-        message = Regex.Replace(
-            message,
-            "Ш+",
-            _random.Pick(new List<string>() { "ШШ", "ШШШ" })
-        );
-        // ч => щщщ
-        message = Regex.Replace(
-            message,
-            "ч+",
-            _random.Pick(new List<string>() { "щщ", "щщщ" })
-        );
-        // Ч => ЩЩЩ
-        message = Regex.Replace(
-            message,
-            "Ч+",
-            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ" })
-        );
-        // Axolotl-Localization-End
+        // RU-Localization-Start
+        foreach (var (regex, lowerReplacements, upperReplacements) in Rules)
+        {
+            message = regex()
+                .Replace(message,
+                    match =>
+                    {
+                        var replacements = char.IsUpper(match.Value[0]) ? upperReplacements : lowerReplacements;
+                        return _random.Pick(replacements);
+                    });
+        }
+        // RU-Localization-End
+
         args.Message = message;
     }
 }
