@@ -11,13 +11,6 @@ public sealed class MothAccentSystem : EntitySystem
     private static readonly Regex RegexLowerBuzz = new Regex("z{1,3}");
     private static readonly Regex RegexUpperBuzz = new Regex("Z{1,3}");
 
-    // RU-Localization-Start
-    private static readonly string[] LowerJ = ["жж", "жжж"];
-    private static readonly string[] UpperJ = ["ЖЖ", "ЖЖЖ"];
-    private static readonly string[] LowerZ = ["зз", "ззз"];
-    private static readonly string[] UpperZ = ["ЗЗ", "ЗЗЗ"];
-    // RU-Localization-End
-
     public override void Initialize()
     {
         base.Initialize();
@@ -35,13 +28,29 @@ public sealed class MothAccentSystem : EntitySystem
 
         // RU-Localization-Start
         // ж => жжж
-        message = message.Replace("ж", _random.Pick(LowerJ));
+        message = Regex.Replace(
+            message,
+            "ж+",
+            _random.Pick(new List<string>() { "жж", "жжж" })
+        );
         // Ж => ЖЖЖ
-        message = message.Replace("Ж", _random.Pick(UpperJ));
-        // з => ззз
-        message = message.Replace("з", _random.Pick(LowerZ));
-        // З => ЗЗЗ
-        message = message.Replace("З", _random.Pick(UpperZ));
+        message = Regex.Replace(
+            message,
+            "Ж+",
+            _random.Pick(new List<string>() { "ЖЖ", "ЖЖЖ" })
+        );
+        // з => ссс
+        message = Regex.Replace(
+            message,
+            "з+",
+            _random.Pick(new List<string>() { "зз", "ззз" })
+        );
+        // З => CCC
+        message = Regex.Replace(
+            message,
+            "З+",
+            _random.Pick(new List<string>() { "ЗЗ", "ЗЗЗ" })
+        );
         // RU-Localization-End
 
         args.Message = message;
