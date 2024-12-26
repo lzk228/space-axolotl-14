@@ -31,10 +31,15 @@ public sealed partial class FrontalLispSystem : EntitySystem
 
     private static readonly (Func<Regex> regex, string lowerReplacement, string upperReplacement)[] Rules = new (Func<Regex>, string, string)[]
     {
+        // с - ш
         (RegexS, "ш", "Ш"),
+        // ч - ш
         (RegexCh, "ш", "Ш"),
+        // ц - ч
         (RegexTs, "ч", "Ч"),
+        // т - ч
         (RegexNonVocalT, "ч", "Ч"),
+        // з - ж
         (RegexZ, "ж", "Ж"),
     };
     // RU-Localization End
