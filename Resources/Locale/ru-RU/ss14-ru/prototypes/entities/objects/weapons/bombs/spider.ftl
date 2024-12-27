@@ -1,2 +1,2 @@
-ent-SpiderCharge = spider clan charge
-    .desc = A modified C-4 charge supplied to you by the Spider Clan. Its explosive power has been juiced up, but only works in one specific area.
+ent-SpiderCharge = бомба клана Паука
+    .desc = Модифицированный заряд C-4, предоставленный вам кланом Паука. Сила его взрыва была увеличена, но действует он только в одной определенной области.

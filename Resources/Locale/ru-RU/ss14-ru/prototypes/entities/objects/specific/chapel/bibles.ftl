@@ -1,6 +1,6 @@
-ent-Bible = bible
-    .desc = New Interstellar Version 2340.
-ent-BibleNecronomicon = necronomicon
-    .desc = There's a note: Klatuu, Verata, Nikto -- Don't forget it again!
-ent-ActionBibleSummon = Summon familiar
-    .desc = Summon a familiar that will aid you and gain humanlike intelligence once inhabited by a soul.
+ent-Bible = библия
+    .desc = Новая межзвёздная версия 2340.
+ent-BibleNecronomicon = некрономикон
+    .desc = Имеется пометка: Klatuu, Verata, Nikto -- Не забыть об этом опять!
+ent-ActionBibleSummon = Призвать фамильяра
+    .desc = Призовите фамильяра, который станет помогать вам и обретёт человекоподобный интеллект после вселения в него души.
