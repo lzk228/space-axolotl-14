@@ -37,4 +37,4 @@ ent-BaseSecurityCargoContraband = { ent-BaseRestrictedContraband }
 ent-BaseMedicalScienceContraband = { ent-BaseRestrictedContraband }
     .desc = { ent-BaseRestrictedContraband.desc }
 ent-BaseGrandTheftContraband = { "" }
-.desc = { "" }
+    .desc = { "" }
