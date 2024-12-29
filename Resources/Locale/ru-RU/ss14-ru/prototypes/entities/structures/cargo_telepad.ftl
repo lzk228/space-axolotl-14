@@ -1,2 +1,2 @@
-ent-CargoTelepad = cargo telepad
-    .desc = Beam in the pizzas and dig in.
+ent-CargoTelepad = грузовой телепад
+    .desc = Захватите пиццу и приступайте к работе.

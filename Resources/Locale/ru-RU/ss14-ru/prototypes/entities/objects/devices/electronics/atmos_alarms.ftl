@@ -1,4 +1,4 @@
-ent-AirAlarmElectronics = air alarm electronics
-    .desc = An electronics board used in air alarms.
-ent-FireAlarmElectronics = fire alarm electronics
-    .desc = An electronics board used in fire alarms.
+ent-AirAlarmElectronics = микросхема воздушной сигнализации
+    .desc = Электронная плата, используемая в воздушных сигнализациях.
+ent-FireAlarmElectronics = микросхема пожарной сигнализации
+    .desc = Электронная плата, используемая в пожарных сигнализациях.
