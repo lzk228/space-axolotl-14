@@ -20,7 +20,6 @@ cmd-banpanel-desc = Открыть панель банов
 cmd-banpanel-help = Использование: banpanel [имя или guid игрока]
 cmd-banpanel-server = Это не может быть использовано через консоль сервера
 cmd-banpanel-player-err = Указанный игрок не может быть найден
-cmd-ban-hint-duration-6 = 1 месяц
 # listbans
 cmd-banlist-desc = Список активных банов пользователя.
 cmd-banlist-help = Использование: banlist <name or user ID>
