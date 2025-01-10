@@ -5,8 +5,8 @@ flavor-profile-unknown = Вкус неописуем.
 # Base flavors. Use these when you can't think of anything.
 # These are specifically flavors that are placed in front
 # of other flavors. When the flavors are processed, these
-# will go in front so you don't get this как "Tastes как tomatoes, sweet and spicy",
-# instead, you get "Tastes sweet, spicy and как tomatoes".
+# will go in front so you don't get this like "Tastes like tomatoes, sweet and spicy",
+# instead, you get "Tastes sweet, spicy and like tomatoes".
 
 flavor-base-savory = жгуче
 flavor-base-sweet = сладко
