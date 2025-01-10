@@ -92,7 +92,7 @@ holopad-engineering-telecoms = Инженерия - Телекоммуникац
 holopad-engineering-tech-vault = Инженерия - Техническое хранилище
 holopad-engineering-ame = Инженерия - ДАМ
 holopad-engineering-power = Инженерия - Питание
-# S ecurity
+# Security
 holopad-security-front = СБ - Приёмная
 holopad-security-brig = СБ - Бриг
 holopad-security-warden = СБ - Смотритель
