@@ -111,6 +111,6 @@ JobServiceWorker = сервисный работник
 JobStationAi = станционный ИИ
 JobStationEngineer = инженер
 JobTechnicalAssistant = технический ассистент
-JobWarden = смотритель
 JobVisitor = посетитель
+JobWarden = смотритель
 JobZookeeper = зоотехник
