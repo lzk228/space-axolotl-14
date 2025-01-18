@@ -41,22 +41,22 @@
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Невыполнение требований (О)
+        Невыполнение требований (Н)
       </Box>
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Нарушение правил задержания (О)
+        Нарушение правил задержания (Н)
       </Box>
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Нарушение правил заключения (О)
+        Нарушение правил заключения (Н)
       </Box>
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Отказ от ментального щита (О)
+        Отказ от ментального щита (Н)
       </Box>
     </ColorBox>
     <ColorBox>
