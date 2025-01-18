@@ -1,0 +1,194 @@
+﻿- type: guideEntry # Default for forks and stuff. Should not be listed anywhere if the server is using a custom ruleset.
+  id: AxolotlRuleset
+  name: guide-entry-rules
+  ruleEntry: true
+  text: "/ServerInfo/Axolotl/ServerRules/Rules.xml"
+
+- type: guideEntry
+  id: AxolotlRuleC1
+  name: guide-entry-rules-c1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Axolotl/ServerRules/CoreRules/RuleC1Admin.xml"
+
+- type: guideEntry
+  id: AxolotlRuleC2
+  name: guide-entry-rules-c2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Axolotl/ServerRules/CoreRules/RuleC2DBAD.xml"
+
+- type: guideEntry
+  id: AxolotlRuleC3
+  name: guide-entry-rules-c3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Axolotl/ServerRules/CoreRules/RuleC3Language.xml"
+
+- type: guideEntry
+  id: AxolotlRuleC4
+  name: guide-entry-rules-c4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Axolotl/ServerRules/CoreRules/RuleC4Metacoop.xml"
+
+- type: guideEntry
+  id: AxolotlRuleC5
+  name: guide-entry-rules-c5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Axolotl/ServerRules/CoreRules/RuleC5OOC.xml"
+
+- type: guideEntry
+  id: AxolotlRuleC6
+  name: guide-entry-rules-c6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Axolotl/ServerRules/CoreRules/RuleC6ERP.xml"
+
+- type: guideEntry
+  id: AxolotlRuleC7
+  name: guide-entry-rules-c7
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Axolotl/ServerRules/CoreRules/RuleC7Bugs.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR1
+  name: guide-entry-rules-r1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR1Grief.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR2
+  name: guide-entry-rules-r2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR2RealCharacter.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR3
+  name: guide-entry-rules-r3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR3CharacterRules.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR4
+  name: guide-entry-rules-r4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR4DontLeaveRole.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR5
+  name: guide-entry-rules-r5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR5Conflicts.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR6
+  name: guide-entry-rules-r6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR6Metashield.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR7
+  name: guide-entry-rules-r7
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR7SelfAntag.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR8
+  name: guide-entry-rules-r8
+  ruleEntry: true
+  priority: 8
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR8AntagRules.xml"
+
+- type: guideEntry
+  id: AxolotlRuleR9
+  name: guide-entry-rules-r9
+  ruleEntry: true
+  priority: 9
+  text: "/ServerInfo/Axolotl/ServerRules/RPRules/RuleR9CommandRules.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS1
+  name: guide-entry-rules-s1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS1Laws.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS2
+  name: guide-entry-rules-s2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS2LawPriority.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS3
+  name: guide-entry-rules-s3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS3LawRedefinition.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS4
+  name: guide-entry-rules-s4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS4RequestChanges.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS5
+  name: guide-entry-rules-s5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS5FreeSilicon.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS6
+  name: guide-entry-rules-s6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS6UnreasonableOrders.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS7
+  name: guide-entry-rules-s7
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS7Consistency.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS8
+  name: guide-entry-rules-s8
+  ruleEntry: true
+  priority: 8
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS8DefaultCrewDefinition.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS9
+  name: guide-entry-rules-s9
+  ruleEntry: true
+  priority: 9
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS9DefaultHarmDefinition.xml"
+
+- type: guideEntry
+  id: AxolotlRuleS10
+  name: guide-entry-rules-s10
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Axolotl/ServerRules/SiliconRules/RuleS10OrderConflicts.xml"
+
+- type: guideEntry
+  id: AxolotlBans
+  name: guide-entry-axolotl-rules-bans
+  ruleEntry: true
+  priority: 11
+  text: "/ServerInfo/Axolotl/ServerRules/Bans.xml"
