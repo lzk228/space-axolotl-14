@@ -5,9 +5,6 @@ maxplayers = 150
 soft_max_players = 50
 map_rotation = true
 
-[server]
-lobby_name = "Space Axolotl️"
-
 [rules]
 time = 60.0
 
