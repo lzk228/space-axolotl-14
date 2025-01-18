@@ -66,12 +66,12 @@
     </ColorBox>
     <ColorBox Color="#2f3832">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Владение: Малой (В)
+        Владение: Малое (В)
       </Box>
     </ColorBox>
     <ColorBox Color="#2f3832">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Владение: Крупной (В)
+        Владение: Крупное (В)
       </Box>
     </ColorBox>
     <ColorBox Color="#2f3832">
@@ -362,7 +362,7 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Нанесение граффити, разбивание стёкол в баре и взлом внутренних окон - это вандализм, а разбивание окон в
+        Нанесение граффити, разбивание стаканов в баре и поломка внутренних окон - это вандализм, а поломка окон в
         космос или охраняемые зоны - нет.
       </Box>
     </ColorBox>
@@ -378,12 +378,12 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Проникновение в неохраняему без разрешения.
+        Проникновение в неохраняемую зону без разрешения.
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Лучше всего просто выгнать их с территории, если это не рецидив (повторное преступление).
+        Лучше всего просто выгнать нарушителя с территории, если это не рецидив.
       </Box>
     </ColorBox>
     <ColorBox>
@@ -398,7 +398,7 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Вызов общественных беспорядков.
+        Причинение общественных беспорядков.
       </Box>
     </ColorBox>
     <ColorBox>
@@ -618,13 +618,13 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Нанесение масштабного ущерба зоне или системе крупных станций.
+        Нанесение масштабного ущерба зоне или крупной станционной системе.
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
         В основном это используется для смертоносных взрывов или саботажа основных систем станции, таких как
-        производство электроэнергии, химикатов, подстанций или атмосистемы.
+        производство электроэнергии, химикатов, подстанций или атмоса.
       </Box>
     </ColorBox>
     <ColorBox>
@@ -783,7 +783,7 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Покушение на убийствоы
+        Покушение на убийство
       </Box>
     </ColorBox>
     <ColorBox>
@@ -813,7 +813,7 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Попытка превращается в полноценное убийство только в том случае, если жертва переходит в состояние смерти и ее приходится реанимировать.
+        Попытка превращается в полноценное убийство только в том случае, если жертва переходит в состояние смерти и её приходится реанимировать.
       </Box>
     </ColorBox>
     <ColorBox>
