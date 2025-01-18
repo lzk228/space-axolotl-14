@@ -41,22 +41,22 @@
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Невыполнение требований (E)
+        Невыполнение требований (О)
       </Box>
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Нарушение правил задержания (E)
+        Нарушение правил задержания (О)
       </Box>
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Нарушение правил заключения (E)
+        Нарушение правил заключения (О)
       </Box>
     </ColorBox>
     <ColorBox Color="#593a4e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Отказ от ментального щита (E)
+        Отказ от ментального щита (О)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -66,17 +66,17 @@
     </ColorBox>
     <ColorBox Color="#2f3832">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Владение: Малой (P)
+        Владение: Малой (В)
       </Box>
     </ColorBox>
     <ColorBox Color="#2f3832">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Владение: Крупной (P)
+        Владение: Крупной (В)
       </Box>
     </ColorBox>
     <ColorBox Color="#2f3832">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Владение: Синдикат (P)
+        Владение: Синдикат (В)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -94,7 +94,7 @@
     </ColorBox>
     <ColorBox Color="#2e422e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Мелкая кража (H)
+        Мелкая кража (К)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -103,7 +103,7 @@
     </ColorBox>
     <ColorBox Color="#2e422e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Крупная кража (H)
+        Крупная кража (К)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -122,17 +122,17 @@
     </ColorBox>
     <ColorBox Color="#453a59">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Вандализм (D)
+        Вандализм (Р)
       </Box>
     </ColorBox>
     <ColorBox Color="#453a59">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Повреждение имущества (D)
+        Повреждение имущества (Р)
       </Box>
     </ColorBox>
     <ColorBox Color="#453a59">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Массовое разрушение (D)
+        Массовое разрушение (Р)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -141,7 +141,7 @@
     </ColorBox>
     <ColorBox Color="#453a59">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Терроризм (D)
+        Терроризм (Р)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -151,7 +151,7 @@
     </ColorBox>
     <ColorBox Color="#59563a">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Проникновение (T)
+        Проникновение (П)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -160,7 +160,7 @@
     </ColorBox>
     <ColorBox Color="#59563a">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Проникновение в охраняемую зону (T)
+        Проникновение в охраняемую зону (П)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -182,22 +182,22 @@
     </ColorBox>
     <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Создание угрозы (V)
+        Создание угрозы (Ж)
       </Box>
     </ColorBox>
     <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Нападение (V)
+        Нападение (Ж)
       </Box>
     </ColorBox>
     <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Покушение на убийство (V)
+        Покушение на убийство (Ж)
       </Box>
     </ColorBox>
     <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Предотвращение реанимации (V)
+        Предотвращение реанимации (Ж)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -215,17 +215,17 @@
     </ColorBox>
     <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Непредумышленное убийство (V)
+        Непредумышленное убийство (Ж)
       </Box>
     </ColorBox>
     <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Убийство (V)
+        Убийство (Ж)
       </Box>
     </ColorBox>
     <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Массовое убийство (V)
+        Массовое убийство (Ж)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -235,7 +235,7 @@
     </ColorBox>
     <ColorBox Color="#3b4354">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Беспорядки (R)
+        Беспорядки (Б)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -244,7 +244,7 @@
     </ColorBox>
     <ColorBox Color="#3b4354">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Мятеж (R)
+        Мятеж (Б)
       </Box>
     </ColorBox>
     <ColorBox>
