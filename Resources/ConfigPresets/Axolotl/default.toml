@@ -11,6 +11,9 @@ discord    = "https://discord.gg/KtHkxwrFnU"
 github     = "https://github.com/lzk228/space-axolotl-14"
 appeal     = "https://discord.gg/KtHkxwrFnU"
 
+[server]
+rules_file = "AxolotlRuleset"
+
 [rules]
 time = 60.0
 

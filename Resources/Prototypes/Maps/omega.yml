@@ -2,7 +2,7 @@
   id: Omega
   mapName: 'Omega'
   mapPath: /Maps/omega.yml
-  minPlayers: 7
+  minPlayers: 0 # Axolotl
   maxPlayers: 35
   stations:
     Omega:
