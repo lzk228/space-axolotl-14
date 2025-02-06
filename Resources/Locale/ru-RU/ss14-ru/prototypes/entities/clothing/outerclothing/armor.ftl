@@ -1,7 +1,7 @@
-ent-ClothingOuterArmorBase = armor vest
-    .desc = A standard Type I armored vest that provides decent protection against most types of damage.
-ent-ClothingOuterArmorBasic = бронежилет
+ent-ClothingOuterArmorBase = бронежилет
     .desc = Стандартный бронежилет типа I, обеспечивающий достойную защиту от большинства видов повреждений.
+ent-ClothingOuterArmorBasic = { ent-BaseSecurityBartenderContraband }
+    .desc = { ent-BaseSecurityBartenderContraband.desc }
 ent-ClothingOuterArmorBasicSlim = бронежилет
     .desc = Тонкий бронежилет типа I, обеспечивающий достойную защиту от большинства видов повреждений.
     .suffix = тонкий
