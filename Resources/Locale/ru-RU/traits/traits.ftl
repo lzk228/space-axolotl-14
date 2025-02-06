@@ -40,4 +40,4 @@ trait-french-desc = Ваш акцент, похоже, имеет определ
 trait-spanish-name = Испанский акцент
 trait-spanish-desc = Hola señor, как пройти в la biblioteca.
 trait-painnumbness-name = Numb
-trait-painnumbness-desc = Вы не чувствуете боли, не осознавая, насколько вы ранены.
+trait-painnumbness-desc = Вы не чувствуете боли и не осознаёте, насколько вы ранены.

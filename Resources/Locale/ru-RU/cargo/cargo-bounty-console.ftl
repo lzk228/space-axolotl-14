@@ -18,6 +18,6 @@ bounty-manifest-header = [font size=14][bold]Официальный манифе
 bounty-manifest-list-start = Манифест:
 bounty-console-tab-available-label = Доступные
 bounty-console-tab-history-label = История
-bounty-console-history-empty-label = Не найдено истории запросов
+bounty-console-history-empty-label = История запросов не найдена
 bounty-console-history-notice-completed-label = [color=limegreen]Выполнено[/color]
 bounty-console-history-notice-skipped-label = [color=red]Пропущено[/color] { $id }
