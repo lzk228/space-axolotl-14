@@ -5,7 +5,7 @@ role-timer-overall-too-high = Требуется на [color=yellow]{ $time }[/c
 role-timer-role-insufficient = Требуется ещё [color=yellow]{ $time }[/color] игрового времени в качестве [color={ $departmentColor }]{ $job }[/color], чтобы разблокировать эту роль.
 role-timer-role-too-high = Требуется на [color=yellow]{ $time }[/color] меньше игрового времени в качестве [color={ $departmentColor }]{ $job }[/color], чтобы выбрать эту роль. (Вы пытаетесь играть за роль для новичков?)
 role-timer-age-too-old = Возраст персонажа должен быть не более [color=yellow]{ $age }[/color], чтобы выбрать эту роль.
-role-timer-age-too-young = Возраст персонажа должен быть не менее [color=yellow]{ $age }[/color], чтоб выбрать эту роль.
+role-timer-age-too-young = Возраст персонажа должен быть не менее [color=yellow]{ $age }[/color], чтобы выбрать эту роль.
 role-timer-whitelisted-species = Ваш персонаж должен быть одной из следующих рас, чтобы выбрать эту роль:
 role-timer-blacklisted-species = Ваш персонаж не должен быть одной из следующих рас, чтобы выбрать эту роль:
 role-timer-whitelisted-traits = Ваш персонаж должен иметь одну из следующих черт, чтобы выбрать эту роль:
