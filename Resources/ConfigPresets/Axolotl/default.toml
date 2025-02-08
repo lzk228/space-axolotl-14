@@ -37,6 +37,3 @@ emergency_early_launch_allowed = true
 
 [ic]
 flavor_text = true
-
-[worldgen]
-enabled = true
