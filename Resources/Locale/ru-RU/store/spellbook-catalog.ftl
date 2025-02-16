@@ -3,6 +3,8 @@ spellbook-fireball-name = Огненный шар
 spellbook-fireball-desc = Пусть большинство членов экипажа взорвутся от ярости, когда увидят летящий в них огненный шар!
 spellbook-blink-name = Прыжок
 spellbook-blink-desc = Не моргайте, иначе вы не заметите, как телепортируетесь.
+spellbook-voidapplause-name = Void Applause
+spellbook-voidapplause-desc = Swap places with the target, doesn't it make you want to do the boogie?
 spellbook-force-wall-name = Силовой барьер
 spellbook-force-wall-desc = Создайте три стены чистой энергии, через которые вы можете пройти, а другие - нет.
 spellbook-polymoprh-spider-name = Полиморф-паук
@@ -15,6 +17,16 @@ spellbook-ethereal-jaunt-name = Эфирная прогулка
 spellbook-ethereal-jaunt-description = Перейдите на Эфирный план чтобы ускользнуть от врагов!
 spellbook-mind-swap-name = Обмен разумом
 spellbook-mind-swap-description = Обменяйтесь телами с другим человеком!
+spellbook-animate-name = Animate
+spellbook-animate-description = Bring an inanimate object to life!
+spellbook-smite-name = Smite
+spellbook-smite-desc = Don't like them? EXPLODE them into giblets! Requires Wizard Robe & Hat.
+spellbook-cluwne-name = Cluwne's Curse
+spellbook-cluwne-desc = For when you really hate someone and Smite isn't enough. Requires Wizard Robe & Hat.
+spellbook-slip-name = Slippery Slope
+spellbook-slip-desc = Learn the ancient ways of the Janitor and curse your target to be slippery. Requires Wizard Robe & Hat.
+spellbook-item-recall-name = Item Recall
+spellbook-item-recall-description = Mark a held item and summon it back at any time with just a snap of your fingers!
 
 # Equipment
 
@@ -24,6 +36,8 @@ spellbook-wand-polymorph-carp-name = Волшебная палочка поли�
 spellbook-wand-polymorph-carp-description = На случай, когда вам срочно нужно филе карпа, а клоун выглядит уж очень аппетитно.
 spellbook-wand-locker-name = Волшебная палочка шкафчика
 spellbook-wand-locker-description = Стреляйте в своих врагов проклятыми шкафчиками и запирайте их!
+spellbook-staff-animation-name = Staff of Animation
+spellbook-staff-animation-description = Bring inanimate objects to life!
 
 # Events
 

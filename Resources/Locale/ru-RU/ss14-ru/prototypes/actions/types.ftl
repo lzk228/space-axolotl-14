@@ -54,3 +54,5 @@ ent-ActionToggleWagging = Махать хвостом
     .desc = Начать/перестать махать хвостом.
 ent-FakeMindShieldToggleAction = action-name-toggle-fake-mindshield
     .desc = action-description-toggle-fake-mindshield
+ent-ActionToggleParamedicSiren = Toggle Paramedic Siren
+    .desc = Toggles the paramedic siren on and off.
