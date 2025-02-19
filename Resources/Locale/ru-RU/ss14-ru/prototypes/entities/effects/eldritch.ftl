@@ -1,2 +1,2 @@
-ent-EffectVoidBlink = void blink
+ent-EffectVoidBlink = пустотный прыжок
     .desc = { "" }
