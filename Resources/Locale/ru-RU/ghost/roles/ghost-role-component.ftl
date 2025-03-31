@@ -236,4 +236,4 @@ ghost-role-information-gingerbread-description =
     Существо чистого праздничного духа.
     Распространяйте паточную вкуснятину и хорошее настроение.
 ghost-role-information-wizard-name = Волшебник
-ghost-role-information-wizard-desc = ВЫ ВОЛШЕБНИК! Покажите станции, из чего состоит ваша магия.
+ghost-role-information-wizard-desc = ТЫ ВОЛШЕБНИК! Покажи станции, из чего сделана твоя магия.
