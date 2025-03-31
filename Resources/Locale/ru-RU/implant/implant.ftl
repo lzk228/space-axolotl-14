@@ -11,7 +11,7 @@ implanter-component-implant-already = { $target } уже имеет { $implant }
 
 implanter-set-draw-verb = Установить извлечение импланта
 implanter-set-draw-window = Установить извлечение импланта
-implanter-set-draw-info = Выберите тип импланта, который должен быть извлеччён.
+implanter-set-draw-info = Выберите тип импланта, который должен быть извлечён.
 implanter-set-draw-type = Тип импланта:
 implanter-draw-text = Извлечение
 implanter-inject-text = Установка
