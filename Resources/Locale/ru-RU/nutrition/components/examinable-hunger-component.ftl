@@ -26,4 +26,4 @@ examinable-hunger-component-examine-starving = { CAPITALIZE(SUBJECT($entity)) } 
         [epicene] изголодавшимися
        *[neuter] изголодавшимся
         }!
-examinable-hunger-component-examine-none = { CAPITALIZE(SUBJECT($entity)) }, похоже, не голодает.
+examinable-hunger-component-examine-none = { CAPITALIZE(SUBJECT($entity)) }, похоже, не { CONJUGATE-BASIC($entity, "голодают", "голодает") }.
