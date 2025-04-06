@@ -21,7 +21,7 @@ handcuff-component-cuff-self-observer-success-message = { $user } {GENDER($user)
         } { REFLEXIVE($target) } себя.
 handcuff-component-cuff-other-success-message = Вы успешно заковали { $otherName }.
 handcuff-component-cuff-self-success-message = Вы заковали себя.
-handcuff-component-cuff-by-other-success-message = { $otherName } {GENDER($user) ->
+handcuff-component-cuff-by-other-success-message = { $otherName } {GENDER($otherName) ->
         [male] заковал
         [female] заковала
         [epicene] заковали
