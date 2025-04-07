@@ -1,6 +1,6 @@
 strippable-component-not-holding-anything = Вы ничего не держите!
 strippable-component-cannot-drop = Вы не можете отпустить это!
-strippable-component-item-slot-occupied-message = { CAPITALIZE(CAPITALIZE($owner)) } уже что-то имеет здесь!
+strippable-component-item-slot-occupied-message = { CAPITALIZE($owner) } уже что-то имеет здесь!
 strippable-component-cannot-equip-message = { CAPITALIZE($owner) } не может экипировать это сюда!
 strippable-component-cannot-put-message = { CAPITALIZE($owner) } не может положить это сюда!
 strippable-component-item-slot-free-message = { CAPITALIZE($owner) } не имеет тут ничего!
