@@ -13,7 +13,7 @@ lathe-menu-recipe-count =
     }
 lathe-menu-reagent-slot-examine = Сбоку имеется отверстие для мензурки.
 lathe-reagent-dispense-no-container = Жидкость выливается из { $name } на пол!
-lathe-menu-result-reagent-display = { $reagent } ({ $amount }ед.)
+lathe-menu-result-reagent-display = { $reagent } ({ $amount } ед.)
 lathe-menu-material-display = { $material } { $amount }
 lathe-menu-tooltip-display = { $amount } { $material }
 lathe-menu-description-display = [italic]{ $description }[/italic]
