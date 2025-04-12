@@ -12,11 +12,11 @@ delivery-unlocked-others = {CAPITALIZE($recipient)} {GENDER($recipient) ->
        *[neuter] разблокировало
         } {$delivery} используя свой отпечаток пальца.
 delivery-opened-others = {CAPITALIZE($recipient)} {GENDER($recipient) ->
-        [male] открыл
-        [female] открыла
-        [epicene] открыли
-       *[neuter] открыло
+        [male] вскрыл
+        [female] вскрыл
+        [epicene] вскрыл
+       *[neuter] вскрыл
         } {$delivery}.
 
 delivery-unlock-verb = Разблокировать
-delivery-open-verb = Открыть
+delivery-open-verb = Вскрыть
