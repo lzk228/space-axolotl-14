@@ -36,3 +36,5 @@ ent-MindShieldImplant = имплант "Щит разума"
     .desc = Этот имплант обеспечит лояльность к Nanotrasen и предотвратит использование устройств контроля разума.
 ent-RadioImplantCentcomm = имплант "радио"
     .desc = Этот имплант даёт доступ к радиочастоте Центкома без гарнитуры. Разрешено только сотрудникам Центкома.
+ent-DeathRattleImplantCentcomm = centcomm death rattle implant
+    .desc = This implant will inform the Centcomm radio channel should the user fall into critical condition or die.

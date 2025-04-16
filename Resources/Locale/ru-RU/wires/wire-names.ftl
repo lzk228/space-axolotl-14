@@ -43,6 +43,8 @@ wires-board-name-jukebox = Музыкальный автомат
 wires-board-name-computer = Компьютер
 wires-board-name-holopad = Голопад
 wires-board-name-barsign = Барная вывеска
+wires-board-name-weapon-energy-turret = Sentry turret
+wires-board-name-turret-controls = Sentry turret control panel
 
 # names that get displayed in the wire hacking hud & admin logs.
 

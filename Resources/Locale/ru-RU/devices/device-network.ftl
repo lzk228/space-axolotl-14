@@ -9,6 +9,8 @@ device-frequency-prototype-name-fax = Факс
 device-frequency-prototype-name-basic-device = Базовые устройства
 device-frequency-prototype-name-cyborg-control = Управление киборгами
 device-frequency-prototype-name-robotics-console = Консоль управления робототехникой
+device-frequency-prototype-name-turret = Sentry Turret
+device-frequency-prototype-name-turret-control = Sentry Turret Control
 
 ## camera frequencies
 
@@ -32,6 +34,7 @@ device-address-prefix-heater = НГР-
 device-address-prefix-freezer = ОХЛ-
 device-address-prefix-volume-pump = ОБН-
 device-address-prefix-smes = СМС-
+device-address-prefix-turret = TRT-
 #PDAs and terminals
 device-address-prefix-console = Конс-
 device-address-prefix-fire-alarm = Пож-

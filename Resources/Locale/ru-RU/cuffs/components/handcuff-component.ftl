@@ -7,26 +7,29 @@ handcuff-component-start-cuffing-observer = { $user } начинает зако�
 handcuff-component-start-cuffing-self-observer = { $user } начинает заковывать { REFLEXIVE($target) } себя.
 handcuff-component-start-cuffing-target-message = Вы начинаете заковывать { $targetName }.
 handcuff-component-start-cuffing-by-other-message = { $otherName } начинает заковывать вас!
-handcuff-component-cuff-observer-success-message = { $user } {GENDER($user) ->
+handcuff-component-cuff-observer-success-message =
+    { $user } { GENDER($user) ->
         [male] заковал
         [female] заковала
         [epicene] заковали
        *[neuter] заковало
-        } { $target }.
-handcuff-component-cuff-self-observer-success-message = { $user } {GENDER($user) ->
+    } { $target }.
+handcuff-component-cuff-self-observer-success-message =
+    { $user } { GENDER($user) ->
         [male] заковал
         [female] заковала
         [epicene] заковали
        *[neuter] заковало
-        } { REFLEXIVE($target) } себя.
+    } { REFLEXIVE($target) } себя.
 handcuff-component-cuff-other-success-message = Вы успешно заковали { $otherName }.
 handcuff-component-cuff-self-success-message = Вы заковали себя.
-handcuff-component-cuff-by-other-success-message = { $otherName } {GENDER($otherName) ->
+handcuff-component-cuff-by-other-success-message =
+    { $otherName } { GENDER($otherName) ->
         [male] заковал
         [female] заковала
         [epicene] заковали
        *[neuter] заковало
-        } вас!
+    } вас!
 handcuff-component-cuff-interrupt-message = Вам помешали заковать { $targetName }!
 handcuff-component-cuff-interrupt-self-message = Вам помешали заковать себя.
 handcuff-component-cuff-interrupt-other-message = Вы помешали { $otherName } заковать вас!

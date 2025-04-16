@@ -1,12 +1,19 @@
 figurines-hop-1 = Бумаги, пожалуйста.
 figurines-hop-2 = Вы уволены.
+figurines-hop-3 = BRB.
+figurines-hop-4 = You can get AA if you fill out the form.
+figurines-hop-5 = I was gone for two seconds...
 figurines-passenger-1 = Изоли пожалуйста.
 figurines-passenger-2 = Вызывайте эвак.
+figurines-passenger-3 = HELP MAINTS!!
+figurines-passenger-4 = I'm no tider.
+figurines-passenger-5 = How much for a toolbelt?
 figurines-greytider-1 = Чувак, эта вечеринка отстой. Я, бля, ненавижу этих людей.
 figurines-greytider-2 = Ой-ой, кто потерял свою дубинку?
 figurines-greytider-3 = Робаст.
 figurines-greytider-4 = Я не я без тулбокса.
 figurines-greytider-5 = Грейтайд по всей станции!
+figurines-greytider-6 = Viva la revolution.
 figurines-clown-1 = Хонк!
 figurines-clown-2 = Банан!
 figurines-clown-3 = Мыло!
@@ -218,11 +225,24 @@ figurines-nukie-commander-4 = Провал - это не вариант.
 figurines-nukie-commander-5 = Упс.
 figurines-footsoldier-1 = Я злой мальчик. С каждым днём всё меньше мальчик, с каждым днём всё больше злой.
 figurines-footsoldier-2 = Кого ты выберешь? Их или нас? Нас или их?
+figurines-footsoldier-3 = Glory to the syndicate!
+figurines-footsoldier-4 = Down with Nanotrasen!
+figurines-footsoldier-5 = I'd rather die than join Nanotrasen.
 figurines-wizard-1 = Ei Nath!
 figurines-wizard-2 = Wehgardium Leviosa!
 figurines-wizard-3 = Skidaddle skadoodle!
 figurines-wizard-4 = ФАЙРБОЛЛ!
 figurines-space-dragon-1 = Рыба поглотит станцию.
+figurines-space-dragon-2 = Dragon de- Actually, nevermind.
+figurines-space-dragon-3 = Crew is delicious.
+figurines-space-dragon-4 = Don't you dare make sushi.
+figurines-space-dragon-5 = This station ain't big enough for the two of us.
+figurines-queen-1 = Our domain must grow.
+figurines-queen-2 = The hive hungers.
+figurines-queen-3 = We consume all.
+figurines-queen-4 = We are the apex.
+figurines-queen-5 = You're just biomass.
+figurines-queen-6 = We must evolve.
 
 # figurines-queen
 
