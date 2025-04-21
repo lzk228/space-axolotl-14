@@ -1,4 +1,4 @@
-ent-WeaponEnergyTurretStationMachineCircuitboard = sentry turret machine board
-    .desc = A machine printed circuit board for a sentry turret.
-ent-WeaponEnergyTurretAIMachineCircuitboard = AI sentry turret machine board
-    .desc = A machine printed circuit board for an AI sentry turret.
+ent-WeaponEnergyTurretStationMachineCircuitboard = охранная турель (машинная плата)
+    .desc = Печатная плата для охранной турели.
+ent-WeaponEnergyTurretAIMachineCircuitboard = охранная турель ИИ (машинная плата)
+    .desc = Печатная плата для охранной турели ИИ.
