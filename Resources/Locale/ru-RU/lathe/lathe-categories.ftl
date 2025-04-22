@@ -7,12 +7,10 @@ lathe-category-parts = Компоненты
 lathe-category-robotics = Робототехника
 lathe-category-tools = Инструменты
 lathe-category-weapons = Вооружение
-
 # Biogen
 lathe-category-food = Пища
 lathe-category-chemicals = Химикаты
 lathe-category-materials = Материалы
-
 # Uniform
 lathe-category-bedsheets = Одеяла
 lathe-category-carpets = Ковры
