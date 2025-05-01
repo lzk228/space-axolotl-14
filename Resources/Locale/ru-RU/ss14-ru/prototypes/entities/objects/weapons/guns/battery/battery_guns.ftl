@@ -65,5 +65,5 @@ ent-WeaponBehonkerLaser = око бехонкера
     .desc = Глаз бехонкера, при сжатии выстреливает лазером.
 ent-WeaponEnergyShotgun = энергетический дробовик
     .desc = Единственный в своём роде прототип энергетического оружия, использующий различные конфигурации дробовика. Оно позволяет совершать как смертельные, так и несмертельные выстрелы, что делает его универсальным оружием.
-ent-WeaponTemperatureGun = temperature gun
-    .desc = An advanced gun that shoots body-temperature-changing beams. This probably constitutes as some kind of war crime.
+ent-WeaponTemperatureGun = термопушка
+    .desc = Продвинутое оружие, которое стреляет лучами, способными менять температуру тела. Это, вероятно, является своего рода военным преступлением.
