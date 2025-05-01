@@ -12,7 +12,7 @@ lathe-category-weapons = Вооружение
 # Biogen
 lathe-category-food = Пища
 # Circuit imprinter
-lathe-category-computers = Компютеры
+lathe-category-computers = Компьютеры
 lathe-category-engineering = Инженерия
 lathe-category-general = Общее
 lathe-category-medical = Медицина

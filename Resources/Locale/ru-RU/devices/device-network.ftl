@@ -12,7 +12,7 @@ device-frequency-prototype-name-robotics-console = Консоль управле
 device-frequency-prototype-name-turret = Охранная турель
 device-frequency-prototype-name-turret-control = Управление охранной турелью
 device-frequency-prototype-name-xenoborg = Ксеноборг
-device-frequency-prototype-name-mothership = Материнский корабель
+device-frequency-prototype-name-mothership = Материнский корабль
 
 ## camera frequencies
 

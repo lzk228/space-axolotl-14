@@ -26,11 +26,11 @@ cargo-console-menu-tab-title-orders = Заказы
 cargo-console-menu-tab-title-funds = Переводы
 cargo-console-menu-account-action-transfer-limit = [bold]Лимит перевода:[/bold] ${ $limit }
 cargo-console-menu-account-action-transfer-limit-unlimited-notifier = [color=gold](Безлимитно)[/color]
-cargo-console-menu-account-action-select = [bold]Действие Аккаунта:[/bold]
-cargo-console-menu-account-action-amount = [bold]Количество:[/bold] $
-cargo-console-menu-account-action-button = Перевод
+cargo-console-menu-account-action-select = [bold]Действие аккаунта:[/bold]
+cargo-console-menu-account-action-amount = [bold]Сумма:[/bold] $
+cargo-console-menu-account-action-button = Перевести
 cargo-console-menu-toggle-account-lock-button = Переключить лимит перевода
-cargo-console-menu-account-action-option-withdraw = Снять наличные
+cargo-console-menu-account-action-option-withdraw = Обналичить
 cargo-console-menu-account-action-option-transfer = Перевести деньги на { $code }
 # Orders
 cargo-console-order-not-allowed = Доступ запрещён
@@ -66,11 +66,11 @@ cargo-funding-alloc-console-menu-title = Консоль распределени
 cargo-funding-alloc-console-label-account = [bold]Аккаунт[/bold]
 cargo-funding-alloc-console-label-code = [bold] Код [/bold]
 cargo-funding-alloc-console-label-balance = [bold] Баланс [/bold]
-cargo-funding-alloc-console-label-cut = [bold] Разделение выручки (%) [/bold]
-cargo-funding-alloc-console-label-primary-cut = Доля дохода снабжения из всего, кроме ящиков с замком (%):
-cargo-funding-alloc-console-label-lockbox-cut = Доля дохода снабжения из ящиков с замком (%):
-cargo-funding-alloc-console-label-help-non-adjustible = Снабжение получает { $percent }% из всех доходов, кроме ящиков с замком. Оставшаяся часть распределяется следующим образом:
-cargo-funding-alloc-console-label-help-adjustible = Оставшиеся доходы из всего, кроме ящиков с замком, распределяются следующим образом:
+cargo-funding-alloc-console-label-cut = [bold] Разделение дохода (%) [/bold]
+cargo-funding-alloc-console-label-primary-cut = Доля дохода отдела снабжения от всего, кроме ящиков с замком (%):
+cargo-funding-alloc-console-label-lockbox-cut = Доля дохода отдела снабжения от продажи ящиков с замком (%):
+cargo-funding-alloc-console-label-help-non-adjustible = Отдел снабжения получает { $percent }% от всех доходов, кроме ящиков с замком. Остаток распределяется следующим образом:
+cargo-funding-alloc-console-label-help-adjustible = Остаток доходов от всего, кроме ящиков с замком, распределяется следующим образом:
 cargo-funding-alloc-console-button-save = Сохранить изменения
 cargo-funding-alloc-console-label-save-fail = [bold]Разделение выручки невалидно![/bold] [color=red]({ $pos ->
         [1] +

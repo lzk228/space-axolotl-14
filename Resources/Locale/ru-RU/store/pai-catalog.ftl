@@ -1,4 +1,4 @@
-pai-mass-scanner-name = Сканнер массы
+pai-mass-scanner-name = Сканер массы
 pai-mass-scanner-desc = Позволяет сканировать близлежащие объекты для помощи в навигации.
 pai-midi-player-name = MIDI проигрыватель
 pai-midi-player-desc = Позволяет проигрывать музыку для развлечения владельца.

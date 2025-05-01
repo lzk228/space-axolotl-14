@@ -1,4 +1,4 @@
-analysis-console-menu-title = Широкоспектральная аналитическая консоль марк 3
+analysis-console-menu-title = Аналитическая консоль широкого спектра модель 3
 analysis-console-server-list-button = Сервер
 analysis-console-extract-button = Извлечь очки
 analysis-console-info-no-scanner = Анализатор не подключён! Пожалуйста, подключите его с помощью мультитула.
@@ -32,6 +32,6 @@ analysis-console-progress-text = {$seconds ->
     *[other] T-{$seconds} секунд
 }
 analysis-console-extract-value = [font="Monospace" size=11][color=orange]Узел {$id} (+{$value})[/color][/font]
-analysis-console-extract-none = [font="Monospace" size=11][color=orange] У разблокированых узлов не осталось очков для извлеченияNo unlocked nodes have any points left to extract [/color][/font]
+analysis-console-extract-none = [font="Monospace" size=11][color=orange] У разблокированых узлов не осталось очков для извлечения [/color][/font]
 analysis-console-extract-sum = [font="Monospace" size=11][color=orange]Всего изучено: {$value}[/color][/font]
 analyzer-artifact-extract-popup = Поверхность артефакта мерцает энергией!
