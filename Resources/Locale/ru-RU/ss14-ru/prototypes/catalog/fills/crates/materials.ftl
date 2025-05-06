@@ -22,5 +22,5 @@ ent-CrateMaterialRandom = излишки материалов
     .desc = Откуда-то взятые излишки материалов.
 ent-CrateMaterialSilo = ящик хранилища материалов
     .desc = Упаковка, включающая все материалы для создания хранилища материалов.
-ent-CrateMaterialBasicResource = базовый ящик материалов
+ent-CrateMaterialBasicResource = ящик базовых материалов
     .desc = По 30 листов стали, стекла и пластика.

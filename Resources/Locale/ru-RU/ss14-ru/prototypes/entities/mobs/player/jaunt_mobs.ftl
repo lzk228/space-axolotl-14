@@ -4,5 +4,5 @@ ent-BaseMobJaunt = прыжок
 ent-EtherealJaunt = прыжок
     .suffix = Волшебный
     .desc = { ent-BaseMobJaunt.desc }
-ent-DesynchronizedPocket = десинхронизированный карман
-    .desc = Карман во временном пространстве, удерживающий пользователя на долю секунды в будущем.
+ent-DesynchronizedPocket = рассинхронизированный карман
+    .desc = Карман в пространстве-времени, удерживающий пользователя на долю секунды в будущем.
