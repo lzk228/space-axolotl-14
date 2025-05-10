@@ -1,4 +1,4 @@
-ent-BaseXenoArtifact = artifact
-    .desc = A strange artifact from time unknown. Looks like a good time.
+ent-BaseXenoArtifact = артефакт
+    .desc = Странный артефакт неизвестных времён. Похоже, хороших времён.
 ent-ActionArtifactActivate = Активировать Артефакт
-    .desc = Activate yourself, causing chaos to those near you.
+    .desc = Активируйтесь, наводя хаос вокруг.
