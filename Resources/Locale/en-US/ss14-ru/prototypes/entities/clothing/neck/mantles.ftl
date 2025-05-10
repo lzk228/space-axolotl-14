@@ -1,7 +1,7 @@
 ent-ClothingNeckMantleCap = captain's mantle
     .desc = A comfortable and chique mantle befitting of only the most experienced captain.
-ent-ClothingNeckMantleCE = chief engineer's mantle
-    .desc = High visibility, check. RIG system, check. High capacity cell, check. Everything a chief engineer could need in a stylish mantle.
+ent-ClothingNeckMantleCE = chief engineer's manica
+    .desc = A segmented arm covering for the experienced Chief Engineer, to signify the hazards of the job and the dangers faced to earn it.
 ent-ClothingNeckMantleCMO = chief medical officer's mantle
     .desc = For a CMO that has been in enough medbays to know that more PPE means less central command dry cleaning visits when the shift is over.
 ent-ClothingNeckMantleHOP = head of personnel's mantle

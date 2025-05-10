@@ -21,3 +21,6 @@ ent-WeaponRevolverPythonAP = Питон
 ent-WeaponRevolverPirate = пиратский револьвер
     .desc = Странный дульнозарядный револьвер, который использовали пираты. Использует патроны калибра .45 магнум.
     .suffix = Револьвер
+ent-WeaponRevolverPirateEmpty = pirate revolver
+    .desc = An odd, old-looking revolver, favoured by pirate crews. Uses .45 magnum ammo.
+    .suffix = Empty
