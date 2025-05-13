@@ -13,9 +13,9 @@ loadout-group-survival-security = Аварийный запас охраны
 loadout-group-survival-syndicate = Github заставил меня перевести текст, который игрок вообще никогда не сможет увидеть, спасите
 loadout-group-breath-tool = Видовое дыхательное снаряжение
 loadout-group-tank-harness = Видовое снаряжение для выживания
-loadout-group-EVA-tank = Видовый газовый баллон
+loadout-group-EVA-tank = Видовой газовый баллон
 loadout-group-vox-tank = Газовый баллон для воксов
-loadout-group-pocket-tank-double = Видовый двойной аварийный газовый баллон в кармане
+loadout-group-pocket-tank-double = Видовой двойной аварийный газовый баллон в кармане
 loadout-group-survival-mime = Мимский аварийный запас
 # Command
 loadout-group-captain-head = Капитан, голова
