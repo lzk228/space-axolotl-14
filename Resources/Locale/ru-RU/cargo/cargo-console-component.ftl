@@ -19,7 +19,7 @@ cargo-console-menu-requests-label = Запросы
 cargo-console-menu-orders-label = Заказы
 cargo-console-menu-order-reason-description = Причина: { $reason }
 cargo-console-menu-populate-categories-all-text = Все
-cargo-console-menu-populate-orders-cargo-order-row-product-name-text = { $productName } (x{ $orderAmount }) от { $orderRequester }
+cargo-console-menu-populate-orders-cargo-order-row-product-name-text = { $productName } (x{ $orderAmount }) от { $orderRequester } со счёта [color={ $accountColor }]{ $account }[/color]
 cargo-console-menu-cargo-order-row-approve-button = Одобрить
 cargo-console-menu-cargo-order-row-cancel-button = Отменить
 cargo-console-menu-tab-title-orders = Заказы
@@ -77,13 +77,13 @@ cargo-funding-alloc-console-label-save-fail =  [bold]Разделение выр
        *[-1] -
     }{ $val }%)[/color]
 # Slip template
-cargo-acquisition-slip-body =  [head=3]Asset Detail[/head]
-    { "[bold]Product:[/bold]" } { $product }
-    { "[bold]Description:[/bold]" } { $description }
-    { "[bold]Unit cost:[/bold" }] ${ $unit }
-    { "[bold]Amount:[/bold]" } { $amount }
-    { "[bold]Cost:[/bold]" } ${ $cost }
+cargo-acquisition-slip-body =  [head=3]Детали актива[/head]
+    { "[bold]Товар:[/bold]" } { $product }
+    { "[bold]Описание:[/bold]" } { $description }
+    { "[bold]Цена за единицу:[/bold" }] ${ $unit }
+    { "[bold]Количество:[/bold]" } { $amount }
+    { "[bold]Сумма:[/bold]" } ${ $cost }
     
-    { "[head=3]Purchase Detail[/head]" }
-    { "[bold]Orderer:[/bold]" } { $orderer }
-    { "[bold]Reason:[/bold]" } { $reason }
+    { "[head=3]Детали покупки[/head]" }
+    { "[bold]Заказчик:[/bold]" } { $orderer }
+    { "[bold]Причина:[/bold]" } { $reason }
