@@ -1,2 +1,2 @@
-armable-examine-armed = { CAPITALIZE(THE($name)) } [color=red]активирован[/color].
-armable-examine-not-armed = { CAPITALIZE(THE($name)) } требует активации.
+armable-examine-armed = { CAPITALIZE($name) } [color=red]активирована[/color].
+armable-examine-not-armed = { CAPITALIZE($name) } требует активации.
