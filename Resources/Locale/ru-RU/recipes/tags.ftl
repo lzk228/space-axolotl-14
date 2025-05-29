@@ -20,7 +20,7 @@ construction-graph-tag-black-crayon = чёртый мелок
 construction-graph-tag-eva-suit = ВКД скафандр
 construction-graph-tag-eva-helmet = ВКД шлем
 # hud
-construction-graph-tag-security-hud = визор охранны
+construction-graph-tag-security-hud = визор охраны
 construction-graph-tag-medical-hud = медицинский визор
 # security
 construction-graph-tag-sun-glasses = солнцезащитные очки
