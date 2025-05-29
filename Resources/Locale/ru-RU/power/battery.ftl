@@ -1,6 +1,6 @@
 ## Strings for the battery (SMES/substation) menu
 
-battery-menu-footer-left = Опасность: высокий вольтаж
+battery-menu-footer-left = Опасно: высокое напряжение
 battery-menu-footer-right = 7.2 REV 6
 battery-menu-out = ВЫВОД
 battery-menu-in = ВВОД

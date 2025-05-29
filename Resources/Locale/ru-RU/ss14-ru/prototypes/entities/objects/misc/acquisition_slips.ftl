@@ -1,5 +1,5 @@
 ent-PaperAcquisitionSlip = квитанция о приобретении
-    .desc = Квитианция с деталями заказа. Её можно отдать в отдел снабжения, чтобы закончить заказ.
+    .desc = Квитанция с деталями заказа. Её можно отдать в отдел снабжения, чтобы завершить заказ.
 ent-PaperAcquisitionSlipMedical = { ent-PaperAcquisitionSlip }
     .suffix = Медицинский
     .desc = { ent-PaperAcquisitionSlip.desc }

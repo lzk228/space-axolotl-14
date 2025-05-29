@@ -1,7 +1,7 @@
 ent-FireExtinguisher = огнетушитель
     .desc = Он тушит пожары.
-ent-BorgFireExtinguisher = манёвренный джет
-    .desc = Основан на технологии огнетушителя, манёвренный джет - это... ну да, это просто огнетушитель побольше.
+ent-BorgFireExtinguisher = маневровый джет
+    .desc = Основан на технологии огнетушителя, маневровый джет - это... ну да, это просто огнетушитель побольше.
 ent-ExtinguisherSpray = струя огнетушителя
     .desc = { ent-Vapor.desc }
 ent-FireExtinguisherMini = карманный огнетушитель
