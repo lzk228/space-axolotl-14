@@ -23,4 +23,4 @@ ent-WeaponRevolverPirate = пиратский револьвер
     .suffix = Револьвер
 ent-WeaponRevolverPirateEmpty = { ent-WeaponRevolverPirate }
     .desc = { ent-WeaponRevolverPirate.desc }
-    .suffix = Empty
+    .suffix = Пустой
