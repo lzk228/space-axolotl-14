@@ -288,7 +288,8 @@ stack-dark-steel-diagonal-mini-tile = тёмная стальная диагон
 stack-dark-steel-diagonal-tile = тёмная стальная диагональная плитка
 stack-dark-steel-herringbone = тёмная стальная плитка ёлочкой
 stack-dark-steel-mini-tile = тёмная стальная мини плитка
-stack-dark-steel-mono-tile = тёмная стальная моно плитаstack-dark-steel-pavement = тёмная стальная тротуарная плитка
+stack-dark-steel-mono-tile = тёмная стальная моно плита
+stack-dark-steel-pavement = тёмная стальная тротуарная плитка
 stack-dark-steel-vertical-pavement = тёмная стальная вертикальная тротуарная плитка
 stack-offset-dark-steel-tile = тёмная смещённая стальная плитка
 stack-offset-steel-tile = смещённая стальная плитка
