@@ -4,5 +4,5 @@ ent-PKAUpgradeDamage = моднабор ПКУ (урон)
     .desc = { ent-BasePKAUpgrade.desc }
 ent-PKAUpgradeRange = моднабор ПКУ (дальность)
     .desc = { ent-BasePKAUpgrade.desc }
-ent-PKAUpgradeFireRate = моднабор ПКУ (скорость стрельбы)
+ent-PKAUpgradeFireRate = моднабор ПКУ (скорострельность)
     .desc = { ent-BasePKAUpgrade.desc }

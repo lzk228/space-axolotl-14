@@ -60,4 +60,4 @@ ent-ClothingHandsKnuckleDustersSyndicate = кастеты синдиката
 ent-ClothingHandsKnuckleDustersStun = шок-кастеты
     .desc = Пара кастетов в сочетании с технологией шокер-дубинки. С ними бить тайдеров намного легче.
 ent-ClothingHandsKnuckleBoneCrushers = костекрушители
-    .desc = Благословлён богами для сломления всех неподчиняющихся.
+    .desc = Благословлены богами на сломление всех непокорных.
