@@ -36,5 +36,5 @@ delivery-priority-delivered-examine = [color=orange]{ $type } с высоким 
 delivery-priority-expired-examine = [color=orange]{ $type } с высоким приоритетом[/color]. Время истекло.
 delivery-fragile-examine = [color=red]{ $type } имеет хрупкое содержимое[/color]. Доставьте невредимым для получения бонуса.
 delivery-fragile-broken-examine = [color=red]{ $type } имеет хрупкое содержимое[/color]. Выглядит сильно поврежденно.
-delivery-bomb-examine = This is a [color=purple]bomb { $type }[/color]. Oh no.
-delivery-bomb-primed-examine = This is a [color=purple]bomb { $type }[/color]. Reading this is a bad use of your time.
+delivery-bomb-examine = Это [color=purple]{ $type }-бомба[/color]. О нет.
+delivery-bomb-primed-examine = Это [color=purple]{ $type }-бомба[/color]. Читать это – плохая трата вашего времени.

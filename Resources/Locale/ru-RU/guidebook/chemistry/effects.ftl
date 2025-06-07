@@ -81,15 +81,15 @@ reagent-effect-guidebook-even-health-change =
     { $chance ->
         [1]
             { $healsordeals ->
-                [heals] Evenly heals
-                [deals] Evenly deals
-               *[both] Evenly modifies health by
+                [heals] Равномерно лечит
+                [deals] Равномерно наносит
+               *[both] Равномерно изменяет здоровье на
             }
        *[other]
             { $healsordeals ->
-                [heals] evenly heal
-                [deals] evenly deal
-               *[both] evenly modify health by
+                [heals] раномерно лечат
+                [deals] равномерно наносят
+               *[both] равномерно изменяют здоровье на
             }
     } { $changes }
 reagent-effect-guidebook-status-effect =
@@ -242,9 +242,9 @@ reagent-effect-guidebook-electrocute =
     } употребившего в течении { NATURALFIXED($time, 3) }
 reagent-effect-guidebook-emote =
     { $chance ->
-        [1] Will force
-       *[other] force
-    } the metabolizer to [bold][color=white]{ $emote }[/color][/bold]
+        [1] Вызывает
+       *[other] вызвать
+    }  [bold][color=white]{ $emote }[/color][/bold]
 reagent-effect-guidebook-extinguish-reaction =
     { $chance ->
         [1] Гасит
