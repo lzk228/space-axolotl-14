@@ -6,7 +6,7 @@ job-board-radio-announce = Утилизаторский ранг повышен 
 job-board-ui-window-title = Доска работ
 job-board-ui-label-rank = [bold]Ранг:[/bold]
 job-board-ui-label-items = Цель: [color=red]{ $item }[/color]
-job-board-label-text = [head=2]Груз утилизаторкой работы[/head]
+job-board-label-text = [head=2]Поставка утилизаторкой работы[/head]
     { "[italic]Для использования в официальных внестанционных утилизаторских поставках.[/italic]" }
     
     { "[bold]Цель:[/bold]" } { $target }
