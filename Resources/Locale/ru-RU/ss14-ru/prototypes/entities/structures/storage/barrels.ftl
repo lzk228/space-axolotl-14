@@ -1,7 +1,7 @@
 ent-BaseBarrelChem = химическая бочка
-    .desc = Маленькая металлическая бочка. Как по тропически.
+    .desc = Маленькая металлическая бочка. Как по-тропически.
 ent-BaseBarrelChemRadioactive = радиоактивная бочка
-    .desc = Похоже, она протекает. Не думаю, что вы захотите долго быть возле неё.
+    .desc = Похоже, она протекает. Не думаю, что вы захотите долго находиться возле неё.
 ent-BarrelChemEmpty = { ent-BaseBarrelChem }
     .suffix = Пустой
     .desc = { ent-BaseBarrelChem.desc }

@@ -45,4 +45,4 @@ ent-ClothingBackpackDuffelSyndicateMedicalBundleFilled = набор медика
 ent-ClothingBackpackDuffelSyndicateDecoyKitFilled = набор обманок
     .desc = Содержит отвлекающие устройства, как звуковые, так и визуальные. Скоро появятся и обонятельные.
 ent-ClothingBackpackDuffelSyndicateFilledStarterKit = базовый набор оперативника
-    .desc = Содержит одно оружие, медицинкие припасы, инструменты для взлома, запасные боеприпасы и некоторые простые инструменты.
+    .desc = Содержит одно оружие, медицинские припасы, инструменты для взлома, запасные боеприпасы и некоторые простые инструменты.

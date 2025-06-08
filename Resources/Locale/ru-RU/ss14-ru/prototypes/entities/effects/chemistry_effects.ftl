@@ -17,6 +17,6 @@ ent-BaseFoamedMetal = base foamed metal
 ent-FoamedIronMetal = вспененное железо
     .desc = Для заделывания пробоин в корпусе.
 ent-FoamedAluminiumMetal = вспененный алюминий
-    .desc = Остатки разреженной пены от алюминиевой пенной гранаты. Легко разрушается.
+    .desc = Остатки пены от алюминиевой пенной гранаты. Легко разрушается.
 ent-ReactionFlash = { "" }
     .desc = { "" }

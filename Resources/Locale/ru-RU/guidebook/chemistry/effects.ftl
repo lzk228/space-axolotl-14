@@ -244,7 +244,7 @@ reagent-effect-guidebook-emote =
     { $chance ->
         [1] Вызывает
        *[other] вызвать
-    }  [bold][color=white]{ $emote }[/color][/bold]
+    }  у цели [bold][color=white]{ $emote }[/color][/bold]
 reagent-effect-guidebook-extinguish-reaction =
     { $chance ->
         [1] Гасит

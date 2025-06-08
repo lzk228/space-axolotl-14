@@ -1,5 +1,5 @@
 ent-BaseStructureWall = базовая стена
-    .desc = Удерживает воздух внутри, а грейтайдов снаружи.
+    .desc = Удерживает воздух внутри, а грейтайдеров снаружи.
 ent-BaseWall = { ent-BaseStructureWall }
     .desc = { ent-BaseStructureWall.desc }
 ent-WallDiagonalBase = { ent-BaseStructureWall }
@@ -69,7 +69,7 @@ ent-WallUranium = урановая стена
 ent-WallWood = деревянная стена
     .desc = Традиционная защита от грейтайдеров.
 ent-WallWeb = паутинная стена
-    .desc = Удерживает паучат внутри, а грейтайдов снаружи.
+    .desc = Удерживает паучат внутри, а грейтайдеров снаружи.
 ent-WallNecropolis = каменная стена
     .desc = { ent-BaseWall.desc }
 ent-WallMining = шахтёрская стена
