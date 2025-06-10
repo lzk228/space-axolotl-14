@@ -26,9 +26,7 @@ construction-graph-tag-medical-hud = медицинский визор
 construction-graph-tag-sun-glasses = солнцезащитные очки
 construction-graph-tag-security-helmet = шлем СБ
 # materials
-construction-graph-tag-manipulator = modular machine part
-# materials
-construction-graph-tag-capacitor = конденсатор
+construction-graph-tag-manipulator = модульная машинная часть
 construction-graph-tag-voice-trigger = голосовой триггер
 construction-graph-tag-signal-trigger = сигнальный триггер
 construction-graph-tag-proximity-sensor = датчик движения
@@ -50,7 +48,7 @@ construction-graph-tag-super-compact-ai-chip = сверхкомпактный ч
 # other
 construction-graph-tag-light-bulb = лампочка
 construction-graph-tag-radio = радио
-construction-graph-tag-pipe = труба
+construction-graph-tag-pipe = газовая труба
 construction-graph-tag-human-head = человеческая голова
 construction-graph-tag-bucket = ведро
 construction-graph-tag-borg-arm = рука киборга
