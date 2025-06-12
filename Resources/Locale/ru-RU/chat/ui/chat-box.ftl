@@ -33,7 +33,7 @@ hud-chatbox-highlights = Подсветка:
 hud-chatbox-highlights-button = Подтвердить
 hud-chatbox-highlights-tooltip =
     Каждое слово должно быть с новой строки.
-    Слова, взятые в кавычки ("..."), подсветятся только
+    Слова, взятые в кавычки ("..."), подсветятся только,
     если отделены пробелами или знаками препинания.
 hud-chatbox-highlights-placeholder =
     МакХэндс
