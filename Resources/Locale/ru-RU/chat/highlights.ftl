@@ -22,16 +22,16 @@ highlights-technical-assistant = технический ассистент, те
 highlights-chemist = химик, химия, медблок, медбей, "мед"
 highlights-medical-doctor = врач, доктор, "док", медблок, медбей, "мед"
 highlights-medical-intern = интерн "док", медблок, медбей, "мед"
-highlights-paramedic = парамедик, медблок, медбей, "мед"
+highlights-paramedic = парамед, медблок, медбей, "мед"
 # Science
 highlights-scientist = учёный, наука, "рнд", "нио"
 highlights-research-assistant = научный ассистент, наука, "рнд", "нио"
 # Civilian
 highlights-bartender = бармен, "бар"
 highlights-botanist = ботаник, гидропоник
-highlights-chaplain = священник, святош, церковь
+highlights-chaplain = священник, свят, церковь
 highlights-chef = шеф, повар, кухн
-highlights-clown = клоун
+highlights-clown = клоун, клун
 highlights-janitor = уборщик
 highlights-lawyer = адвокат, юрист
 highlights-librarian = библиотекар, библиотека
@@ -39,8 +39,8 @@ highlights-mime = мим
 highlights-passenger = пассажир, грейтайдер, "тайдер"
 highlights-service-worker = сервисный работник, сервисник
 # Station-specific
-highlights-boxer = боксёр
-highlights-reporter = репортёр, журналист
+highlights-boxer = боксёр, боксер
+highlights-reporter = репортёр, репортер, журналист
 highlights-zookeeper = зоотехник
 highlights-psychologist = психолог
 # Silicon
