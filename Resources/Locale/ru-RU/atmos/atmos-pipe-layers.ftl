@@ -5,5 +5,5 @@ atmos-pipe-layers-component-change-layer = Выбрана { $layerName } кон�
 atmos-pipe-layers-component-current-layer = { $layerName } конфигурация.
 atmos-pipe-layers-component-select-layer = { CAPITALIZE($layerName) } конфигурация
 atmos-pipe-layers-component-tool-missing = Нужен { $toolName }
-atmos-pipe-layers-component-pipes-are-covered = Трубы покрыты
-atmos-pipe-layers-component-cannot-adjust-pipes = Необходимо обнажить трубы перед их регулировкой.
+atmos-pipe-layers-component-pipes-are-covered = Трубы накрыты
+atmos-pipe-layers-component-cannot-adjust-pipes = Необходимо оголить трубы перед их регулировкой.

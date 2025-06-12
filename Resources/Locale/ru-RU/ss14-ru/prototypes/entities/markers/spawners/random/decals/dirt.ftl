@@ -13,5 +13,5 @@ ent-DecalSpawnerDirtMonospace = { ent-DecalSpawnerDirtBase }
     .suffix = грязь, Monospace, 1 радиус
     .desc = { ent-DecalSpawnerDirtBase.desc }
 ent-DecalSpawnerBurns = { ent-DecalSpawnerDirtMonospace }
-    .suffix = пожоги, 1 радиус
+    .suffix = копоть, 1 радиус
     .desc = { ent-DecalSpawnerDirtMonospace.desc }
