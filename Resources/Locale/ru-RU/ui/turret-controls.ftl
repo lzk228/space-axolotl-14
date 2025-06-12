@@ -1,7 +1,7 @@
 # Headings
 turret-controls-window-title = Система управления автономной обороной
 turret-controls-window-turret-status-label = Соединённые устройства [{ $count }]
-turret-controls-window-armament-controls-label = Настройка вооружения
+turret-controls-window-armament-controls-label = Режим вооружения
 turret-controls-window-targeting-controls-label = Авторизованный персонал
 # Status reports
 turret-controls-window-no-turrets = <! Отсутствуют соединённые устройства !>
@@ -15,9 +15,9 @@ turret-controls-window-turret-firing = АТАКА ЦЕЛИ
 turret-controls-window-turret-error = ОШИБКА [404]
 turret-controls-window-turret-broken = ***НЕИСПРАВНА***
 # Buttons
-turret-controls-window-safe = Неактивная
-turret-controls-window-stun = Оглушающая
-turret-controls-window-lethal = Летальная
+turret-controls-window-safe = Неактивный
+turret-controls-window-stun = Оглушающий
+turret-controls-window-lethal = Летальный
 turret-controls-window-ignore = Игнорировать
 turret-controls-window-target = Цель
 turret-controls-window-access-group-label = { $prefix } { $label }
