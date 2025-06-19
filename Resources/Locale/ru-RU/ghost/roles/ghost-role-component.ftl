@@ -206,7 +206,7 @@ ghost-role-information-lost-challenge-commander-rules =
     Вы не помните ничего из своей предыдущей жизни и не помните ничего из того, что узнали, будучи призраком.
     Вам разрешается помнить знания об игре в целом, например, как готовить, как использовать предметы и т.д.
     Вам [color=red]НЕ[/color] разрешается помнить, имя, внешность и т.д. вашего предыдущего персонажа.
-ghost-role-information-lost-challenge-cargo-technican-name = Грузовой шофер
+ghost-role-information-lost-challenge-cargo-technican-name = Грузовой шофёр
 ghost-role-information-lost-challenge-cargo-technican-description = Вы - грузовой техник, получивший отпуск на берег вместе с одним из своих командиров.
 ghost-role-information-lost-challenge-cargo-technican-rules =
     Вы не враждебны станции и делаете то, что должны, чтобы обеспечить собственное выживание.
