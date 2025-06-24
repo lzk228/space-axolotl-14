@@ -4,7 +4,6 @@ lathe-category-clothing = Одежда
 lathe-category-lights = Лампы
 lathe-category-machines = Машины
 lathe-category-parts = Компоненты
-lathe-category-robotics = Робототехника
 lathe-category-tiles = Плитка
 lathe-category-tools = Инструменты
 lathe-category-weapons = Вооружение
@@ -28,9 +27,10 @@ lathe-category-maints = Техи
 lathe-category-steel = Стальная
 lathe-category-white = Белая
 lathe-category-wood = Деревянная
-lathe-category-modules = Modules
 # Science
 lathe-category-mechs = Мехи
+lathe-category-modules = Модули
+lathe-category-robotics = Робототехника
 # Security TechFab
 lathe-category-ammo = Боеприпасы
 lathe-category-boxes = Коробки
