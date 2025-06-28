@@ -24,4 +24,4 @@ cmd-explosion-failed-to-parse-coords = Не удалось спарсить ко
 cmd-explosion-failed-to-parse-map-id = Не удалось спарсить map ID: { $value }
 cmd-explosion-need-coords-explicit = Не удалось получить стандартные координаты/карту через информацию игрока. Необходимо указать это явно.
 cmd-explosion-unknown-prototype = Неизвестный прототип взрыва: { $value }
-cmd-explosion-no-prototypes = Менеджер прототипов не имеет прототипы взрывов?
+cmd-explosion-no-prototypes = Менеджер прототипов не имеет прототипов взрывов?

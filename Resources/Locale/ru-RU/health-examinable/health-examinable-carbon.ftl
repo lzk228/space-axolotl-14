@@ -1,7 +1,7 @@
 # TODO: заменить на genitive там где возможно
 health-examinable-carbon-none = Видимые повреждения тела отсутствуют.
 
-health-examinable-carbon-Slash-8 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } поверхностный порез.[/color]
+health-examinable-carbon-Slash-8 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } неглубокий порез.[/color]
 health-examinable-carbon-Slash-15 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько маленьких порезов.[/color]
 health-examinable-carbon-Slash-30 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько значительных порезов.[/color]
 health-examinable-carbon-Slash-50 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто глубокими порезами.[/color]
