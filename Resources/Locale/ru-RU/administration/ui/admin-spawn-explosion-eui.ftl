@@ -15,7 +15,6 @@ admin-explosion-eui-label-distance = Дистанция
 admin-explosion-eui-label-spawn = Бабах!
 cmd-explosionui-desc = Открывает окно для удобного доступа к уничтожению станции.
 cmd-explosionui-help = Использование: explosionui
-# TODO перевести либо вписать более понятный ру сообществу прикол
 cmd-explosion-desc = Поезд сделал бум
 cmd-explosion-help = Использование: explosion [intensity] [slope] [maxIntensity] [x y] [mapId] [prototypeId]
 cmd-explosion-failed-to-parse-intensity = Не удалось спарсить интенсивность: { $value }

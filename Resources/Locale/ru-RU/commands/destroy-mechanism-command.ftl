@@ -1,4 +1,3 @@
-# TODO ПЕРЕВОД
 cmd-destroymechanism-desc = Destroys a mechanism from your entity.
 cmd-destroymechanism-help = Usage: destroymechanism <mechanism>
 cmd-destroymechanism-success = Mechanism with name { $name } has been destroyed.
