@@ -1,9 +1,9 @@
 ent-DoorRemoteDefault = пульт от шлюзов
-    .desc = Гаджет, который может открывать и закрывать шлюзы дистанционно.
+    .desc = Гаджет, который может дистанционно открывать и закрывать шлюзы.
 ent-DoorRemoteCommand = пульт от шлюзов командования
     .desc = { ent-DoorRemoteDefault.desc }
-ent-DoorRemoteCustom = custom door remote
-    .desc = A gadget which can open and bolt doors remotely. This advanced variant does not have built-in access, instead inheriting the ID access of the user.
+ent-DoorRemoteCustom = настраиваемый пульт от шлюзов
+    .desc = Каджет, который может дистанционно открывать и закрывать шлюзы. Этот продвинутый вариант не имеет встроенного доступа, вместо этого он унаследует доступ айди карты пользователя.
 ent-DoorRemoteSecurity = пульт от шлюзов брига
     .desc = { ent-DoorRemoteDefault.desc }
 ent-DoorRemoteArmory = пульт от шлюзов оружейной

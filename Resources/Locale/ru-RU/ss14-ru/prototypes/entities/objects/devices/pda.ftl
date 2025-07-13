@@ -157,4 +157,4 @@ ent-ChameleonPDA = КПК пассажира
 ent-WizardPDA = КПК волшебника
     .desc = Вы слышите слабый шёпот, доносящийся из него.
 ent-ScurretPDA = { ent-ClearPDA }
-    .desc = A temporary PDA granted to scurret temps. Doesn't do much. Wawa!
+    .desc = Временный КПК, выдаваемый временным слизенькам. Не делает ничего особенного. Вава!
