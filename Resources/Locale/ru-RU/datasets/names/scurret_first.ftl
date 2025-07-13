@@ -68,4 +68,4 @@ names-scurret-first-dataset-47 = Дальновидный
 names-scurret-first-dataset-48 = Преданный
 names-scurret-first-dataset-49 = Любознательный
 # After consulting with lawyers, NT added this one to the dictionary.
-names-scurret-first-dataset-50 = Юридически Отличающийся
+names-scurret-first-dataset-50 = Юридически Отличимый
