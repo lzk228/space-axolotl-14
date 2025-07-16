@@ -56,7 +56,7 @@ names-scurret-last-dataset-33 = Клён
 names-scurret-last-dataset-34 = Дуб
 names-scurret-last-dataset-35 = Орех
 # AND SIR GIDEON OFNIR
-names-scurret-last-dataset-36 = Всезнающий
+names-scurret-last-dataset-36 = Всезнайка
 names-scurret-last-dataset-37 = Пруд
 names-scurret-last-dataset-38 = Поток
 names-scurret-last-dataset-39 = Резервуар
