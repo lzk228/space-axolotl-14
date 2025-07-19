@@ -1,4 +1,4 @@
-# Scurrets from Planet Wawa have two parts to their name names-scurret-first-dataset- a 'chosen' and 'qualitative' name.
+# Scurrets from Planet Wawa have two parts to their name - a 'chosen' and 'qualitative' name.
 
 
 # The chosen name is picked by the scurret themselves,
