@@ -1,2 +1,2 @@
-ent-MobMoproach = moproach
-    .desc = This little mothroach has mopshoes on its feet! How adorable!
+ent-MobMoproach = швабракан
+    .desc = У этого маленького швабракана тапочками-швабрами на ногах! Как же очаровательно!
