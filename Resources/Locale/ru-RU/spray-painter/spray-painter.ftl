@@ -4,12 +4,12 @@ spray-painter-ammo-on-examine = Содержит { $charges } { $charge ->
         [few] заряда
         *[other] зарядов
         }.
-spray-painter-ammo-after-interact-full = Краскопульт полный!
+spray-painter-ammo-after-interact-full = Краскопульт полон!
 spray-painter-ammo-after-interact-refilled = Вы заправляете краскопульт.
 spray-painter-interact-no-charges = Не хватает краски.
 spray-painter-interact-nothing-to-remove = Нечего удалять!
-spray-painter-on-examined-painted-message = Выглядит свежепокрашенно.
-spray-painter-style-not-available = Невозможно применить выбранный стиль к этому объекту.
+spray-painter-on-examined-painted-message = Выглядит свежеокрашенно.
+spray-painter-style-not-available = Выбранный стиль нельзя применить к этому объекту.
 spray-painter-verb-toggle-decals = Переключить покраску декалей
 spray-painter-item-status-label = Декали: { $mode }
 spray-painter-item-status-add = [color=green]Добавление[/color]
@@ -49,8 +49,8 @@ spray-painter-tab-group-crateplastic = Пластик
 spray-painter-tab-group-cratesecure = С замком
 spray-painter-tab-group-closet = Без замка
 spray-painter-tab-group-locker = С замком
-spray-painter-tab-group-wallcloset = Без замка (Стена)
-spray-painter-tab-group-walllocker = С замком (Стена)
+spray-painter-tab-group-wallcloset = Без замка (Настенный)
+spray-painter-tab-group-walllocker = С замком (Настенный)
 # Airlocks
 spray-painter-style-airlockstandard-atmospherics = Атмос
 spray-painter-style-airlockstandard-basic = Обычный

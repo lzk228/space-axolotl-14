@@ -7,4 +7,4 @@ ent-SprayPainterEmpty = { ent-SprayPainter }
     .suffix = Пустой
     .desc = { ent-SprayPainter.desc }
 ent-SprayPainterAmmo = сжатая краска
-    .desc = Катридж сильно сжатой крашски, обычно используется в краскопультах.
+    .desc = Картридж сильно сжатой краски, обычно используемый в краскопультах.

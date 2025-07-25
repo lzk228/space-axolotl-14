@@ -25,4 +25,4 @@ marking-VoxHairSpotty = Вокс, Пёстрые волосы
 marking-VoxHairMadScientist = Вокс, Безумный учёный
 marking-VoxHairHedgehog = Вокс, Ёж
 marking-VoxHairBushy = Вокс, Пушистые перья
-marking-VoxHairSlick = Вокс, Гладкие перья
+marking-VoxHairSlick = Вокс, Приглаженные перья
