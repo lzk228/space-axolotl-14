@@ -3,7 +3,7 @@
 
 ## Window
 
-air-alarm-ui-title = Air Alarm
+air-alarm-ui-title = Воздушная сигнализация
 air-alarm-ui-access-denied = Недостаточный уровень доступа!
 air-alarm-ui-window-pressure-label = Давление
 air-alarm-ui-window-temperature-label = Температура
