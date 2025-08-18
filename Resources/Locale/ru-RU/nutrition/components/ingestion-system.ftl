@@ -20,7 +20,7 @@ ingestion-cant-digest-other = { CAPITALIZE(SUBJECT($target)) } не сможет
 
 ## Action Verbs, not to be confused with Verbs
 
-ingestion-verb-food = Съесть
+ingestion-verb-food = Есть
 ingestion-verb-drink = Пить
 
 # Edible Component
