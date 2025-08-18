@@ -10,8 +10,8 @@ wire-name-color-gray = Серый
 wire-name-color-cyan = Голубой
 wire-name-color-navy = Тёмно-синий
 wire-name-color-purple = Фиолетовый
-wire-name-color-pink = Светло-розовый
-wire-name-color-fuchsia = Розовый
+wire-name-color-pink = Розовый
+wire-name-color-fuchsia = Пурпурный
 # letter names
 wire-letter-name-alpha = Alpha
 wire-letter-name-beta = Beta
