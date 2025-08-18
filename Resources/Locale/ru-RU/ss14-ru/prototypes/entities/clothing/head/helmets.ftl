@@ -56,5 +56,5 @@ ent-ClothingHeadHelmetJusticeEmpty = { ent-ClothingHeadHelmetJustice }
     .desc = { ent-ClothingHeadHelmetJustice.desc }
 ent-ActionToggleJusticeHelm = Переключить шлем правосудия
     .desc = Включает или выключает шлем правосудия.
-ent-CardHelmet = cardboard helmet
-    .desc = A medieval helmet built from cardboard.
+ent-CardHelmet = картонный шлем
+    .desc = Средневековый шлем, сделанный из картона.

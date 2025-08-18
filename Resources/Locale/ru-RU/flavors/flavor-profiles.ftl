@@ -53,7 +53,7 @@ flavor-base-terrible = ужасающе
 flavor-base-mindful = разумно
 flavor-base-chewy = жевательно
 flavor-base-trashy = мусорно
-flavor-base-motivating = motivating
+flavor-base-motivating = мотивирующее
 
 # Complex flavors. Put a flavor here when you want something that's more
 # specific.

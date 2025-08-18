@@ -1,7 +1,7 @@
-ent-MobLing = Urist McLing
-    .suffix = Non-Antag
+ent-MobLing = Урист МакКрад
+    .suffix = Неантаг
     .desc = { ent-MobHuman.desc }
-ent-ActionChangelingDevour = [color=red]Devour[/color]
-    .desc = Consume the essence of your victims and subsume their identity and mind into your own.
-ent-ActionChangelingTransform = [color=red]Transform[/color]
-    .desc = Transform and assume the identities of those you have devoured.
+ent-ActionChangelingDevour = [color=red]Поглотить[/color]
+    .desc = Поглотите сущность ваших жертв и впитайте их личность и разум в себя.
+ent-ActionChangelingTransform = [color=red]Превратиться[/color]
+    .desc = Превратитесь и примите личности тех, кого вы поглотили.

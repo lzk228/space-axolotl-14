@@ -39,14 +39,14 @@ air-alarm-ui-mode-wide-filtering = Фильтрация (широкая)
 air-alarm-ui-mode-fill = Заполнение
 air-alarm-ui-mode-panic = Паника
 air-alarm-ui-mode-none = Нет
-air-alarm-ui-pump-direction-siphoning = Siphoning
-air-alarm-ui-pump-direction-scrubbing = Scrubbing
-air-alarm-ui-pump-direction-releasing = Releasing
-air-alarm-ui-pressure-bound-nobound = No Bound
-air-alarm-ui-pressure-bound-internalbound = Internal Bound
-air-alarm-ui-pressure-bound-externalbound = External Bound
-air-alarm-ui-pressure-bound-both = Both
-air-alarm-ui-widget-gas-filters = Gas Filters
+air-alarm-ui-pump-direction-siphoning = Сифонинг
+air-alarm-ui-pump-direction-scrubbing = Скруббинг
+air-alarm-ui-pump-direction-releasing = Выпуск
+air-alarm-ui-pressure-bound-nobound = Без границы
+air-alarm-ui-pressure-bound-internalbound = Внутрення граница
+air-alarm-ui-pressure-bound-externalbound = Внешняя граница
+air-alarm-ui-pressure-bound-both = Оба
+air-alarm-ui-widget-gas-filters = Фильтр газов
 
 ## Widgets
 
@@ -71,8 +71,8 @@ air-alarm-ui-vent-internal-bound-label = Внутренняя граница
 air-alarm-ui-scrubber-pump-direction-label = Направление
 air-alarm-ui-scrubber-volume-rate-label = Объём (Л)
 air-alarm-ui-scrubber-wide-net-label = ШирокаяСеть
-air-alarm-ui-scrubber-select-all-gases-label = Select all
-air-alarm-ui-scrubber-deselect-all-gases-label = Deselect all
+air-alarm-ui-scrubber-select-all-gases-label = Включить все
+air-alarm-ui-scrubber-deselect-all-gases-label = Отключить все
 
 ### Thresholds
 

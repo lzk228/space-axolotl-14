@@ -1,2 +1,2 @@
-ent-MothershipCore = mothership core
-    .desc = A sentient machine that can produce Xenoborgs. Without this the Xenoborgs are doomed.
+ent-MothershipCore = ядро материнского корабля
+    .desc = Разумная машина, способная производить ксеноборгов. Без него ксеноборги обречены.
