@@ -1,1 +1,1 @@
-ghost-kick-on-trigger-default = Споткнулся за кик-мину, пробил четвёртую стену.
+ghost-kick-on-trigger-default = Споткнулся о кик-мину, пробил четвёртую стену.
