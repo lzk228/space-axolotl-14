@@ -1,4 +1,4 @@
-ent-BaseAPC = ЛКП
+﻿ent-BaseAPC = ЛКП
     .desc = Терминал управления локальными электрическими системами.
 ent-APCFrame = каркас ЛКП
     .desc = Терминал управления локальными электрическими системами, без электроники.
@@ -18,5 +18,5 @@ ent-APCHyperCapacity = { ent-BaseAPC }
     .suffix = Гипер ёмкость, 200кДж
     .desc = { ent-BaseAPC.desc }
 ent-APCXenoborg = { ent-BaseAPC }
-    .suffix = Basic, 50kJ, Xenoborg
+    .suffix = Базовый, 50кДж, Ксеноборг
     .desc = { ent-BaseAPC.desc }

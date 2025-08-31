@@ -1,4 +1,4 @@
-ent-BaseMeleeWeaponEnergy = { ent-BaseItem }
+﻿ent-BaseMeleeWeaponEnergy = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
 ent-EnergySword = энергетический меч
     .desc = Очень громкий и опасный меч с лучом чистой, концентрированной плазмы. Разрезает небронированные объекты как масло.
@@ -17,8 +17,8 @@ ent-EnergySwordDouble = двухклинковый энергетический 
 ent-HyperEutacticBlade = гиперэвтектический клинок
     .desc = Сверхмассивное оружие, способное разорвать на части саму ткань пространства и времени, гиперэвтектический клинок динамически выковывает гиперэвтектическую кристаллическую наноструктуру, способную проходить сквозь большинство известных форм материи, как горячий нож сквозь масло.
 ent-CyborgEnergySword = { ent-EnergySword }
-    .desc = A very loud & dangerous sword with a beam made of pure, concentrated plasma. Specially designed for syndicate cyborgs.
-    .suffix = For Borgs
+    .desc = Очень громкий и опасный меч с лучаом из чистой концентрированной плазмы. Создан специально для киборгов Синдиката.
+    .suffix = Для боргов
 ent-CyborgEnergySwordDouble = { ent-EnergySwordDouble }
     .desc = Стажёры из командования Синдиката решили, что одного клинка на энергетическом мече недостаточно. Специальная разработка для киборгов Синдиката.
     .suffix = Одноручное, Для боргов
