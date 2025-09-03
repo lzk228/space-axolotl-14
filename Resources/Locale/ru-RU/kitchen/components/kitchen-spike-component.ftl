@@ -2,17 +2,17 @@
 comp-kitchen-spike-begin-hook-self-other = { CAPITALIZE($victim) } начинает насаживать { REFLEXIVE($victim) } себя на { $hook }!
 
 comp-kitchen-spike-begin-hook-other-self = Вы начинаете насаживать себя { CAPITALIZE($victim) } на { $hook }!
-comp-kitchen-spike-begin-hook-other = { CAPITALIZE($user) } begins dragging { CAPITALIZE($victim) } onto { $hook }!a
+comp-kitchen-spike-begin-hook-other = { CAPITALIZE($user) } начинает насаживать { CAPITALIZE($victim) } на { $hook }!
 
 comp-kitchen-spike-hook-self = Вы бросаетесь на { $hook }!
 comp-kitchen-spike-hook-self-other = { CAPITALIZE($victim) } бросается на { $hook }!
 
-comp-kitchen-spike-hook-other-self = Вы бросили { CAPITALIZE($victim) } on { $hook }!
+comp-kitchen-spike-hook-other-self = Вы повесили { CAPITALIZE($victim) } на { $hook }!
 comp-kitchen-spike-hook-other = { CAPITALIZE($user) } { GENDER($user) ->
-        [male] бросил
-        [female] бросила
-        [epicene] бросили
-        *[neuter] бросило
+        [male] повесил
+        [female] повесила
+        [epicene] повесили
+        *[neuter] повесило
     } { CAPITALIZE($victim) } на { $hook }!
 
 comp-kitchen-spike-begin-unhook-self = Вы начинаете слезать с { $hook }!
