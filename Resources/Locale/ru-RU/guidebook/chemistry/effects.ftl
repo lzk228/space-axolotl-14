@@ -239,7 +239,7 @@ reagent-effect-guidebook-electrocute =
     { $chance ->
         [1] Бьёт током
        *[other] бьют током
-    } употребившего в течении { NATURALFIXED($time, 3) }
+    } употребившего в течение { NATURALFIXED($time, 3) }
 reagent-effect-guidebook-emote =
     { $chance ->
         [1] Вызывает
