@@ -4,6 +4,7 @@ desc = "Сервер с действительно ванильной сборк
 maxplayers = 150
 soft_max_players = 50
 map_rotation = true
+role_timers = false
 
 [infolinks]
 bug_report = "https://github.com/space-wizards/space-station-14/issues/new/choose"

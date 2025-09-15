@@ -12,10 +12,10 @@ VERSION = os.environ["GITHUB_SHA"]
 RELEASE_DIR = "release"
 
 #
-# CONFIGURATION PARAMETERS
-# Forks should change these to publish to their own infrastructure.
+#  CONFIGURATION PARAMETERS
+#  Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "http://188.92.78.98:27960/"
+ROBUST_CDN_URL = "http://cdn.axolotl-station.ru/"
 FORK_ID = "axolotl"
 
 def main():
