@@ -1,4 +1,4 @@
-ent-BaseAction = { "" }
+﻿ent-BaseAction = { "" }
     .desc = { "" }
 ent-BaseDoAfterAction = { ent-BaseAction }
     .desc = { ent-BaseAction.desc }
@@ -66,8 +66,8 @@ ent-ActionToggleParamedicSiren = Переключить сирену парам�
     .desc = Включает или выключает сирену парамедика.
 ent-ActionGravityJump = Прыгнуть
     .desc = Активируя усовершенствованную систему перемещения, вы совершаете короткий прыжок в направлении вашего взгляда.
-ent-ActionVulpkaninGravityJump = Leap
-    .desc = Use your agile legs to leap a short distance. Be careful not to bump into anything!
+ent-ActionVulpkaninGravityJump = Скакнуть
+    .desc = Прыгните на короткую дистанцию, используя свои проворные ноги. Будьте осторожны, не наткнитесь ни на что!
 ent-ActionToggleRootable = Укоренение
     .desc = Начните или прекратите укореняться к полу.
 ent-ActionChameleonController = Управление одеждой
