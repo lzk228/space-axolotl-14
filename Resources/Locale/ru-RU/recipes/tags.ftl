@@ -112,7 +112,7 @@ construction-graph-tag-wallmount-substation-circuit-board = микросхема
 construction-graph-tag-surveillance-camera-monitor-board = плата монитор камер наблюдения
 construction-graph-tag-television-board = плата телевизора
 construction-graph-tag-freezer-electronics = микросхема холодильника
-construction-graph-tag-turret-control-electronics = микросхема контроли управления охранной турели
+construction-graph-tag-turret-control-electronics = микросхема панели управления охранной турели
 # crystals
 construction-graph-tag-cyan-crystal-shard = голубой осколок кристалла
 construction-graph-tag-blue-crystal-shard = синий осколок кристалла
