@@ -1,4 +1,4 @@
-ent-BaseStash = { "" }
+﻿ent-BaseStash = { "" }
     .desc = { "" }
 ent-ToyRubberDuck = резиновая уточка
     .desc = Не занесена сюда океанскими течениями.
@@ -31,8 +31,8 @@ ent-Football = мяч для регби
     .desc = Рукояйцо, не для игры в ногомяч.
 ent-BeachBall = пляжный мяч
     .desc = Простой пляжный мяч — один из самых популярных продуктов компании Nanotrasen. 'Почему мы делаем пляжные мячи? Потому что мы можем! (TM)' — Nanotrasen.
-ent-TennisBall = tennis ball
-    .desc = A fuzzy orb of endless betrayal.
+ent-TennisBall = теннисный мяч
+    .desc = Пушистый шар бесконечного предательства.
 ent-BalloonSyn = воздушный шарик Синдиката
     .desc = Вручается смелейшим из смелейших, пережившим аттракцион "Атомный смерч" в Синдиленде.
 ent-BalloonCorgi = воздушный шарик корги

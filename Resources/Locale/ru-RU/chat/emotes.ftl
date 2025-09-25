@@ -1,4 +1,4 @@
-# Имена
+﻿# Имена
 chat-emote-name-scream = Кричать
 chat-emote-name-laugh = Смеяться
 chat-emote-name-honk = Хонк
@@ -32,11 +32,11 @@ chat-emote-name-monkeyscreeches = Обезьяньи крики
 chat-emote-name-robotbeep = Робот
 chat-emote-name-yawn = Зевать
 chat-emote-name-snore = Храпеть
-chat-emote-name-bark = Bark
-chat-emote-name-snarl = Snarl
-chat-emote-name-whine = Whine
-chat-emote-name-howl = Howl
-chat-emote-name-growl = Growl
+chat-emote-name-bark = Лаять
+chat-emote-name-snarl = Скалиться
+chat-emote-name-whine = Скулить
+chat-emote-name-howl = Выть
+chat-emote-name-growl = Рычать
 # Сообщение
 chat-emote-msg-scream = кричит!
 chat-emote-msg-laugh = смеётся.
