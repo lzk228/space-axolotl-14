@@ -1,4 +1,4 @@
-﻿guide-entry-ss14 = Станции и смены
+guide-entry-ss14 = Станции и смены
 guide-entry-engineering = Инженерное дело
 guide-entry-construction = Строительство
 guide-entry-expandingrepairingstation = Расширение и починка станции

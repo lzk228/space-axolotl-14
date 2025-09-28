@@ -1,4 +1,4 @@
-﻿ent-VendingMachine = торговый автомат
+ent-VendingMachine = торговый автомат
     .desc = Просто добавь капитализма!
 ent-VendingMachineWallmount = торговый автомат
     .desc = { ent-VendingMachine.desc }

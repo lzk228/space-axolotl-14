@@ -1,4 +1,4 @@
-﻿ent-BaseStash = { "" }
+ent-BaseStash = { "" }
     .desc = { "" }
 ent-ToyRubberDuck = резиновая уточка
     .desc = Не занесена сюда океанскими течениями.

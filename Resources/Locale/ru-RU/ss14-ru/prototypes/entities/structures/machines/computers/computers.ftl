@@ -88,3 +88,5 @@ ent-ComputerXenoborgsControl = консоль управления ксеноб�
     .desc = Используется для дистанционного мониторинга за всеми ксеноборгами.
 ent-StationAiUploadComputer = консоль загрузки ИИ
     .desc = Используется для обновления законов станционного ИИ.
+ent-StationAiFixerComputer = AI restoration console
+    .desc = Used to repair damaged artifical intelligences.

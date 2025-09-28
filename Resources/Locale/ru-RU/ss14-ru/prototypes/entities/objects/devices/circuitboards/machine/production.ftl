@@ -1,4 +1,4 @@
-﻿ent-AutolatheMachineCircuitboard = автолат (машинная плата)
+ent-AutolatheMachineCircuitboard = автолат (машинная плата)
     .desc = Печатная плата автолата.
 ent-AutolatheHyperConvectionMachineCircuitboard = гиперконвекционный автолат (машинная плата)
     .desc = Печатная плата гиперконвекционного автолата.
