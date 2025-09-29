@@ -1,4 +1,4 @@
-﻿# clown
+# clown
 construction-graph-tag-banana-peel = банановая кожура
 construction-graph-tag-clown-suit = клоунский костюм
 construction-graph-tag-clown-shoes = клоунские туфли
@@ -92,6 +92,7 @@ construction-graph-tag-ripley-peripherals-control-module = модуль упра
 construction-graph-tag-door-electronics-circuit-board = микросхема шлюза
 construction-graph-tag-firelock-electronics-circuit-board = микросхема пожарного шлюза
 construction-graph-tag-conveyor-belt-assembly = конвейерная лента
+construction-graph-tag-station-ai-core-electronics = station AI core electronics
 # tools
 construction-graph-tag-multitool = мультитул
 construction-graph-tag-health-analyzer = анализатор здоровья

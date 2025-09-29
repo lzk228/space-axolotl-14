@@ -20,8 +20,16 @@ lathe-category-research = Исследования
 lathe-category-security = Безопасность
 lathe-category-service = Сервис
 lathe-category-supply = Снабжение
+lathe-category-circuit-tile = Circuit
+lathe-category-concrete-tile = Concrete
+lathe-category-dark-tile = Dark
+lathe-category-faux-tile = Faux
+lathe-category-maints-tile = Maints
 # Cutter
 lathe-category-concrete = Бетон
+lathe-category-steel-tile = Steel
+lathe-category-white-tile = White
+lathe-category-wood-tile = Wood
 lathe-category-dark = Тёмная
 lathe-category-maints = Техи
 lathe-category-steel = Стальная

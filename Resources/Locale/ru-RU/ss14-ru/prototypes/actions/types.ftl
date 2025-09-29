@@ -1,4 +1,4 @@
-﻿ent-BaseAction = { "" }
+ent-BaseAction = { "" }
     .desc = { "" }
 ent-BaseDoAfterAction = { ent-BaseAction }
     .desc = { ent-BaseAction.desc }
