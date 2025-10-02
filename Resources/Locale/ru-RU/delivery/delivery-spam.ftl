@@ -268,15 +268,15 @@ delivery-spam-12 = Присоединяйтесь к нам на первом р
         { "[italic]*Фосфорные озёра не предназначены для купания, после посадки на Галимар вы отказываетесь от всех прав на юридическое представительство по отношению к Relaxination Destinations.[/italic]" }
         { "[italic]**В Око Космоса нельзя заглядывать более чем на пять секунд за раз. Вы не слышите зов Ока[/italic]" }
         { "[italic]***Перед посадкой необходимо подписать отказ от претензий, Relaxination Destinations не гарантирует безопасность руин Агатары. Исчезновения экскурсионных групп сократились до приемлемой отметки в 0,23% от всех экскурсионных групп, посещающих руины.[/italic]" }
-delivery-spam-13 = paper ПЕРЕВЕСТИ ПИСЬМО
-    .desc = A letter to the editor.
+delivery-spam-13 = бумага
+    .desc = Письмо редактору.
     .content =
-        To whom it may concern,
-        
-        The famous Adventures of Ian and Renault book series is one that is enjoyed by young children and at least one severely dyslexic lizard (don't worry, I got better). However, there was an error in the publication, as Ian and Renault would never make a mistake writing. It appears that in The Adventures of Ian and Renault: An Arctic Journey of Courage and Friendship, two lines from The Adventures of Ian and Renault: Exploring the City were used.
-        This made no sense. How did Ian and Renault find a little kitten in the Arctic? What was the little kitten doing there? Why were Ian and Renault doing more than average today? And the worst offender is the second misplaced line, which is "As the day turned to night, they were exhausted abut happy from their adventure in the city" (Ian and Renault, 1). OH, SORRY!!! I'M NOT AWARE THAT THERE'S A CITY IN THE ARCTIC!!! THAT THEY JUST STOPPED AT. YOU KNOW. FOR A COFFEE. OH WAIT!! COFFEE KILLS DOGS AND FOXES!!!!!!!!! WHO WOULD PUBLISH THIS!!!!! YOU'VE JUST KILLED IAN AND RENAULT!!!!!!!!!!!!!!!!!!! HOW COULD YOU!!!!!!!!!!!!!!!!!!! YOU MONSTER!!!!!!!!!!!!!!!!!
-        And what did you get for killing Ian and Renault. Hmm? A slightly longer book? You need that longer book, don't you? Longer books sell for more, do they? You wanted to make more money? 
-        LOOK AT WHERE THAT GOT YOU. YOU'VE KILLED THE TWO. CONGRATS. 
-        THERE WILL BE NO MORE SEQUELS NOW. 
-        HOW'S THAT FOR MAKING MONEY???? IT SUCKS???? 
-        { "[" }bold]WELL YOU SHOULDN'T HAVE KILLED THEM!!!!!!!!!!!!!!![/bold]
+        Всем заинтересованным лицам,
+
+        Легендарная серия книг «Приключения Иана и Алисы», обожаемая детьми и, как минимум, одной ящерице-дислексику (не переживайте, меня уже понимают #либо мне уже лучше). Однако в последней публикации допущена чудовищная ошибка, ведь Иан и Алиса НИКОГДА не ошибаются при написании. В книге «Приключения Иана и Алисы — арктическое путешествие храбрости и дружбы» оказались две строчки из «Приключения Иана и Алисы — исследование города».
+        Это лишено всякого смысла. Как Иан и Алиса нашли котёнка в Арктике? Что котёнок там делал? Почему Иан и Алиса делали БОЛЬШЕ, чем обычно, сегодня #типо дислексик я хз? А худшим косяком является вторая неправильная строчка: «Когда день перешёл в ночь, они были измотаны, но счастливы от своего приключения в городе» (Иан и Алиса, стр. 1). ОЙ, ПРОСТИТЕ!!! Я НЕ ЗНАЛ, ЧТО В АРКТИКЕ ЕСТЬ ГОРОД!!! В КОТОРОМ МОЖНО ТАК ПРОСТО ОСТАНОВИТЬСЯ. ЗА КОФЕЧКОМ. ОЙ, ПОГОДИТЕ!! КОФЕ УБИВАЕТ СОБАК И ЛИСИЧЕК!!!!!!!!! КТО ЭТО ВООБЩЕ ОПУБЛИКОВАЛ!!!!! ВЫ ТОЛЬКО ЧТО УБИЛИ ИАНА И АЛИСУ!!!!!!!!!!!!!!!!!!! КАК ВЫ МОГЛИ!!!!!!!!!!!!!!!!!!! ВЫ МОНСТРЫ!!!!!!!!!!!!!!!!!
+        И ради чего вы убили Иана и Алису? Мм? Чтобы книга была чуть побольше? Нужна огромная книженция, да? Большие книги дороже продаются? Хотели срубить побольше кредитов?
+        ПОСМОТРИТЕ, ЧЕМ ЭТО ЗАКОНЧИЛОСЬ. ВЫ УБИЛИ ОБОИХ. ПОЗДРАВЛЯЮ.
+        НЕ БУДЕТ БОЛЬШЕ СИКВЕЛОВ.
+        И КАК ВАМ ТЕПЕРЬ ДЕЛАТЬ ДЕНЬГИ????  НИКАК????
+        [bold]ТАК НЕ НАДО БЫЛО ИХ УБИВАТЬ!!!!!!!!!!!!!!![/bold]
