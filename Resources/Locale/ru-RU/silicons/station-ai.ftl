@@ -1,13 +1,13 @@
-# General
+﻿# General
 ai-wire-snipped = Один из ваших системных проводов был перерезан в { $source }.
 wire-name-ai-vision-light = ИИЗ
 wire-name-ai-act-light = ИИД
 station-ai-takeover = ИИ захват
 station-ai-eye-name = око ИИ — { $name }
-station-ai-has-no-power-for-upload = Upload failed - the AI core is unpowered.
-station-ai-is-too-damaged-for-upload = Upload failed - the AI core must be repaired.
-station-ai-core-losing-power = Your AI core is now running on reserve battery power.
-station-ai-core-critical-power = Your AI core is critically low on power. External power must be re-established or severe data corruption may occur!
+station-ai-has-no-power-for-upload = Загрузка не удалась, ядро ИИ не запитано.
+station-ai-is-too-damaged-for-upload = Загрузка не удалась, ядро ИИ нужно отремонтировать.
+station-ai-core-losing-power = Ваше ядро ИИ питается от резервной батареи.
+station-ai-core-critical-power = У вашего ядра ИИ критически низкий уровень энергии. Нужно возобновить внешнее питание, иначе может произойти серьёзное повреждение данных!
 # Radial actions
 ai-open = Открыть действия
 ai-close = Закрыть действия

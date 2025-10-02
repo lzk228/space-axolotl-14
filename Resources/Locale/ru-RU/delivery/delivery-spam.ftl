@@ -1,4 +1,4 @@
-# All spelling mistakes and broken english are intentional!
+﻿# All spelling mistakes and broken english are intentional!
 # I hate saving paper contents in ftl files
 
 
@@ -268,7 +268,7 @@ delivery-spam-12 = Присоединяйтесь к нам на первом р
         { "[italic]*Фосфорные озёра не предназначены для купания, после посадки на Галимар вы отказываетесь от всех прав на юридическое представительство по отношению к Relaxination Destinations.[/italic]" }
         { "[italic]**В Око Космоса нельзя заглядывать более чем на пять секунд за раз. Вы не слышите зов Ока[/italic]" }
         { "[italic]***Перед посадкой необходимо подписать отказ от претензий, Relaxination Destinations не гарантирует безопасность руин Агатары. Исчезновения экскурсионных групп сократились до приемлемой отметки в 0,23% от всех экскурсионных групп, посещающих руины.[/italic]" }
-delivery-spam-13 = paper
+delivery-spam-13 = paper ПЕРЕВЕСТИ ПИСЬМО
     .desc = A letter to the editor.
     .content =
         To whom it may concern,

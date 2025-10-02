@@ -1,4 +1,4 @@
-hand-labeler-ui-header = Ручной этикетировщик
+﻿hand-labeler-ui-header = Ручной этикетировщик
 # The content of the label in the UI above the text entry input.
 hand-labeler-current-text-label = Этикетка:
 # When the hand labeler applies a label successfully
@@ -11,5 +11,5 @@ hand-labeler-has-label = На объекте имеется этикетка "{ 
 hand-labeler-remove-label-text = Удалить этикетку
 hand-labeler-add-label-text = Наклеить этикетку
 # Shown when the labeler is examined
-hand-labeler-examine-blank = The label text is blank.
-hand-labeler-examine-label-text = The label text is '{ $label-text }'.
+hand-labeler-examine-blank = Этикетка пустая.
+hand-labeler-examine-label-text = Этикетка: "{ $label-text }".
