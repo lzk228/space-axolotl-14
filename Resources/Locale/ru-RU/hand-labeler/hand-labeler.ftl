@@ -12,4 +12,4 @@ hand-labeler-remove-label-text = Удалить этикетку
 hand-labeler-add-label-text = Наклеить этикетку
 # Shown when the labeler is examined
 hand-labeler-examine-blank = Этикетка пустая.
-hand-labeler-examine-label-text = Этикетка: "{ $label-text }".
+hand-labeler-examine-label-text = Этикетка гласит "{ $label-text }".
