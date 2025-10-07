@@ -26,5 +26,5 @@ station-ai-fixer-console-window-continue-action = Продолжить
 station-ai-fixer-console-window-cancel-action = Отмена
 station-ai-fixer-console-window-purge-warning-title = Инициирование очистки ИИ
 station-ai-fixer-console-window-purge-warning-1 = Вы собираетесь навсегда удалить искусственный интеллект.
-station-ai-fixer-console-window-purge-warning-2 = По завершению операции, интеллект исчезнет и не сможет быть восстановлен.
+station-ai-fixer-console-window-purge-warning-2 = По завершении операции, интеллект исчезнет и не сможет быть восстановлен.
 station-ai-fixer-console-window-purge-warning-3 = Желаете продолжить?
