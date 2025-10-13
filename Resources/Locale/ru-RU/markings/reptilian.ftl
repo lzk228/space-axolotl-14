@@ -1,4 +1,4 @@
-﻿marking-LizardFrillsShort-frills_short = Рептилия, воротник (Короткий)
+marking-LizardFrillsShort-frills_short = Рептилия, воротник (Короткий)
 marking-LizardFrillsShort = Рептилия, воротник (Короткий)
 marking-LizardFrillsSimple-frills_simple = Рептилия, воротник (Простой)
 marking-LizardFrillsSimple = Рептилия, воротник (Простой)

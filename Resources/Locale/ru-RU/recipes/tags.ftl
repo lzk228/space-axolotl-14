@@ -1,4 +1,4 @@
-﻿# clown
+# clown
 construction-graph-tag-banana-peel = банановая кожура
 construction-graph-tag-clown-suit = клоунский костюм
 construction-graph-tag-clown-shoes = клоунские туфли

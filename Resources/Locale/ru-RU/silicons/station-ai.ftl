@@ -1,4 +1,4 @@
-﻿# General
+# General
 ai-wire-snipped = Один из ваших системных проводов был перерезан в { $source }.
 wire-name-ai-vision-light = ИИЗ
 wire-name-ai-act-light = ИИД

@@ -1,4 +1,4 @@
-﻿ent-BaseImplanter = имплантер
+ent-BaseImplanter = имплантер
     .desc = { ent-BaseItem.desc }
 ent-Implanter = экстрактор имплантов
     .desc =
