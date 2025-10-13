@@ -94,5 +94,5 @@ ent-ComputerXenoborgsControlCircuitboard = xenoborg control console board
     .desc = A computer printed circuit board for a xenoborg control console.
 ent-StationAiUploadCircuitboard = AI upload console board
     .desc = A computer printed circuit board for an AI upload console.
-ent-StationAiFixerCircuitboard = AI restoration console
+ent-StationAiFixerCircuitboard = AI restoration console board
     .desc = A computer printed circuit board for an AI restoration console console.

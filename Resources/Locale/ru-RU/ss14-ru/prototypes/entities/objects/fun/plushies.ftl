@@ -71,3 +71,5 @@ ent-PlushieHuman = плюшевый человек
     .desc = Плюшевый человек из войлока. Качество — ниже не бывает. Человек голый. Человек плачет. Человек кричит.
 ent-PlushieMoth = плюшевая моль
     .desc = Милая и пушистая плюшевая моль. Развлекайтесь, бз!
+ent-PlushieVulp = vulpkanin plushie
+    .desc = An adorable stuffed toy that resembles a vulpkanin. Yip! Yap!

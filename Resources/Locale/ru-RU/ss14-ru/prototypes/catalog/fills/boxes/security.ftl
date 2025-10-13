@@ -16,3 +16,5 @@ ent-BoxSunglasses = коробка солнцезащитных очков
     .desc = Коробка крутых, солнце- и вспышкозащитных очков.
 ent-BoxForensicPad = коробка криминалистических пластинок
     .desc = Коробка криминалистических пластинок.
+ent-BoxDetonator = detonator box
+    .desc = A box of explosive detonators and triggers.
