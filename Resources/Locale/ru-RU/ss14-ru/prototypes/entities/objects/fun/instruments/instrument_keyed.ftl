@@ -1,12 +1,12 @@
-ent-BaseKeyedInstrument = { ent-BaseHandheldInstrument }
+﻿ent-BaseKeyedInstrument = { ent-BaseHandheldInstrument }
     .desc = { ent-BaseHandheldInstrument.desc }
 ent-SynthesizerInstrument = синтезатор
     .desc = { ent-BaseKeyedInstrument.desc }
 ent-SuperSynthesizerInstrument = суперсинтезатор
     .desc = Разрываем гетто с помощью Touhou MIDIs с 2020 года.
-    .suffix = Admin
+    .suffix = Админ
 ent-SuperSynthesizerNoLimitInstrument = { ent-SuperSynthesizerInstrument }
-    .suffix = NoLimits Admin
+    .suffix = Безлим Админ
     .desc = { ent-SuperSynthesizerInstrument.desc }
 ent-AccordionInstrument = аккордеон
     .desc = { ent-BaseKeyedInstrument.desc }

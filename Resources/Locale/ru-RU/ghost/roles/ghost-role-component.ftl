@@ -1,4 +1,4 @@
-# also used in MakeGhostRuleWindow and MakeGhostRoleCommand
+﻿# also used in MakeGhostRuleWindow and MakeGhostRoleCommand
 ghost-role-component-default-rules =
     Все стандартные правила применяются, если администратор не сказал вам обратное.
     Вы не помните ничего из своей предыдущей жизни и не помните ничего из того, что узнали, будучи призраком.
@@ -37,8 +37,8 @@ ghost-role-information-silicon-rules =
     Вам [color=red]НЕ[/color] разрешается помнить или говорить имя, внешность и т.д. вашего предыдущего персонажа.
 ghost-role-information-mouse-name = Мышь
 ghost-role-information-mouse-description = Голодная и озорная мышь.
-ghost-role-information-cancer-mouse-name = Cancer Mouse
-ghost-role-information-cancer-mouse-description = An irradiated mouse, spread your affliction and seek food.
+ghost-role-information-cancer-mouse-name = Раковая мышь
+ghost-role-information-cancer-mouse-description = Облучённая мышь. Распространяйте своё насчастье и ищите еду.
 ghost-role-information-mothroach-name = Таракамоль
 ghost-role-information-mothroach-description = Милая озорная таракамоль.
 ghost-role-information-moproach-name = Швабракан

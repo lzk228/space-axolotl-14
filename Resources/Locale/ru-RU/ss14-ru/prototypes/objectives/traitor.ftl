@@ -1,4 +1,4 @@
-ent-BaseTraitorObjective = { ent-BaseObjective }
+﻿ent-BaseTraitorObjective = { ent-BaseObjective }
     .desc = { ent-BaseObjective.desc }
 ent-BaseTraitorSocialObjective = { ent-BaseTraitorObjective }
     .desc = { ent-BaseTraitorObjective.desc }
@@ -29,8 +29,6 @@ ent-RDHardsuitStealObjective = { ent-BaseRDStealObjective }
 ent-HandTeleporterStealObjective = { ent-BaseRDStealObjective }
     .desc = { ent-BaseRDStealObjective.desc }
 ent-EnergyMagnumStealObjective = { ent-BaseTraitorStealObjective }
-    .desc = { ent-BaseTraitorStealObjective.desc }
-ent-EnergyShotgunStealObjective = { ent-BaseTraitorStealObjective }
     .desc = { ent-BaseTraitorStealObjective.desc }
 ent-MagbootsStealObjective = { ent-BaseTraitorStealObjective }
     .desc = { ent-BaseTraitorStealObjective.desc }

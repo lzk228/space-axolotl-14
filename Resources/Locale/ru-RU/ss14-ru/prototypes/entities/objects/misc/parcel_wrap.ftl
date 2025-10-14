@@ -1,7 +1,7 @@
-ent-ParcelWrap = обёрточная бумага
+﻿ent-ParcelWrap = обёрточная бумага
     .desc = Бумага, которой упаковывают вещи для транспортировки.
-ent-ParcelWrapAdmeme = bluespace wrap
-    .desc = Paper used contain items for transport. This one seems to be able to store an unusual amount of space within it.
+ent-ParcelWrapAdmeme = блюспейс бумага
+    .desc = Бумага, которой упаковывают вещи для транспортировки. Похоже, в неё можно завернуть необычайно много.
     .suffix = Admeme
 ent-WrappedParcel = завёрнутая посылка
     .desc = Что-то завёрнутое в бумагу. Интересно, что же внутри...

@@ -1,4 +1,4 @@
-ent-FoodMeatBase = { ent-FoodInjectableBase }
+﻿ent-FoodMeatBase = { ent-FoodInjectableBase }
     .desc = { ent-FoodInjectableBase.desc }
 ent-FoodMeatRawBase = { ent-FoodMeatBase }
     .desc = { ent-FoodMeatBase.desc }
@@ -76,8 +76,8 @@ ent-FoodMeatChickenCooked = приготовленное мясо курицы
     .desc = Приготовленная курятина. Лучше всего использовать в других рецептах.
 ent-FoodMeatChickenFried = жареная курица
     .desc = Сочный кусок куриного мяса, обжаренный до корочки.
-ent-FoodMeatChickenFriedVox = mystery fried chicken
-    .desc = “Eleven secret herbs and… oh no. That’s not chicken."
+ent-FoodMeatChickenFriedVox = загадочная жареная курица
+    .desc = Одинадцать секретных трав и... О нет. Это не курица.
 ent-FoodMeatDuckCooked = приготовленная мясо утки
     .desc = Приготовленная утятина. Лучше всего использовать в других рецептах.
 ent-FoodMeatCrabCooked = приготовленное мясо краба
