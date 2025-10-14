@@ -131,9 +131,9 @@ stack-hv-cable =
     }
 stack-explosive-cord =
     { $amount ->
-        [1] взрывной шнур
-        [few] взрывных шнура
-       *[other] взрывных шнуров
+        [1] детонационный шнур
+        [few] детонационных шнура
+       *[other] детонационных шнуров
     }
 stack-wood-plank =
     { $amount ->

@@ -110,5 +110,5 @@ ent-BulletDisablerSmgSpread = оглушающий лазерный залп
     .desc = { ent-BulletDisablerSmg.desc }
 ent-BulletLaserMagnum = лазерный заряд магнума
     .desc = { ent-BulletLaser.desc }
-ent-BulletLaserWindowPiercingMagnum = пробивающий окна заряд магнума
+ent-BulletLaserWindowPiercingMagnum = пролетающий окна заряд магнума
     .desc = { ent-BulletLaser.desc }

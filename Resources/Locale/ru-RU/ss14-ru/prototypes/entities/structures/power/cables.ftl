@@ -17,5 +17,5 @@ ent-CableApcExtension = НВ кабель
 ent-CableApcExtensionUncuttable = { ent-CableApcExtension }
     .suffix = Невозможно перерезать
     .desc = { ent-CableApcExtension.desc }
-ent-CableDet = взрывной шнур
+ent-CableDet = детонационный шнур
     .desc = Спагетти для людей, которые ненавидят стены.
