@@ -132,7 +132,7 @@ reagent-effect-guidebook-status-effect-delay =
         [add]
             { $chance ->
                 [1] Вызывает
-               *[other]вызывают
+               *[other] вызывают
             } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
                     [one] секунду
                     [few] секунды
@@ -141,7 +141,7 @@ reagent-effect-guidebook-status-effect-delay =
        *[set]
             { $chance ->
                 [1] Вызывает
-               *[other]вызывают
+               *[other] вызывают
             } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
                     [one] секунду
                     [few] секунды
@@ -166,7 +166,7 @@ reagent-effect-guidebook-knockdown =
         [update]
             { $chance ->
                 [1] Вызывает
-               *[other]вызывают
+               *[other] вызывают
             } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
                     [one] секунду
                     [few] секунды
@@ -175,7 +175,7 @@ reagent-effect-guidebook-knockdown =
         [add]
             { $chance ->
                 [1] Вызывает
-               *[other]вызывают
+               *[other] вызывают
             } нокдаун минимум на { NATURALFIXED($time, 3) } { $time ->
                     [one] секунду
                     [few] секунды
@@ -184,7 +184,7 @@ reagent-effect-guidebook-knockdown =
        *[set]
             { $chance ->
                 [1] Вызывает
-               *[other]вызывают
+               *[other] вызывают
             } нокдаун минимум на { NATURALFIXED($time, 3) } { $time ->
                     [one] секунду
                     [few] секунды
