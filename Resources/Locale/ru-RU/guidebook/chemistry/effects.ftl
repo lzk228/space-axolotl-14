@@ -156,7 +156,11 @@ reagent-effect-guidebook-status-effect-delay =
                     [few] секунды
                     *[other] секунд
                 } от { LOC($key) }
-    } после { NATURALFIXED($delay, 3) } секунд задержки
+    } после { NATURALFIXED($delay, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                } задержки
 reagent-effect-guidebook-knockdown =
     { $type ->
         [update]
