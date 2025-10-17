@@ -1,0 +1,10 @@
+ent-WoundInternalBase = { "" }
+    .desc = { "" }
+ent-WoundFracture = fracture wound
+    .desc = { ent-WoundInternalBase.desc }
+ent-WoundArterialBleeding = arterial bleeding
+    .desc = { ent-WoundInternalBase.desc }
+ent-WoundHusking = husking
+    .desc = { ent-WoundInternalBase.desc }
+ent-WoundBoneDeath = bone death
+    .desc = { ent-WoundInternalBase.desc }

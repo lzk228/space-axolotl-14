@@ -1,0 +1,10 @@
+ent-WoundSurgicalBase = { "" }
+    .desc = { "" }
+ent-WoundIncision = open incision
+    .desc = { ent-WoundSurgicalBase.desc }
+ent-WoundClamped = clamped arteries
+    .desc = { ent-WoundSurgicalBase.desc }
+ent-WoundRetracted = retracted skin
+    .desc = { ent-WoundSurgicalBase.desc }
+ent-WoundOpenRibCage = open ribcage
+    .desc = { ent-WoundSurgicalBase.desc }

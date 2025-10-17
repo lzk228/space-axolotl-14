@@ -1,0 +1,9 @@
+ent-SyringeParacetamol = { ent-PrefilledSyringe }
+    .suffix = paracetamol
+    .desc = { ent-PrefilledSyringe.desc }
+ent-SyringeTramadol = { ent-PrefilledSyringe }
+    .suffix = tramadol
+    .desc = { ent-PrefilledSyringe.desc }
+ent-SyringeOxycodone = { ent-PrefilledSyringe }
+    .suffix = oxycodone
+    .desc = { ent-PrefilledSyringe.desc }

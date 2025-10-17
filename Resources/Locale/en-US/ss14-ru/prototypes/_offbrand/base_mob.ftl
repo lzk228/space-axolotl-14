@@ -1,0 +1,14 @@
+ent-BaseMobWoundable = { "" }
+    .desc = { "" }
+ent-BaseMobPain = { "" }
+    .desc = { "" }
+ent-BaseMobHeartrate = { "" }
+    .desc = { "" }
+ent-BaseMobBrain = { "" }
+    .desc = { "" }
+ent-BaseMobSurgery = { "" }
+    .desc = { "" }
+ent-BaseMobCryostasis = { "" }
+    .desc = { "" }
+ent-BaseMobLungDamage = { "" }
+    .desc = { "" }
