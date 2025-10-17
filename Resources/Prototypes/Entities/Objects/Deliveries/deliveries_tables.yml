@@ -104,7 +104,9 @@
       - id: Brutepack
       - id: Ointment
       - id: Gauze
-      - id: Bloodpack
+      - id: ChemistryBottleParacetamol # Offbrand
+    - id: SyndicateBusinessCard
+      weight: 0.5
 
 # Packages
 # TODO: Currently mostly maints loot, should be updated in the future.
