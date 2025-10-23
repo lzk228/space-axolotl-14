@@ -2,8 +2,8 @@
 marking-TattooVoxNightlingHead = Вокс, Голова, Татуировка (Найтлинг)
 marking-TattooVoxArrowHead-tattoo_arrow_head = Вокс, Голова, Татуировка (Стрелка)
 marking-TattooVoxArrowHead = Вокс, Голова, Татуировка (Стрелка)
-marking-VoxTattooEyeliner-eyeliner = Eyeliner
-marking-VoxTattooEyeliner = Eyeliner
+marking-VoxTattooEyeliner-eyeliner = Подводка
+marking-VoxTattooEyeliner = Подводка
 marking-VoxVisage-visage = Маска (Полный)
 marking-VoxVisage = Маска (Полный)
 marking-VoxVisageL-visage_l = Маска (Левый)
