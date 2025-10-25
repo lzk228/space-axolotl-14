@@ -1,4 +1,4 @@
-ent-BaseKnife = { ent-BaseItem }
+﻿ent-BaseKnife = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
 ent-Shiv = заточка
     .desc = Грубое оружие, сделанное из куска ткани и осколка стекла.
@@ -26,5 +26,5 @@ ent-KukriKnife = нож-кукри
     .desc = У профессионалов есть правила. Будь вежлив. Работай эффективно. Убивай каждого встречного.
 ent-ThrowingKnife = метательный нож
     .desc = Этот кроваво-красный нож очень аэродинамичен и удобен для метания, но удачи вам, если вы попытаетесь сразиться с кем-то врукопашную.
-ent-UtilityKnife = utility knife
-    .desc = A knife with a retractable, tiny blade. Useful as a box cutter and letter opener, among other things.
+ent-UtilityKnife = канцелярский нож
+    .desc = Нож с маленьким выдвижным лезвием. Полезен, в частности, чтобы открывать коробки и письма.
