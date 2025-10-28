@@ -19,6 +19,7 @@ electrify-door-on = Включить перегрузку
 electrify-door-off = Отключить перегрузку
 toggle-light = Переключить свет
 ai-device-not-responding = Устройство не отвечает
+ai-device-no-access = You have no access to this device
 ai-consciousness-download-warning = Ваше сознание начали загружать.
 # UI
 station-ai-customization-menu = Настройка ИИ

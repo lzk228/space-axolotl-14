@@ -3,6 +3,8 @@ materials-glass = стекло
 materials-reinforced-glass = бронестекло
 materials-plasma-glass = плазменное стекло
 materials-reinforced-plasma-glass = плазменное бронестекло
+materials-uranium-glass = uranium glass
+materials-reinforced-uranium-glass = reinforced uranium glass
 # Metals
 materials-steel = сталь
 materials-gold = золото

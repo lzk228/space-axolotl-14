@@ -1,4 +1,4 @@
-﻿ent-BaseWeaponBattery = { ent-BaseItem }
+ent-BaseWeaponBattery = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
 ent-BaseLaserRifle = { ent-BaseWeaponBattery }
     .desc = { ent-BaseWeaponBattery.desc }

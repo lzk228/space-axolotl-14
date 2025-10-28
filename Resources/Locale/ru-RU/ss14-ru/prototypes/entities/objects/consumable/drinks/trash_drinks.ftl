@@ -1,4 +1,4 @@
-﻿ent-DrinkBottleBaseEmpty = { ent-DrinkBaseOpenableOpen }
+ent-DrinkBottleBaseEmpty = { ent-DrinkBaseOpenableOpen }
     .desc = { ent-DrinkBaseOpenableOpen.desc }
     .suffix = { ent-DrinkBaseEmptyTrash.suffix }
 ent-DrinkBottleBaseSmallEmpty = { ent-DrinkBaseOpenableOpen }

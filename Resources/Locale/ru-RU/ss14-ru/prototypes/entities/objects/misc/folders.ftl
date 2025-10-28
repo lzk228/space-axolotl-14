@@ -1,4 +1,4 @@
-﻿ent-BoxFolderNuclearCodes = папка с кодами ядерной аутентификации
+ent-BoxFolderNuclearCodes = папка с кодами ядерной аутентификации
     .desc = { ent-BaseItem.desc }
 ent-BoxFolderBaseEmpty = папка
     .desc = Папка, заполненная совершенно секретными документами.
