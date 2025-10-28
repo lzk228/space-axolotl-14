@@ -1,4 +1,4 @@
-﻿ent-ClothingBeltChampion = пояс чемпиона
+ent-ClothingBeltChampion = пояс чемпиона
     .desc = Доказывает всем, что вы сильнейший!
 ent-ClothingBeltSuspendersRed = красные подтяжки
     .desc = Для поддержания штанов.

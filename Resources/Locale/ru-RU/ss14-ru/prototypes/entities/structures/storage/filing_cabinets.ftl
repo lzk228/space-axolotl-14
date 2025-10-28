@@ -1,4 +1,4 @@
-﻿ent-BaseFilingCabinet = { ent-BaseStructureDynamic }
+ent-BaseFilingCabinet = { ent-BaseStructureDynamic }
     .desc = Шкаф для хранения всего, что пожелаете.
     .suffix = Пустой
 ent-filingCabinet = картотечный шкаф

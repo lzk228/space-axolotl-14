@@ -1,4 +1,4 @@
-﻿# Traitor single items
+# Traitor single items
 steal-target-groups-hypospray = гипоспрей
 steal-target-groups-handheld-crew-monitor = ручной монитор экипажа
 steal-target-groups-clothing-outer-hardsuit-rd = экспериментальный исследовательский скафандр
