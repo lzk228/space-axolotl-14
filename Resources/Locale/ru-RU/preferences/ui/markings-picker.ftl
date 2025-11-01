@@ -11,11 +11,11 @@ marking-used-forced = { $marking-name } (Принудительно)
 marking-slot-add = Добавить
 marking-slot-remove = Удалить
 marking-slot = Слот { $number }
-humanoid-marking-modifier-force = Force
-humanoid-marking-modifier-ignore-species = Ignore Species
-humanoid-marking-modifier-base-layers = Base layers
-humanoid-marking-modifier-enable = Enable
-humanoid-marking-modifier-prototype-id = Prototype id:
+humanoid-marking-modifier-force = Принудительно
+humanoid-marking-modifier-ignore-species = Игнорировать вид
+humanoid-marking-modifier-base-layers = Базовый слой
+humanoid-marking-modifier-enable = Включить
+humanoid-marking-modifier-prototype-id = ID прототипа:
 
 # Categories
 

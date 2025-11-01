@@ -23,14 +23,14 @@ entity-effect-guidebook-create-entity =
     }
 entity-effect-guidebook-destroy =
     { $chance ->
-        [1] Destroys
-        *[other] destroy
-    } the object
+        [1] Уничтожает
+        *[other] уничтожают
+    } объект
 entity-effect-guidebook-break =
     { $chance ->
-        [1] Breaks
-        *[other] break
-    } the object
+        [1] Ломает
+        *[other] ломают
+    } объект
 entity-effect-guidebook-explosion =
     { $chance ->
         [1] Вызывает
@@ -140,8 +140,8 @@ entity-effect-guidebook-status-effect-old =
 entity-effect-guidebook-status-effect =
     { $type ->
         [update]{ $chance ->
-                    [1] Causes
-                    *[other] cause
+                    [1] Вызывает
+                    *[other] вызывают
                  } {LOC($key)} for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
         [add]
             { $chance ->
@@ -172,7 +172,7 @@ entity-effect-guidebook-status-effect =
             } от { LOC($key) }
     } { $delay ->
         [0] immediately
-        *[other] после { NATURALFIXED($delay, 3) } { $time ->
+        *[other] после { NATURALFIXED($delay, 3) } { $delay ->
             [one] секунду
             [few] секунды
             *[other] секунд
@@ -181,24 +181,28 @@ entity-effect-guidebook-status-effect =
 entity-effect-guidebook-status-effect-indef =
     { $type ->
         [update]{ $chance ->
-                    [1] Causes
-                    *[other] cause
-                 } permanent {LOC($key)}
+                    [1] Вызывает
+                    *[other] вызывает
+                 } постоянный {LOC($key)}
         [add]   { $chance ->
-                    [1] Causes
-                    *[other] cause
-                } permanent {LOC($key)}
+                    [1] Вызывает
+                    *[other] вызывают
+                } постоянный{LOC($key)}
         [set]  { $chance ->
-                    [1] Causes
-                    *[other] cause
-                } permanent {LOC($key)}
+                    [1] Вызывает
+                    *[other] вызывают
+                } постоянный{LOC($key)}
         *[remove]{ $chance ->
-                    [1] Removes
-                    *[other] remove
+                    [1] Убирает
+                    *[other] убирают
                 } {LOC($key)}
     } { $delay ->
-        [0] immediately
-        *[other] after a {NATURALFIXED($delay, 3)} second delay
+        [0] мгновенно
+        *[other] после { NATURALFIXED($delay, 3) } { $delay ->
+            [one] секунду
+            [few] секунды
+            *[other] секунд
+        } задержки
     }
 entity-effect-guidebook-knockdown =
     { $type ->

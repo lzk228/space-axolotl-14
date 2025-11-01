@@ -38,5 +38,5 @@ ent-ClothingHeadsetFreelance = гарнитура фрилансера
     .desc = Такими пользуются группы бродячих фрилансеров.
 ent-ClothingHeadsetWizard = гарнитура волшебника
     .desc = Гарнитура, используемая ужасными космическими волшебниками.
-ent-ClothingHeadsetNinja = green headset
-    .desc = Who could refuse to wear this stylish black and green headset?
+ent-ClothingHeadsetNinja = зелёная гарнитура
+    .desc = Кто бы отказался носить эту стильную чёрно-зелёную гарнитуру?
