@@ -2,7 +2,7 @@
 loadout-group-species-restriction = Этот предмет недоступен для вашего текущего вида.
 # Miscellaneous
 loadout-group-trinkets = Безделушки
-loadout-group-jobtrinkets = Рабочие безделушки
+loadout-group-jobtrinkets = Безделушки должности
 loadout-group-glasses = Очки
 loadout-group-backpack = Рюкзак
 loadout-group-instruments = Инструменты

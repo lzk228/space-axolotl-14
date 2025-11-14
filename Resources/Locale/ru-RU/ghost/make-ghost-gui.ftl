@@ -9,7 +9,7 @@ make-ghost-roles-window-join-extends-by-label = Присоединение ув�
 make-ghost-roles-window-max-duration-label = Максимальная продолжительность (сек)
 make-ghost-roles-window-make-button = Создать
 # Raffle
-make-ghost-roles-window-raffle-not-button = Без лотереии
+make-ghost-roles-window-raffle-not-button = Без лотереи
 make-ghost-roles-window-raffle-custom-settings-button = Пользовательская
 make-ghost-roles-window-raffle-role-label = Лотерея?
 make-ghost-roles-window-raffle-settings-label = { $id } (начальная { $initialDuration } сек, макс { $maxDuration } сек, присоединение добавляет { $joinExtendsDurationBy } сек)
