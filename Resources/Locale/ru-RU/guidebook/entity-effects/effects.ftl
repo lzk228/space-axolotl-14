@@ -171,7 +171,7 @@ entity-effect-guidebook-status-effect =
                *[other] секунд
             } от { LOC($key) }
     } { $delay ->
-        [0] immediately
+        [0] немедленно
         *[other] после { NATURALFIXED($delay, 3) } { $delay ->
             [one] секунду
             [few] секунды
