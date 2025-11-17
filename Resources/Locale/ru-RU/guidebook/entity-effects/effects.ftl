@@ -142,7 +142,11 @@ entity-effect-guidebook-status-effect =
         [update]{ $chance ->
                     [1] Вызывает
                     *[other] вызывают
-                 } {LOC($key)} for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
+                 } {LOC($key)} минимум на {NATURALFIXED($time, 3)} { $time ->
+                [one] секунду
+                [few] секунды
+               *[other] секунд
+            }, эффект не накапливается
         [add]
             { $chance ->
                 [1] Вызывает
