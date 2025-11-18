@@ -1,1 +1,2 @@
-key-phrase-gadget = go go gadget
+# TODO ПЕРЕВЕСТИ
+key-phrase-gadget = гаджет в бой
