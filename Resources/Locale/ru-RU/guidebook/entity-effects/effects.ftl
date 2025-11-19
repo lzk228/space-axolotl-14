@@ -13,6 +13,14 @@
         [1] Насыщает
        *[other] насыщают
     }
+entity-effect-guidebook-spawn-entity =
+    { $chance ->
+        [1] Creates
+       *[other] create
+    } { $amount ->
+        [1] { INDEFINITE($entname) }
+       *[other] { $amount } { MAKEPLURAL($entname) }
+    }
 entity-effect-guidebook-create-entity =
     { $chance ->
         [1] Создаёт
@@ -24,12 +32,12 @@ entity-effect-guidebook-create-entity =
 entity-effect-guidebook-destroy =
     { $chance ->
         [1] Уничтожает
-        *[other] уничтожают
+       *[other] уничтожают
     } объект
 entity-effect-guidebook-break =
     { $chance ->
         [1] Ломает
-        *[other] ломают
+       *[other] ломают
     } объект
 entity-effect-guidebook-explosion =
     { $chance ->
@@ -131,7 +139,7 @@ entity-effect-guidebook-status-effect-old =
                 [few] секунды
                *[other] секунд
             }, эффект не накапливается
-        *[remove]
+       *[remove]
             { $chance ->
                 [1] Удаляет
                *[other] удаляют
@@ -139,10 +147,11 @@ entity-effect-guidebook-status-effect-old =
     }
 entity-effect-guidebook-status-effect =
     { $type ->
-        [update]{ $chance ->
-                    [1] Вызывает
-                    *[other] вызывают
-                 } {LOC($key)} минимум на {NATURALFIXED($time, 3)} { $time ->
+        [update]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
                 [one] секунду
                 [few] секунды
                *[other] секунд
@@ -165,7 +174,7 @@ entity-effect-guidebook-status-effect =
                 [few] секунды
                *[other] секунд
             }, эффект не накапливается
-        *[remove]
+       *[remove]
             { $chance ->
                 [1] Удаляет
                *[other] удаляют
@@ -176,37 +185,43 @@ entity-effect-guidebook-status-effect =
             } от { LOC($key) }
     } { $delay ->
         [0] немедленно
-        *[other] после { NATURALFIXED($delay, 3) } { $delay ->
-            [one] секунду
-            [few] секунды
-            *[other] секунд
-        } задержки
+       *[other]
+            после { NATURALFIXED($delay, 3) } { $delay ->
+                [one] секунду
+                [few] секунды
+               *[other] секунд
+            } задержки
     }
 entity-effect-guidebook-status-effect-indef =
     { $type ->
-        [update]{ $chance ->
-                    [1] Вызывает
-                    *[other] вызывает
-                 } постоянный {LOC($key)}
-        [add]   { $chance ->
-                    [1] Вызывает
-                    *[other] вызывают
-                } постоянный{LOC($key)}
-        [set]  { $chance ->
-                    [1] Вызывает
-                    *[other] вызывают
-                } постоянный{LOC($key)}
-        *[remove]{ $chance ->
-                    [1] Убирает
-                    *[other] убирают
-                } {LOC($key)}
+        [update]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывает
+            } постоянный { LOC($key) }
+        [add]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } постоянный{ LOC($key) }
+        [set]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } постоянный{ LOC($key) }
+       *[remove]
+            { $chance ->
+                [1] Убирает
+               *[other] убирают
+            } { LOC($key) }
     } { $delay ->
         [0] мгновенно
-        *[other] после { NATURALFIXED($delay, 3) } { $delay ->
-            [one] секунду
-            [few] секунды
-            *[other] секунд
-        } задержки
+       *[other]
+            после { NATURALFIXED($delay, 3) } { $delay ->
+                [one] секунду
+                [few] секунды
+               *[other] секунд
+            } задержки
     }
 entity-effect-guidebook-knockdown =
     { $type ->
@@ -495,7 +510,7 @@ entity-effect-guidebook-add-to-solution-reaction =
     { $chance ->
         [1] Заставляет
        *[other] заставляют
-    } {$reagent} добавиться во внутренний контейнер для растворов этого объекта
+    } { $reagent } добавиться во внутренний контейнер для растворов этого объекта
 entity-effect-guidebook-artifact-durability-restore =
     Восстанавливает { $restored } { $restored ->
         [1] прочность
@@ -505,11 +520,10 @@ entity-effect-guidebook-plant-attribute =
     { $chance ->
         [1] Изменяет
        *[other] изменяют
-    } { $attribute } на {$positive ->
-    [true] [color=red]{$amount}[/color]
-    *[false] [color=green]{$amount}[/color]
+    } { $attribute } на { $positive ->
+        [true] [color=red]{ $amount }[/color]
+       *[false] [color=green]{ $amount }[/color]
     }
-
 entity-effect-guidebook-plant-cryoxadone =
     { $chance ->
         [1] Омолаживает

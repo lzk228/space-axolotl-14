@@ -22,3 +22,7 @@ reagent-name-hew = сок, заставляющий говорить Хев
 reagent-desc-hew = Чистая сущность инвертированной плюшевой рептилии. Заставляет вас говорить Хев!
 reagent-name-corgiessence = коргиум
 reagent-desc-corgiessence = На вкус как еда для собак. Очевидно, это дело вкуса.
+reagent-name-catessence = felinase
+reagent-desc-catessence = A type of carcinogenic enzyme known to break down proteins found within the vocal cords of most animals. Mixing is NOT recommended.
+reagent-name-canidessence = caninase
+reagent-desc-canidessence = A type of carcinogenic enzyme known to break down proteins found within the vocal cords of most animals. Mixing is NOT recommended.
