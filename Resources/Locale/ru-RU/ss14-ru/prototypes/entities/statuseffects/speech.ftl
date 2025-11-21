@@ -8,5 +8,5 @@ ent-StatusEffectScrambled = неразборчивость
     .desc = { ent-SpeechStatusEffectBase.desc }
 ent-StatusEffectOwO = owo-акцент
     .desc = { ent-SpeechStatusEffectBase.desc }
-ent-StatusEffectBark = лай-акцент
+ent-StatusEffectBark = гав-акцент
     .desc = { ent-SpeechStatusEffectBase.desc }
