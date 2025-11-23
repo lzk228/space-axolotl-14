@@ -1,5 +1,5 @@
 changeling-cloner-component-empty = Он пуст.
-changeling-cloner-component-filled = Внутри имеется образец ДНК.
+changeling-cloner-component-filled = Внутри находится образец ДНК.
 changeling-cloner-component-spent = Он был использован.
 changeling-cloner-component-reset-verb = Очистить ДНК
 changeling-cloner-component-reset-popup = Вы очищаете хранилище инъектора ДНК.
