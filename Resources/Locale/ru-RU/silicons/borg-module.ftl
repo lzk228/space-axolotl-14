@@ -1,4 +1,4 @@
-borg-module-fit = Этот модуль помещается в { $types }.
+borg-module-fit = Этот модуль можно установить в { $types }.
 borg-type-all = [color=white]любого киборга[/color]
 borg-type-salvage = [color= #d6b328]киборга-шахтёра[/color]
 borg-type-engineer = [color= #ff9900]киборга-инженера[/color]
