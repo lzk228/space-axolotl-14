@@ -11,5 +11,5 @@ borg-type-syndicate-assault = [color= #680a0d]штурмового киборг�
 xenoborg-type-all = [color= #3d94ff]любого ксеноборга[/color]
 xenoborg-type-engi = [color= #edd45b]инженерного ксеноборга[/color]
 xenoborg-type-heavy = [color= #d62020]тяжёлого ксеноборга[/color]
-xenoborg-type-scout = [color= #6a6b6f]разведика ксеноборга[/color]
+xenoborg-type-scout = [color= #6a6b6f]разведчика ксеноборга[/color]
 xenoborg-type-stealth = [color= #ff00cc]скрытного ксеноборга[/color]
