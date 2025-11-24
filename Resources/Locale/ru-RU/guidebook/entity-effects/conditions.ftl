@@ -1,91 +1,5 @@
 entity-condition-guidebook-total-damage =
     { $max ->
-        [2147483648] it has at least { NATURALFIXED($min, 2) } total damage
-       *[other]
-            { $min ->
-                [0] it has at most { NATURALFIXED($max, 2) } total damage
-               *[other] it has between { NATURALFIXED($min, 2) } and { NATURALFIXED($max, 2) } total damage
-            }
-    }
-entity-condition-guidebook-type-damage =
-    { $max ->
-        [2147483648] it has at least { NATURALFIXED($min, 2) } of { $type } damage
-       *[other]
-            { $min ->
-                [0] it has at most { NATURALFIXED($max, 2) } of { $type } damage
-               *[other] it has between { NATURALFIXED($min, 2) } and { NATURALFIXED($max, 2) } of { $type } damage
-            }
-    }
-entity-condition-guidebook-group-damage =
-    { $max ->
-        [2147483648] it has at least { NATURALFIXED($min, 2) } of { $type } damage.
-       *[other]
-            { $min ->
-                [0] it has at most { NATURALFIXED($max, 2) } of { $type } damage.
-               *[other] it has between { NATURALFIXED($min, 2) } and { NATURALFIXED($max, 2) } of { $type } damage
-            }
-    }
-entity-condition-guidebook-total-hunger =
-    { $max ->
-        [2147483648] the target has at least { NATURALFIXED($min, 2) } total hunger
-       *[other]
-            { $min ->
-                [0] the target has at most { NATURALFIXED($max, 2) } total hunger
-               *[other] the target has between { NATURALFIXED($min, 2) } and { NATURALFIXED($max, 2) } total hunger
-            }
-    }
-entity-condition-guidebook-reagent-threshold =
-    { $max ->
-        [2147483648] there's at least { NATURALFIXED($min, 2) }u of { $reagent }
-       *[other]
-            { $min ->
-                [0] there's at most { NATURALFIXED($max, 2) }u of { $reagent }
-               *[other] there's between { NATURALFIXED($min, 2) }u and { NATURALFIXED($max, 2) }u of { $reagent }
-            }
-    }
-entity-condition-guidebook-mob-state-condition = the mob is { $state }
-entity-condition-guidebook-job-condition = the target's job is { $job }
-entity-condition-guidebook-solution-temperature =
-    the solution's temperature is { $max ->
-        [2147483648] at least { NATURALFIXED($min, 2) }k
-       *[other]
-            { $min ->
-                [0] at most { NATURALFIXED($max, 2) }k
-               *[other] between { NATURALFIXED($min, 2) }k and { NATURALFIXED($max, 2) }k
-            }
-    }
-entity-condition-guidebook-body-temperature =
-    the body's temperature is { $max ->
-        [2147483648] at least { NATURALFIXED($min, 2) }k
-       *[other]
-            { $min ->
-                [0] at most { NATURALFIXED($max, 2) }k
-               *[other] between { NATURALFIXED($min, 2) }k and { NATURALFIXED($max, 2) }k
-            }
-    }
-entity-condition-guidebook-organ-type =
-    the metabolizing organ { $shouldhave ->
-        [true] is
-       *[false] is not
-    } { INDEFINITE($name) } { $name } organ
-entity-condition-guidebook-has-tag =
-    the target { $invert ->
-        [true] does not have
-       *[false] has
-    } the tag { $tag }
-entity-condition-guidebook-this-reagent = this reagent
-entity-condition-guidebook-breathing =
-    the metabolizer is { $isBreathing ->
-        [true] breathing normally
-       *[false] suffocating
-    }
-entity-condition-guidebook-internals =
-    the metabolizer is { $usingInternals ->
-        [true] using internals
-       *[false] breathing atmospheric air
-    }
-reagent-effect-condition-guidebook-total-damage =
-    { $max ->
         [2147483648] тело имеет по крайней мере { NATURALFIXED($min, 2) } общего урона
        *[other]
             { $min ->
@@ -93,7 +7,7 @@ reagent-effect-condition-guidebook-total-damage =
                *[other] тело имеет между { NATURALFIXED($min, 2) } и { NATURALFIXED($max, 2) } общего урона
             }
     }
-reagent-effect-condition-guidebook-type-damage =
+entity-condition-guidebook-type-damage =
     { $max ->
         [2147483648] тело имеет по крайней мере { NATURALFIXED($min, 2) } урона типа { $type }
        *[other]
@@ -102,7 +16,7 @@ reagent-effect-condition-guidebook-type-damage =
                *[other] тело имеет между { NATURALFIXED($min, 2) } и { NATURALFIXED($max, 2) } урона типа { $type }
             }
     }
-reagent-effect-condition-guidebook-group-damage =
+entity-condition-guidebook-group-damage =
     { $max ->
         [2147483648] тело имеет по крайней мере { NATURALFIXED($min, 2) } урона группы { $type }
        *[other]
@@ -111,7 +25,7 @@ reagent-effect-condition-guidebook-group-damage =
                *[other] тело имеет между { NATURALFIXED($min, 2) } и { NATURALFIXED($max, 2) } урона группы { $type }
             }
     }
-reagent-effect-condition-guidebook-total-hunger =
+entity-condition-guidebook-total-hunger =
     { $max ->
         [2147483648] цель имеет по крайней мере { NATURALFIXED($min, 2) } общего голода
        *[other]
@@ -120,7 +34,7 @@ reagent-effect-condition-guidebook-total-hunger =
                *[other] цель имеет между  { NATURALFIXED($min, 2) } и { NATURALFIXED($max, 2) } общего голода
             }
     }
-reagent-effect-condition-guidebook-reagent-threshold =
+entity-condition-guidebook-reagent-threshold =
     { $max ->
         [2147483648] в кровеносной системе имеется по крайней мере { NATURALFIXED($min, 2) } ед. { $reagent }
        *[other]
@@ -129,9 +43,9 @@ reagent-effect-condition-guidebook-reagent-threshold =
                *[other] имеет между { NATURALFIXED($min, 2) } ед. и { NATURALFIXED($max, 2) } ед. { $reagent }
             }
     }
-reagent-effect-condition-guidebook-mob-state-condition = пациент в { $state }
-reagent-effect-condition-guidebook-job-condition = должность цели — { $job }
-reagent-effect-condition-guidebook-solution-temperature =
+entity-condition-guidebook-mob-state-condition = пациент в { $state }
+entity-condition-guidebook-job-condition = должность цели — { $job }
+entity-condition-guidebook-solution-temperature =
     температура раствора составляет { $max ->
         [2147483648] не менее { NATURALFIXED($min, 2) }k
        *[other]
@@ -140,7 +54,7 @@ reagent-effect-condition-guidebook-solution-temperature =
                *[other] между { NATURALFIXED($min, 2) }k и { NATURALFIXED($max, 2) }k
             }
     }
-reagent-effect-condition-guidebook-body-temperature =
+entity-condition-guidebook-body-temperature =
     температура тела составляет { $max ->
         [2147483648] не менее { NATURALFIXED($min, 2) }k
        *[other]
@@ -149,23 +63,23 @@ reagent-effect-condition-guidebook-body-temperature =
                *[other] между { NATURALFIXED($min, 2) }k и { NATURALFIXED($max, 2) }k
             }
     }
-reagent-effect-condition-guidebook-organ-type =
+entity-condition-guidebook-organ-type =
     метаболизирующий орган { $shouldhave ->
         [true] это
        *[false] это не
     } { $name } орган
-reagent-effect-condition-guidebook-has-tag =
+entity-condition-guidebook-has-tag =
     цель { $invert ->
         [true] не имеет
        *[false] имеет
     } метку { $tag }
-reagent-effect-condition-guidebook-this-reagent = этот реагент
-reagent-effect-condition-guidebook-breathing =
+entity-condition-guidebook-this-reagent = этот реагент
+entity-condition-guidebook-breathing =
     цель { $isBreathing ->
         [true] дышит нормально
        *[false] задыхается
     }
-reagent-effect-condition-guidebook-internals =
+entity-condition-guidebook-internals =
     цель { $usingInternals ->
         [true] использует дыхательную маску
        *[false] дышит атмосферным газом
