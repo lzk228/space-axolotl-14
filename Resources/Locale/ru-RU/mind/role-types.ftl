@@ -30,4 +30,6 @@ role-subtype-survivor = Выживший
 role-subtype-subverted = Дефектный
 role-subtype-paradox-clone = Парадокс
 role-subtype-wizard = Волшебник
+role-subtype-xenoborg = Xenoborg
+role-subtype-xenoborg-core = Xenoborg Core
 role-subtype-changeling = Генокрад

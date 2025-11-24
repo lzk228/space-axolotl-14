@@ -339,3 +339,7 @@ uplink-smuggler-satchel-name = Сумка контрабандиста
 uplink-smuggler-satchel-desc = Удобная, подозрительная на вид сумка. Достаточно плоская, чтобы поместиться под напольной плиткой.
 uplink-acolyte-armor-name = Доспехи аколита
 uplink-acolyte-armor-desc = Маст-хэв для любого уважающего себя лидера культа. Зловеще-выглядящие доспехи, сделанные из костей, и удивительно устойчивые к повреждениям.
+uplink-briefcase-gun-name = Briefcase Gun
+uplink-briefcase-gun-desc = An indistinct briefcase with a highly compact C-20K mounted inside it. Careful not the grip the handle too tight!
+uplink-energycrossbow-name = Mini Energy Crossbow
+uplink-energycrossbow-desc = The go-to sidearm of any operative who prefers their victims not to be moving. Fires regenerating toxic arrows that floors victims in an instant.
