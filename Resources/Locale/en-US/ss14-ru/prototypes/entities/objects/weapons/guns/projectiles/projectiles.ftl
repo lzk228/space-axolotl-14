@@ -112,3 +112,5 @@ ent-BulletLaserMagnum = magnum laser bolt
     .desc = { ent-BulletLaser.desc }
 ent-BulletLaserWindowPiercingMagnum = magnum window-piercing bolt
     .desc = { ent-BulletLaser.desc }
+ent-EnergyCrossbowBolt = energy bolt
+    .desc = This'll hurt.
