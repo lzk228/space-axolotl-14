@@ -1,4 +1,4 @@
-﻿ent-BulletRifle = пуля (.20 винтовочная)
+ent-BulletRifle = пуля (.20 винтовочная)
     .desc = { ent-BaseBullet.desc }
 ent-BulletRiflePractice = пуля (.20 винтовочная учебная)
     .desc = { ent-BaseBulletPractice.desc }

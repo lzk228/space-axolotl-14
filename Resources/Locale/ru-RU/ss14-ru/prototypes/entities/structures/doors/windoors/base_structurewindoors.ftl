@@ -1,4 +1,4 @@
-﻿ent-BaseWindoor = { ent-BaseDeltaPressureGlassQuarter }
+ent-BaseWindoor = { ent-BaseDeltaPressureGlassQuarter }
     .desc = { ent-BaseDeltaPressureGlassQuarter.desc }
 ent-BaseSecureWindoor = { ent-BaseDeltaPressureReinforcedGlassQuarter }
     .desc = { ent-BaseDeltaPressureReinforcedGlassQuarter.desc }

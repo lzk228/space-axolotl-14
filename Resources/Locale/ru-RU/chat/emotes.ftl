@@ -1,4 +1,4 @@
-﻿# Имена
+# Имена
 chat-emote-name-scream = Кричать
 chat-emote-name-laugh = Смеяться
 chat-emote-name-honk = Хонк
@@ -72,3 +72,8 @@ chat-emote-msg-cathisses = шипит.
 chat-emote-msg-monkeyscreeches = кричит.
 chat-emote-msg-yawn = зевает.
 chat-emote-msg-snore = храпит.
+chat-emote-msg-bark = лает.
+chat-emote-msg-snarl = скалится.
+chat-emote-msg-whine = скулит.
+chat-emote-msg-howl = воет.
+chat-emote-msg-growl = рычит.

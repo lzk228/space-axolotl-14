@@ -1,4 +1,4 @@
-﻿ent-VendingMachine = торговый автомат
+ent-VendingMachine = торговый автомат
     .desc = Просто добавь капитализма!
 ent-VendingMachineWallmount = торговый автомат
     .desc = { ent-VendingMachine.desc }
@@ -88,6 +88,7 @@ ent-VendingMachineSnack = Getmore Chocolate Corp
     .desc = Автомат с закусками, предоставленный корпорацией Getmore Chocolate, базирующейся на Марсе.
 ent-VendingMachineSovietSoda = ВОДА
     .desc = Старый торговый автомат со сладкой водой.
+    .suffix = VODA
 ent-VendingMachineRobotics = Роботех Делюкс
     .desc = Все инструменты, необходимые для создания собственной армии роботов.
 ent-VendingMachineTheater = ТеатроШкаф

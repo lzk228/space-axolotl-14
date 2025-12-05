@@ -1,4 +1,4 @@
-﻿ent-BaseWeaponRevolver = BaseWeaponRevolver
+ent-BaseWeaponRevolver = BaseWeaponRevolver
     .desc = Дерзай — налетай, целься и стреляй.
 ent-WeaponRevolverDeckard = Декард
     .desc = Великолепно выполненный, изготавливаемый на заказ револьвер. Используется, когда нет времени на тест Войта-Кампфа. Вмещает 5 патронов калибра .45 магнум.

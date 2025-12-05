@@ -1,4 +1,4 @@
-﻿## General stuff
+## General stuff
 
 ui-options-title = Игровые настройки
 ui-options-tab-accessibility = Доступность
@@ -31,7 +31,7 @@ ui-options-ambient-music-volume = Громкость музыки окружен
 ui-options-ambience-volume = Громкость окружения:
 ui-options-lobby-volume = Громкость лобби и окончания раунда:
 ui-options-interface-volume = Громкость интерфейса:
-ui-options-ambience-max-sounds = Кол-во одновременных звуков окружения:
+ui-options-ambience-max-sounds = Количество одновременных звуков окружения:
 ui-options-lobby-music = Музыка в лобби
 ui-options-restart-sounds = Звуки перезапуска раунда
 ui-options-event-music = Музыка событий
@@ -128,7 +128,7 @@ ui-options-header-text-edit = Редактирование текста
 ui-options-header-text-chat = Чат
 ui-options-header-text-other = Прочий ввод текста
 ui-options-hotkey-keymap = Использовать клавиши QWERTY (США)
-ui-options-hotkey-toggle-walk = Переключать шаг\бег
+ui-options-hotkey-toggle-walk = Переключать шаг/бег
 ui-options-function-move-up = Двигаться вверх
 ui-options-function-move-left = Двигаться налево
 ui-options-function-move-down = Двигаться вниз
@@ -159,6 +159,9 @@ ui-options-function-save-item-location = Сохранить расположен
 ui-options-static-storage-ui = Закрепить интерфейс хранилища на хотбаре
 ui-options-function-smart-equip-backpack = Умная экипировка в рюкзак
 ui-options-function-smart-equip-belt = Умная экипировка на пояс
+ui-options-function-smart-equip-suit-storage = Умная экипировка на хранилище костюма
+ui-options-function-smart-equip-pocket1 = Умная экипировка в карман 1
+ui-options-function-smart-equip-pocket2 = Умная экипировка в карман 2
 ui-options-function-open-backpack = Открыть рюкзак
 ui-options-function-open-belt = Открыть пояс
 ui-options-function-throw-item-in-hand = Бросить предмет
@@ -212,6 +215,11 @@ ui-options-function-editor-copy-object = Копировать
 ui-options-function-show-debug-console = Открыть консоль
 ui-options-function-show-debug-monitors = Показать дебаг информацию
 ui-options-function-inspect-entity = Изучить сущность
+ui-options-function-inspect-entity-tooltip = Open a ViewVariables window for the entity your mouse is currently hovering over.
+ui-options-function-inspect-server-component = Inspect Server Component
+ui-options-function-inspect-server-component-tooltip = Open a ViewVariables window with the server component set by the "quickinspect" command for the entity your mouse is currently hovering over.
+ui-options-function-inspect-client-component = Inspect Client Component
+ui-options-function-inspect-client-component-tooltip = Open a ViewVariables window with the client component set by the "quickinspect" command for the entity your mouse is currently hovering over.
 ui-options-function-hide-ui = Спрятать интерфейс
 ui-options-function-hotbar1 = Слот хотбара 1
 ui-options-function-hotbar2 = Слот хотбара 2
@@ -300,7 +308,7 @@ ui-options-net-predict = Предугадывание на стороне кли
 ui-options-net-interp-ratio-tooltip =
     Увеличение этого параметра, как правило, делает игру
     более устойчивой к потере пакетов, однако при этом
-    это так же добавляет немного больше задержки и
+    это также добавляет немного больше задержки и
     требует от клиента предсказывать больше будущих тиков.
 ui-options-net-predict-tick-bias = Погрешность тиков предугадывания
 ui-options-net-predict-tick-bias-tooltip =

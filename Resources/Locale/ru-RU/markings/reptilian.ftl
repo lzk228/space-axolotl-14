@@ -79,3 +79,7 @@ marking-LizardChestFin = Рептилия, плавник
 marking-LizardSnoutSplotch = Рептилия, морда лица (Пятно)
 marking-LizardSnoutSplotch-snout_splotch_primary = Морда
 marking-LizardSnoutSplotch-snout_splotch_secondary = Нос
+marking-LizardSnoutVisageSharp = Рептилия, маска (Заострённая)
+marking-LizardSnoutVisageSharp-visage_sharp = Рептилия, маска (Заострённая)
+marking-LizardSnoutVisageRound = Рептилия, маска (Круглая)
+marking-LizardSnoutVisageRound-visage_round = Рептилия, маска (Круглая)
