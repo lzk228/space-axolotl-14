@@ -11,10 +11,10 @@
             "name": "cyr_b"
         },
         {
-            "name": "cyr_ch"
+            "name": "cyr_c"
         },
         {
-            "name": "cyr_c"
+            "name": "cyr_ch"
         },
         {
             "name": "cyr_d"
@@ -29,40 +29,40 @@
             "name": "cyr_g"
         },
         {
+            "name": "cyr_hard_sign"
+        },
+        {
             "name": "cyr_i"
         },
         {
             "name": "cyr_l"
         },
         {
-            "name": "cyr_soft_sign"
-        },
-        {
             "name": "cyr_p"
-        },
-        {
-            "name": "cyr_shh"
         },
         {
             "name": "cyr_sh"
         },
         {
-            "name": "cyr_hard_sign"
+            "name": "cyr_shh"
         },
         {
-            "name": "cyr_u"
-        },
-        {
-            "name": "cyr_ya"
+            "name": "cyr_soft_sign"
         },
         {
             "name": "cyr_y"
         },
         {
-            "name": "cyr_zh"
+            "name": "cyr_ya"
+        },
+        {
+            "name": "cyr_yu"
         },
         {
             "name": "cyr_z"
+        },
+        {
+            "name": "cyr_zh"
         }
     ]
 }
