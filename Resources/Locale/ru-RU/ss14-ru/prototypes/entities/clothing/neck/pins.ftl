@@ -39,3 +39,5 @@ ent-ClothingNeckAutismPin = значок "нейродивергент"
     .desc = Значок в честь дня распространения информации о проблеме нейродивергентов.
 ent-ClothingNeckGoldAutismPin = значок "аутизм"
     .desc = Значок в честь дня распространения информации о проблеме аутизма.
+ent-SprayFlowerPin = flower pin
+    .desc = A cute flower pin. Something seems off with it...
