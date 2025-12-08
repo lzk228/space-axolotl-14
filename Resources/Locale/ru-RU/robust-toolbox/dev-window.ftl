@@ -18,7 +18,7 @@ dev-window-tab-render-targets-column-name = Имя
 dev-window-tab-render-targets-column-size = Размер
 dev-window-tab-render-targets-column-type = Тип
 dev-window-tab-render-targets-column-vram = VRAM
-dev-window-tab-render-targets-column-thumbnail = Thumbnail
+dev-window-tab-render-targets-column-thumbnail = Миниатюра
 
 dev-window-tab-render-targets-value-null = null
 dev-window-tab-render-targets-value-not-available = Не доступно

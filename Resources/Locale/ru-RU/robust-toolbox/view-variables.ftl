@@ -8,7 +8,7 @@ view-variable-instance-entity-server-variables-tab-title = Переменные 
 view-variable-instance-entity-server-components-tab-title = Компоненты сервера
 view-variable-instance-entity-client-components-search-bar-placeholder = Поиск
 view-variable-instance-entity-server-components-search-bar-placeholder = Поиск
-view-variable-instance-entity-add-window-server-components = Добавиь компонент [S]
+view-variable-instance-entity-add-window-server-components = Добавить компонент [S]
 view-variable-instance-entity-add-window-client-components = Добавить компонент [C]
 
 
