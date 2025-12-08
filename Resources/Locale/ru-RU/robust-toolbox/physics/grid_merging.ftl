@@ -1,4 +1,4 @@
-cmd-merge_grids-desc = Combines 2 grids into 1 grid
+cmd-merge_grids-desc = Объединяет 2 грида в 1 грид
 cmd-merge_grids-help = merge_grids <gridUid1> <gridUid2> <offsetX> <offsetY> [angle]
 
 cmd-merge_grids-hintA = Grid A
