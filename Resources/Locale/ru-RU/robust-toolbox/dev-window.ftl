@@ -12,7 +12,7 @@ dev-window-tab-textures-info = Ширина: { $width } Высота: { $height 
 ## "Render Targets" dev window tab
 dev-window-tab-render-targets-title = Цели рендера
 dev-window-tab-render-targets-reload = Перезагрузить
-dev-window-tab-render-targets-filter = Фильтп
+dev-window-tab-render-targets-filter = Фильтр
 dev-window-tab-render-targets-column-id = ID
 dev-window-tab-render-targets-column-name = Имя
 dev-window-tab-render-targets-column-size = Размер

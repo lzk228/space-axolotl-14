@@ -41,7 +41,7 @@ cmd-replay-recording-start-hint-time = [временной лимит (мину�
 cmd-replay-recording-start-hint-name = [имя]
 cmd-replay-recording-start-hint-overwrite = [перезаписать (bool)]
 
-cmd-replay-recording-stop-desc = Останавливает запсь повтора.
+cmd-replay-recording-stop-desc = Останавливает запись повтора.
 cmd-replay-recording-stop-help = Использование: replay_recording_stop
 cmd-replay-recording-stop-success = Запись повтора остановлена.
 cmd-replay-recording-stop-not-recording = Сейчас не ведётся запись.
