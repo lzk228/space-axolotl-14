@@ -289,7 +289,7 @@ figurines-nukie-elite-6 = Хорошая работа, команда.
 
 figurines-queen-1 = Наша территория должна расти.
 figurines-queen-2 = Улей голодает.
-figurines-queen-3 = Мы потребляем всех.
+figurines-queen-3 = Мы поглотим всех.
 figurines-queen-4 = Мы на верхушке.
 figurines-queen-5 = Ты всего лишь биомасса.
 figurines-queen-6 = Мы должны развиваться.
